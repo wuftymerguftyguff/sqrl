@@ -1,0 +1,512 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><title>GRC's&nbsp;|&nbsp;SQRL Secure Quick Reliable Login Client Operation&nbsp;&nbsp;</title>
+<meta name="keywords" content="SQRL Secure Quick Reliable Login Client Operation, GRC, Gibson Research Corporation, Steve Gibson" />
+<meta name="description" content="SQRL Secure Quick Reliable Login Client Operation" />
+<meta name="sitemenu" content=" " />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "offices_@_grc.com" for "https://www.grc.com" on "1998.03.30T21:20-0800" r (n 0 s 0 v 0 l 0))' />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "https://www.grc.com" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.grc.com" r (n 0 s 0 v 0 l 0))' />
+<link rel="icon" href="https://www.grctech.com/_t5ii3ssqfwc1j_/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.grctech.com/_t5ii3ssqfwc1j_/favicon.ico" type="image/x-icon" />
+<link rel="meta" href="https://www.grc.com/labels.rdf" type="application/rdf+xml" title="ICRA labels" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/grc.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/mainmenu.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grctech.com/_t5ii3ssqfwc1j_/thirdparty.css" />
+
+<style type="text/css">
+ .greenhead { text-align:center; color:#008800; font-size:16pt; font-family:arial,helvetica; font-weight:bold; }
+ .callout	{ background:#f0f0ff; padding:1em; margin:1em 0 1em 1em; border-left:#6666ff solid 2px; }
+ .callsubj	{ font-family:arial; font-size:11pt; font-weight:bold; }
+ .greynote	{ color:#666; font-size:smaller; margin:-0.5em 0 2em 1.5em }
+ .greensub	{ color:#008800; text-align:center; margin-top:0.5em; font-family:arial,helvetica; font-weight:bold; }
+ .greybox   { padding:1em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 2px; }
+ .greybox2  { padding:1.5em 2em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 4px; }
+ .blackpara { color:#000; margin:0.25em 0 0; }
+ .centerarial { text-align:center; font-family:arial; font-size:larger; }
+ .lsa			{ font-size:larger; margin-top:1em }
+ .sectiondiv{ border-top:#00A 3px solid; font-size:20pt; margin-top:1em; padding-top:0.25em }
+ .redparam { font-family:'Courier New', Courier, monospace; font-weight:bold; color:#900; font-size:large; }
+ .parample { color:#000; font-family: 'Courier New', Courier, monospace; font-size:20pt; }
+ .urltxt   { color:#0000CC; font-family: 'Courier New', Courier, monospace; font-weight:bold; font-size:17px; }
+ .greyfade { font-style:italic; color:#aaa; }
+ .block    { margin:10px 0 10px 0.25em; padding-left:0.5em; border-left:#00f 2px solid; }
+ .comment  { font-weight: normal; color:#888; font-size:smaller;}
+ .repel span a { font-weight: normal; color:#888; font-size:smaller; }	/* the >> in the drop-down menus which link to sub-menus */
+
+</style>
+
+<style type="text/css">
+ .tab { border:1px #88f solid; background:#eef; padding:0 1em; font-size:larger; font-family:Arial, Helvetica, sans-serif; }
+</style>
+</head><body><a name="top"></a>
+
+<!-- ########################## GRC Masthead Menu ########################## -->
+
+<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
+<div id="masthead">
+	<a href="https://www.grc.com/default.htm"><img id="mastheadlogo" src="https://www.grc.com/mh-logo.gif" width="286" height="24" alt="Gibson Research Corporation" title="" /></a>
+	<img id="focus" src="https://www.grc.com/mh-focus.gif" width="121" height="13" alt="" title="What we're about" />
+	<a href="https://www.grc.com/news.htm"><img id="blogicon" src="https://www.grc.com/image/menublogicon.png" width="22" height="22" alt="blog icon" title="To our news and announcements page" /></a>
+	<a href="https://www.grc.com/news.htm"><img id="twittericon" src="https://www.grc.com/image/menutwittericon.png" width="22" height="22" title="To our news and announcements page" alt="Twitter Icon"/></a>
+	<a href="https://www.grc.com/news.htm"><img id="rssicon" src="https://www.grc.com/image/menurssicon.png" width="22" height="22" title="To our news and announcements page" alt="RSS Icon" /></a>
+
+	<form action="https://www.google.com/search.htm" id="searchbox_000064552291181981813:y8yi5go2xza" onsubmit="javascript: this.action='https://www.grc.com/search.htm'">
+		<input type="hidden" name="cx" value="000064552291181981813:y8yi5go2xza" />
+		<input type="hidden" name="cof" value="FORID:11" />
+		<input id="text" type="text" name="q" maxlength="256" />
+		<input id="search" type="image" name="sa" value="Search" src="https://www.grc.com/mh-srch.gif" alt="&nbsp;[Search]" title="" />
+	</form>
+</div>
+
+<div class="menu">
+
+<ul>
+	<li><a href="https://www.grc.com/default.htm"><img src="https://www.grc.com/mb-home.gif" width="76" height="18" alt="[Home]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="leftbutton">
+			<li><a href="https://www.grc.com/purchasing.htm">&nbsp;Purchasing</a></li>
+			<li><a href="https://www.grc.com/sales.htm">&nbsp;Sales Support</a></li>
+			<li><a href="https://www.grc.com/support.htm">&nbsp;Technical Support</a></li>
+			<li><a href="https://www.grc.com/default.htm#bottom">&nbsp;Contact Us</a></li>
+			<li><a href="https://www.grc.com/news.htm">&nbsp;Blogs, Twitter &amp; RSS</a></li>
+			<li><a href="https://www.grc.com/privacy.htm">&nbsp;Privacy Policy</a></li>
+<!--			<li><a href="/siteoptions.htm">&nbsp;Site Options</a></li>			-->
+			<li><a href="https://www.grc.com/stevegibson.htm">&nbsp;Steve's Projects Page</a></li>
+			<li><a href="https://www.grc.com/resume.htm">&nbsp;Steve's Old Resume</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/sr/spinrite.htm"><img src="https://www.grc.com/mb-products.gif" width="96" height="18" alt="[Products]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/sr/spinrite.htm">&nbsp;General information</a></li>
+			<li><a href="https://www.grc.com/sr/whatitdoes.htm">&nbsp;What SpinRite Does</a></li>
+			<li><a href="https://www.grc.com/sr/testimonials.htm">&nbsp;User testimonials</a></li>
+			<li><a href="https://www.grc.com/sr/smart.htm">&nbsp;S.M.A.R.T. Monitor</a></li>
+			<li><a href="https://www.grc.com/cs/prepurch.htm">&nbsp;Purchase SpinRite</a></li>
+			<li><a href="https://www.grc.com/sr/faq.htm">&nbsp;FAQ</a></li>
+			<li><a href="https://www.grc.com/sr/themovie.htm">&nbsp;Demo Videos</a></li>
+			<li><a href="https://www.grc.com/sr/kb/sata.htm">&nbsp;Knowledgebase: SATA</a></li>
+			<li><a href="https://www.grc.com/sr/kb/badbios.htm">&nbsp;Knowledgebase: BIOS</a></li>
+			<li><a href="https://www.grc.com/sroverview.htm">&nbsp;SpinRite v5.0 pages</a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2"><img src="https://www.grc.com/mb-services.gif" width="94" height="18" alt="[Services]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2">&nbsp;ShieldsUP!</a></li>
+			<li><a href="https://www.grc.com/revocation.htm">&nbsp;Certificate Revocation</a></li>
+			<li><a href="https://www.grc.com/haystack.htm">&nbsp;Password Haystacks</a></li>
+			<li><a href="https://www.grc.com/fingerprints.htm">&nbsp;HTTPS Fingerprints</a></li>			
+			<li><a href="https://www.grc.com/securitynow.htm">&nbsp;Security Now!</a></li>
+			<li><a href="https://www.grc.com/dns/dns.htm">&nbsp;DNS Spoofability Test</a></li>
+			<li><a href="https://www.grc.com/passwords.htm">&nbsp;Perfect Passwords</a></li>
+			<li><a href="https://www.grc.com/ppp.htm">&nbsp;PPP Passwords</a></li>
+			<li><a href="https://www.grc.com/media.htm">&nbsp;Tech TV video clips</a></li>
+			<li><a href="https://www.grc.com/discussions.htm">&nbsp;Newsgroup Discussions</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/freepopular.htm"><img src="https://www.grc.com/mb-freeware.gif" width="98" height="18" alt="[Freeware]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="operation.htm"><span class="drop"><span>Security</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/lt/leaktest.htm">&nbsp;Leaktest</a></li>
+					<li><a href="https://www.grc.com/securable.htm">&nbsp;Securable</a></li>
+					<li><a href="https://www.grc.com/stm/shootthemessenger.htm">&nbsp;Shoot the messenger</a></li>
+					<li><a href="https://www.grc.com/unpnp/unpnp.htm">&nbsp;Unplug n' Pray</a></li>
+					<li><a href="https://www.grc.com/freeware/dcom.htm">&nbsp;DCOMbobulator</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrap</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrapCmd</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="operation.htm"><span class="drop"><span>Utilities</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/never10.htm">&nbsp;Never 10&nbsp;&nbsp;(no upgrade)</a></li>
+					<li><a href="https://www.grc.com/dns/benchmark.htm">&nbsp;DNS Benchmark</a></li>
+					<li><a href="https://www.grc.com/wizmo/wizmo.htm">&nbsp;Wizmo</a></li>
+					<li><a href="https://www.grc.com/id/idserve.htm">&nbsp;ID Serve</a></li>
+					<li><a href="https://www.grc.com/freeware/clickey.htm">&nbsp;ClicKey</a></li>
+					<li><a href="https://www.grc.com/ct/cleartype.htm">&nbsp;Free &amp; Clear</a></li>
+					<li><a href="https://www.grc.com/tip/id.htm">&nbsp;IDentity (ASPI)</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="operation.htm"><span class="drop"><span>Obsolete</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/cih/cih.htm">&nbsp;FIX-CIH</a></li>
+					<li><a href="https://www.grc.com/tip/clickdeath.htm">&nbsp;TIP (trouble in paradise)</a></li>
+					<li><a href="https://www.grc.com/oo-update.htm">&nbsp;OptOut</a></li>
+					<li><a href="https://www.grc.com/xpdite/xpdite.htm">&nbsp;XPdite</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;NoShare</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;LetShare</a></li>
+					<li><a href="https://www.grc.com/pw/patchwork.htm">&nbsp;Patchwork</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="operation.htm"><img src="https://www.grc.com/mb-research.gif" width="98" height="18" alt="[Research]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="operation.htm"><span class="drop"><span>General</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/malware.htm">&nbsp;Malware Repository</a></li>
+					<li><a href="sqrl.htm">&nbsp;SQRL&nbsp;Login&nbsp;Technology</a></li>					
+					<li><a href="https://www.grc.com/ssl/ev.htm">&nbsp;EV SSL/TLS Certificates</a></li>
+					<li><a href="https://www.grc.com/otg/uheprng.htm">&nbsp;Ultra-high entropy PRNG</a></li>
+					<li><a href="https://www.grc.com/menudemo.htm">&nbsp;Pure CSS web menus</a></li>
+					<li><a href="https://www.grc.com/nat/nat.htm">&nbsp;NAT router security</a></li>
+					<li><a href="https://www.grc.com/pda/palmpower.htm">&nbsp;PDA max battery life</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="operation.htm"><span class="drop"><span>Pending</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/nf/netfilter.htm">&nbsp;GRC NetFilter</a></li>
+					<li><a href="https://www.grc.com/tp/trustpuppy.htm">&nbsp;TrustPuppy</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="operation.htm"><span class="drop"><span>Historical</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/worms/25-01-03.htm">&nbsp;Worm wars of 2001</a></li>
+					<li><a href="https://www.grc.com/downloaders.htm">&nbsp;File downloader spying</a></li>
+					<li><a href="https://www.grc.com/ct/ctwhat.htm">&nbsp;Sub-pixel font rendering</a></li>
+					<li><a href="https://www.grc.com/su/earthlink.htm">&nbsp;Earthlink browser tag</a></li>
+					<li><a href="https://www.grc.com/tip/codfaq1.htm">&nbsp;ZIP &amp; JAZ click of death</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="operation.htm"><span class="drop"><span>Dormant</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/vpn/vpn.htm">&nbsp;OpenVPN</a></li>
+					<li><a href="https://www.grc.com/r&amp;d/assimilator.htm">&nbsp;The Assimilator</a></li>
+					<li><a href="https://www.grc.com/aspi_me.htm">&nbsp;ASPI ME</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+			<li><a href="https://www.grc.com/health.htm"><span class="drop"><span>Health</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/health.htm">&nbsp;Health Homepage</a></li>
+					<li><a href="https://www.grc.com/health/lowcarb.htm">&nbsp;The Low Carb Choice</a></li>
+					<li><a href="https://www.grc.com/health/vitamin-d.htm">&nbsp;Vitamin D</a></li>
+					<li><a href="https://www.grc.com/health/sleep/healthy_sleep_formula.htm">&nbsp;Healthy Sleep Formula</a></li>
+					<li><a href="https://www.grc.com/zeo.htm">&nbsp;Zeo Sleep Manager Pro</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li id="other"><a href="https://www.grc.com/pdp-8/pdp-8.htm"><img src="https://www.grc.com/mb-other.gif" width="77" height="18" alt="[Other]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/pdp-8/pdp-8.htm">&nbsp;PDP-8 Computers</a></li>
+			<li><a href="https://www.grc.com/misc/truecrypt/truecrypt.htm">&nbsp;TrueCrypt Repository</a></li>
+			<li><a href="https://www.grc.com/Big-Number-Calculator.htm">&nbsp;Big Number Calculator</a></li>
+			<li><a href="https://groups.google.com/forum/#!forum/portable-sound-blaster">&nbsp;Portable Sound Blaster</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+</div> <!-- close "menu" div -->
+<hr style="display:none" />
+</div></div></div> <!-- close the "minwidth" wrappers -->
+<!-- ###################### END OF GRC MASTHEAD MENU  ###################### -->
+
+
+<center>
+
+<div class="repel regionhead"><span>SQRL</span>SQRL</div>
+<table style="margin-bottom:1em;" cellpadding="0" cellspacing="0"><tr valign="bottom"><td rowspan="2"><img src="SQRL_Logo_80x80.png" width="80" height="80" alt="100x100 SQRL Logo" /></td><td rowspan="2">&nbsp;&nbsp;&nbsp;</td><td style="color:#bb0000; font-size:22pt;"><b>S</b>ecure <b>Q</b>uick <b>R</b>eliable <b>L</b>ogin</td></tr><tr valign="bottom"><td style="font-size:10.5pt;">A highly secure, comprehensive, easy-to-use replacement<br />for usernames, passwords, reminders, one-time-code<br />authenticators<b>&nbsp;.&nbsp;.&nbsp;.</b> and everything else.</td></tr></table><img src="https://www.grc.com/image/darkbluepixel.gif" width="90%" height="4" border="0" alt="divider" /><div id="embelow" class="pagecontainer">
+
+<div class="red_tight_headline" style="font-size:20pt; margin-top:1em;">SQRL User-Interface &amp; Operation</div>
+
+<p>Developers of SQRL clients are, of course, free to express their understanding of SQRL's operation with whatever user-interface design they choose. GRC's user-interface design, presented below, may be copied directly into other clients and for use on other platforms or used as a starting point. If possible, maintaining a common and similar flow and feature set would likely ease cross-platform use. Note, also, that since SQRL's user-interface strings will be freely available in at least 30 international languages and dialects, designing a close copy of GRC's UI will make immediate translations of the user-interface available.</p>
+
+<p>The design of this page's array of user-interface dialogs consumed more than 60-days of time, because the act of thinking through every possible user-interface consequence of SQRL's initial technology resulted in many significant changes being fed back into the design, significantly improving its operation.</p>
+
+<p>Now, after a total of six months of detailed design work following SQRL's announcement, we have a final stable design against which code can be written. That task is now underway for the creation of GRC's reference SQRL client.</p>
+
+<p>Because the final casting of the design into running code is still likely to result in at least some small changes being fed back into the exact design of the user-interface, the dialogs below should be regarded as a user-interface design schema, rather than as SQRL's final design. We won't have a final design until it is expressed in code. For that reason, although SQRL will be written to support a multi-lingual interface, the translation of its user-interface will await the finalization of the first English-only edition. Once that exists the community at <a href="https://crowdin.net/project/sqrl">crowdin.net</a> (see next section) will receive all of SQRL's final text strings to translate.</p>
+
+<div class="blue_section_heading">Multiple Language Internationalization</div>
+
+GRC's reference implementation of SQRL will be published in more than 30 major world-wide languages and their dialects. The translation is made possible through the &#8220;<a href="https://crowdin.net/project/sqrl">Crowdin</a>&#8221; crowd-sourced translation facility and the participation of many wonderful and willing multi-language volunteers. GRC and the entire growing SQRL community thanks Crowdin for their kindness and generosity in making their service available to GRC, for this purpose, at no charge.
+
+<div class="blue_section_heading">SQRL User Interface Flow</div>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/ui-flow.png" width="305" height="490" alt="ui-flow" /><em>Overwhelming?</em> The detailed presentation below may appear somewhat overwhelming for a typical SQRL user. But keep in mind that the purpose of this page is to display every avenue and option within the SQRL client. For the purpose of design and documentation, it lays out the <b>entire</b> SQRL client user-interface all at once. A SQRL user would typically encounter the initial identity creation dialogs followed by occasional password prompts. Everything else would be presented as the user's experience, needs and usage grows.
+
+<p><em>The user-interface flow chart to the left</em> shows the entire UI-flow for GRC's SQRL client application.</p>
+
+<ul><li>In the typical case, the user would click on a SQRL link or scan a SQRL QR code. That action activates SQRL to respond to the &#8220;sqrl:&#8221; URL or QR code.</li><li>Depending upon the user's own configuration of SQRL for their use, they may (or very likely may not) be re-prompted for either their entire SQRL password or just its hint. The full SQRL password only <b>needs</b> to be provided once when SQRL is first used. Therefore, any re-prompting is only for the user's protection in environments where someone else might use their SQRL client without their knowledge. In environments where that's not possible, all password re-prompting, after the full password has once been provided, can be suppressed.</li>
+
+<li><img align="left" style="margin-right:1.5em;" src="ui/Confirm.png" width="313" height="217" alt="Confirm" />Assuming that all is well and normal, the only thing the user will <em>ALWAYS</em> see, is the single confirmation dialog (shown here to the left) that supplies the website's &#8220;friendly name&#8221; (not some confusing URL) to verify that this is the website the user intends to login to.
+
+<p>This single verification is important because without it a user could be intending to use SQRL to login to &#8220;BlackHats.com&#8221;, but the BlackHats.com site gives the user a SQRL code it just obtained from Amazon.com. Since Amazon.com would always identify itself as &#8220;Amazon&#8221; the user would be expecting to see &#8220;BlackHats&#8221; and not &#8220;Amazon&#8221;. (Note that SQRL's built-in man-in-the-middle (MITM) detection would catch this even before the wrong website's name was displayed, but not every possible SQRL operating configuration can benefit from SQRL's MITM detection and prevention, so SQRL always verifies with the user before login.)</p> 
+
+<p>Note, also, that this pre-login prompting dialog offers an &#8220;Other&#8221; options button which allows the user to perform non-login operations such as completely disabling the site's use of SQRL for security purposes or completely removing all trace of the user's SQRL identity from the site. These are uncommon, but available.</p></li></ul> 
+
+And that's all there is to it! The user will typically click a link on a site's login page, confirm that they're about to authenticate their identity to the site they expect, they click &#8220;<b>YES</b>&#8221; and they're logged in.
+
+<p>The detailed array of SQRL dialogs below lays out everything ELSE that the user might see during their management of their SQRL identity(s).</p>
+
+</td></tr></table></p>
+
+<div class="blue_section_heading">Home</div>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Home.png" width="508" height="408" alt="Home" />When the SQRL executable (sqrl.exe) is run or its tray icon is clicked &#8211; and at least one identity has previously been created &#8211; this top level &#8220;home&#8221; dialog will be shown. From here the user can tweak settings, change their password, manage their SQRL identity(s) and browse the rather extensive built-in help.<span class="font7px"><br /><br /></span>If this is the first time SQRL is being executed on the computer, the &#8220;First Contact&#8221; series, shown below, will be started instead.</td></tr></table></p>
+
+<div class="blue_section_heading">First Contact</div>
+
+<p>The first time a user runs GRC's SQRL client on a new machine:</p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:0.75em;" src="ui/Welcome.png" width="508" height="408" alt="Welcome" />We want to be sure that newcomers understand how SQRL works and that they do not automatically create new identities for every instance of SQRL they use.</p><p>SQRL's &#8220;Personal Identities&#8221; are meant to be global, created once and reused everywhere.</p><p>Therefore, any time a SQRL client is run without a defined identity it should carefully educate and deter its user from creating additional identities.</p></td></tr></table>
+
+<p>The SQRL client assumes its user knows nothing about SQRL. It is designed to avoid annoying experts, while offering to help curious and willing new users acquire some understanding of what they need to do, and why. Since that first page (above) will only be presented the first time SQRL is run on a new device, it is the perfect place to offer additional information.</p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:0.75em;" src="ui/HowItWorks.png" width="508" height="408" alt="HowItWorks" />The &#8220;Learn more about SQRL&#8221; button presents this carefully designed, as brief but complete as possible, introduction to the few things every SQRL user should know. It is intended to be the quickest possible introduction to SQRL's main ideas.</td></tr></table>
+
+<p>Here is the complete, (currently) suggested reference text for each of those four tabs shown above:</p>
+
+<span class="tab">In a Nutshell</span><div class="nice_white_box" style="margin-bottom:1.5em;">Before you begin using SQRL to login to websites, your SQRL private identity must be created. You only need one, probably for life, because it reveals NOTHING about you, and it's highly secure. It's just a very long (77-digit) random number.<span class="font7px"><br /><br /></span>From then on, whenever you login with SQRL to a website, your private identity is used to generate another 77-digit number for that one website. Every website you visit sees you as a different number, yet every time you return to the same site, that site's unique number is regenerated.<span class="font7px"><br /><br /></span>This allows you to be uniquely and permanently identified, yet completely anonymous.<span class="font7px"><br /><br /></span>Since you never need to use an eMail address or a password, you never give a website your actual identity to protect. If the website's SQRL identities are ever stolen, not only would the stolen identities only be valid for that one website, but SQRL's cryptography prevents impersonation using stolen identities.<span class="font7px"><br /><br /></span>This is as good as it sounds. It's what we've been waiting for.</div>
+
+<span class="tab">Your SQRL Password</span><div class="nice_white_box" style="margin-bottom:1.5em;">SQRL frees you from the burden of logging into Internet websites by doing it for you. But this means if someone else gained control of your SQRL app, they could impersonate you.<span class="font7px"><br /><br /></span>We solve this problem with a SQRL password which YOU use to login to your SQRL. You decide how much login protection you need. You choose your own password of whatever length and complexity you desire. To impede someone guessing, you set how long any password takes to process. And to make longer, more complex passwords less painful to use, the password's first four characters may be used to "refresh" the full password you recently entered.<span class="font7px"><br /><br /></span>You are free to change your password and its various settings at any time. And if you should ever forget or lose your password for any reason, SQRL's Rescue Code can be used to recover your access.</div>
+
+<span class="tab">SQRL's Rescue Code</span><div class="nice_white_box" style="margin-bottom:1.5em;">You and SQRL will probably never need rescuing. But SQRL's security is so tight that you MIGHT need a way to unlock things a bit. Here are the two scenarios where you WOULD need rescuing:<span class="font7px"><br /><br /></span>&bull; If you changed your password and the new one slipped your mind, there's no one to ask. Unlike websites, where you click "I forgot my password", your SQRL app doesn't know it either. If it did, it could be hacked and used to steal your identity. Backups you have made of your identity will have been saved under the password you were using then, so that might help. But your SQRL-assigned Rescue Code will always forgive any memory lapse.<span class="font7px"><br /><br /></span>&bull; Once you have established your SQRL identity with a website, that identity can ONLY be changed with ITS Rescue Code. If someone WERE to somehow steal your SQRL identity (if your phone was stolen and you used a VERY weak or guessable password, or malware infected your device), they could never replace your identity with theirs. But YOU could retake your stolen identity by creating a new one and using the old identity's Rescue Code (which the bad guys would never have) to replace that old identity with your new one.<span class="font7px"><br /><br /></span>SQRL's Rescue Code is a powerful ally. Write it down, keep it safe and never lose it. You will probably never need it, but if you do you'll be very glad you kept it.</div>
+
+<span class="tab">Why Backup?</span><div class="nice_white_box" style="margin-bottom:1.5em;">Your SQRL private identity is a randomly chosen 77-digit number used to generate each of your individual web identities. NO ONE knows what it is. As you use SQRL to identify yourself to the Internet, your identity BECOMES that 77-digit number. If it is ever lost, so is your Internet identity.<span class="font7px"><br /><br /></span>The other reason to backup your private identity is to copy it into another computer or mobile device. Once your one private SQRL identity has been installed into all of your devices, you can use any of them to easily identify yourself on the Internet.<span class="font7px"><br /><br /></span>SQRL provides many simple ways to back up your private identity, and all backups are ALWAYS protected by your SQRL password and Rescue Code.<span class="font7px"><br /><br /></span>Printing backups onto paper, as a small QR code and text (perhaps more than once) is recommended, since paper is the original data storage medium. In many ways it's still the best. Simply store it where you store your life's other important documents. You can also record your backup to thumb drives, burn them to CD's, and store them safely anywhere.<span class="font7px"><br /><br /></span>But PLEASE do make backups, since NO ONE knows your unique 77-digit private identity... not even you!</div>
+
+<div class="nice_green_box" style="color:#060;"><div style="text-align:center; font-size:larger; margin-bottom:0.25em;"><em>Definition / Glossary Notes</em></div>In the text shown above, and as the UI continues below, terms have been carefully chosen in an attempt to clearly convey their purpose:<ul>
+
+<li><em>Private Identity: </em>The UI text attempts to draw a distinction between the user's single private SQRL identity and the system's multiple per-website &#8220;web identities&#8221;.</li>
+
+<li><em>Web Identity: </em>The term &#8220;web identities&#8221; conveys the idea that SQRL users have unique identities at individual websites.</li>
+
+<li><em>Rescue Code: </em>The term &#8220;Rescue Code&#8221; was chosen to convey the idea that this somewhat daunting code will be needed only to &#8220;rescue&#8221; the user from extraordinary situations. As we'll see below, it's the high-entropy, high-security, system-supplied, 24-decimal-digit code that is used to key the encryption and decryption of what is essentially the user's root identity &#8209; the Identity Unlock Key (IUK). (Please refer to the <a href="key-flow.htm">key-flow</a> page for additional information.)</li>
+
+</ul></div>
+
+<div class="blue_section_heading">New Identity Creation</div>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create1.png" width="508" height="408" alt="Create1" />Here, we lead the user who believes they wish to create a new SQRL identity through the short list of reasons why they might actually want to create a new identity.<span class="font7px"><br /><br /></span>This both continues teaching them a bit more about SQRL, and further verifies that this is what they really intend.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create1a.png" width="508" height="408" alt="Create1" />As we lead the user through the process of creating a new identity, we need to explain about the &#8220;Rescue Code&#8221;, whose random 24-digit security is what allows the user's identity to be safely stored inside insecure PCs and devices.<span class="font7px"><br /><br /></span>The only impact this &#8220;Rescue Code&#8221; has upon the user is the need to <em>just once</em> record it permanently &#8212; either by hand or by printing. And since it can never be stored inside the generating PC or device, it must be recorded at the time a new identity is created.<span class="font7px"><br /><br /></span>This stage of the identity creation wizard explains this, and prepares the user for the need to be able to immediately and permanently record the new identity's &#8220;Rescue Code.&#8221; It gives them the opportunity to gracefully cancel this process before going any further if that won't be possible or convenient at this time.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create2.png" width="508" height="408" alt="Create1" />To help users manage situations where multiple identities are installed into a single SQRL app, SQRL identities are named.<span class="font7px"><br /><br /></span>So here, the user is prompted to provide a name for a new identity they wish to create, or to select the name of an existing identity they wish to replace.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/IdentityReplace.png" width="508" height="408" alt="Create1" />If the user chooses to replace an existing identity, the display of this explanation dialog will be triggered. The SQRL user interface presents help when it believes it will be needed. The main user interface panel can be used to display and disable SQRL's help dialogs once a user understands what's going on and attains proficiency, The help dialogs can also be redisplayed at any time.<span class="font7px"><br /><br /></span>The portion of the text that is &#8220;below the scroll&#8221; and not shown in the dialog to the left, continues<b>&nbsp;.&nbsp;.&nbsp;.</b>
+
+<div class="nice_blue_box" style="margin-top:1em;">[...] recognize the user by their identity which is being replaced.<span class="font7px"><br /><br /></span>When a user logs into a website that still recognizes them by their previous identity, SQRL will confirm that they wish to update that website's stored identity to their current identity, and, if so, SQRL will prompt the user for the previous identity's Rescue Code to permit its replacement. An identity's Rescue Code is always required to prove rightful ownership of any identity being replaced.<span class="font7px"><br /><br /></span>To help users replace their compromised identity at many websites, the long and secure Rescue Code only needs to be entered once per session.</div></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create3.png" width="508" height="408" alt="Create1" />As this dialog is displayed, a great quantity (you can never have too much, only too little) of unpredictable data is collected from throughout the host system to obtain a high-entropy (absolutely random) 256-bit SQRL identity. The user sees a simple progress meter as the &#8220;entropy pool&#8221; is filled past overflowing.<span class="font7px"><br /><br /></span>
+
+<div class="nice_red_box"><em>For the technically inclined:</em> This entropy pool is created by initializing and opening a SHA256 hash function. Then, unpredictable data from throughout the system, including the system's processor, operating system, network, storage, audio and video peripherals is poured into and accumulated by the open SHA256 function. The &#8220;noisier&#8221; this is the better. Even &#8220;conversion uncertainty&#8221; in the audio and video digitizing analog-to-digital converters will be useful. This continues until many times the SHA256's maximum entropy has been amassed. Once this point is reached the SHA256 function is briefly closed to produce its first 256-bit hash result. This will form the new identity's unencrypted Identity Unlock Key (IUK). The hash function is then reopened, retaining its full state, and additional entropy is added. The SHA256 function is finally closed to produce another 256-bit value from which the identity's Rescue Code will be derived.</div>
+
+</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/AboutEntropy.png" width="508" height="408" alt="Create1" />If the user wishes to understand a bit more about what's going on with this &#8220;entropy&#8221; collecting, they can click the &#8220;Additional Information&#8221; button to display the dialog to the left. The portion of the text that is &#8220;below the scroll&#8221; and not shown in the dialog to the left, continues<b>&nbsp;.&nbsp;.&nbsp;.</b>
+
+<div class="nice_blue_box" style="margin-top:1em;">[...] None of this is precisely knowable to anything other than SQRL when measured in fractions of billionths of seconds.<span class="font7px"><br /><br /></span>And in the interest of leaving no stone unturned, SQRL also absorbs the unpredictable "noise" being received though the system's audio and video devices when any are available.<span class="font7px"><br /><br /></span>SQRL absorbs ALL this, amassing a huge pool of chaotic, unrelated and unpredictable digital noise. It is then stirred together it such a way that every single binary bit of data collected is used in the final production of one unique SQRL digital identity.</div></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create4.png" width="508" height="408" alt="Create1" />Having created a new SQRL identity, the volatile Rescue Code which cannot (for security) be stored anywhere inside the computer must be written down, printed, or somehow recorded by the user. This stage of the identity creation wizard offers to either display the 24-digit Rescue Code (if it's safe to do so) or to print it to whatever printing facility the user's system may have.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create5.png" width="508" height="408" alt="Create1" />Since we are really (really) not kidding about the necessity of recording the Rescue Code in some fashion that it can later be re-entered if needed, this next phase of the wizard prompts the user to re-enter the Rescue Code that they presumably have just written down. This serves to verify that, at least at the time of identity creation, they were able to correctly re-enter the Rescue Code. Since the Wizard's &#8220;Next&#8221; button is helpfully disabled until we have a Rescue COde match, one way or the other the user is going to re-enter the Rescue Code if they wish to proceed.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create6.png" width="508" height="408" alt="Create1" />One of the reasons people use bad passwords is that no one ever really explained what they should do, and why. At this stage of SQRL identity creation we're about to ask the user to invent another new password. So we try to give this forthcoming request some context, and to briefly grab their attention about the fact that SQRL's SINGLE PASSWORD is fundamentally different from every other password they have ever used. It becomes the master password for their entire online identity. (At least to the extent that SQRL succeeds on the Internet.) We also &#8220;soften the blow&#8221; of asking them to invent a &#8220;long &amp; strong&#8221; password by explaining that most of the time they'll be able to just use the &#8220;password hint&#8221; of the first few characters of the password.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create7.png" width="508" height="408" alt="Create1" />This is SQRL's password design dialog. It allows users to see what they are entering if they choose (which is useful and sane when they have sufficient privacy). It also displays a continuously updated &#8220;Password Security&#8221; rating bar. Using this simple means they'll be able to experiment with any password construction solutions.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create8.png" width="508" height="408" alt="Create1" />Next we do two things...<span class="font7px"><br /><br /></span>We need to verify that the user is able to re-enter their password in a typical password-entry mode. Once they have done that, we are finally able to encrypt and store this new identity in their SQRL client. Therefore, when the password verification field correctly matches their chosen password the &#8220;Set New Password&#8221; button (which was initially disabled and greyed-out) will be enabled. Pressing that button will initiate a five-second &#8220;<a href="scrypt.htm">EnScrypt</a>&#8221; process shown by the progress bar. After that the &#8220;Next&#8221; button will be enabled, allowing the user to proceed.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create9.png" width="508" height="408" alt="Create1" />Now that the user's new identity has been  successfully created, they should export it from the PC into one of more locations and formats. So long as the Rescue Code is kept separate (see the next dialog panel) this is safe. So this panel explains that what has now been created can NEVER be re-created (it truly cannot). So we encourage them to back up their new identity right away. They can show it on screen as a QR code for acquisition by a camera-enabled device, save the file to a thumb drive for offline storage, or print it out onto paper (as with QR code and emergency-recovery ASCII code.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/RemovePW.png" width="418" height="286" alt="RemovePW" />By default, SQRL identities contain <em>both</em> the encrypted Identity Unlock Key (IUK), which is the parent to the user's Identity Master Key (IMK), and the user's encrypted IMK.<span class="font7px"><br /><br /></span>Since the parent IUK is encrypted by the guaranteed maximum entropy system-supplied Rescue Code, it is safe against attack. But the saved IMK is encrypted under user's own password, over which we have no real control (even though we <em>have</em> strengthened it as much as is feasible).<span class="font7px"><br /><br /></span>Therefore, to mitigate the danger of a stored identity having a weak, password falling into hostile hands, we pop-up this dialog before any identity export to ask whether the user would like to have their password removed from the identity for storage. It's an additional step, but it should be clear and comforting, and it would hugely help to protect users who insist upon using weak passwords.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/DisplayQR.png" width="265" height="322" alt="DisplayQR" />If the user asks to have their newly created identity displayed as a QR Code, after deciding whether or not to remove its password to eliminate the danger of a hacker obtaining it and exploiting a weak password, this dialog will be displayed until it is closed.<span class="font7px"><br /><br /></span>The user could then immediately scan the new identity into a mobile smartphone or tablet.<span class="font7px"><br /><br /></span>The SQRL application will always allow the identity to be displayed like this, but having the newly created and protected identity existing in multiple places constitutes a backup, so proactively offering it coaxes users not to procrastinate.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Create10.png" width="508" height="408" alt="Create1" />This final panel provides some useful and important tips for securely storing their identity. We remind them NOT to store the Rescue Code alongside the identity backup<b>&nbsp;.&nbsp;.&nbsp;.</b> unless they are both being stored in an honest-to-god safe that only they have access to. We also explain that all SQRL devicess should be kept &#8220;in sync&#8221;, so this new identity should be copied into any other devices, especially if this identity is a replacement for a previously existing identity.</td></tr></table></p>
+
+<div class="blue_section_heading">Identity Import</div>
+
+<p>If, in response to the very first dialog box above (&#8220;SQRL has not been loaded with an identity&#8221;) the user chose to <em>import</em> an existing identity rather than to create a new one, or if, at any time, they chose to import an existing identity, their interaction would proceed as follows. Since the function of most of this will, by now, be quite clear, comments are only added where there's something to add.</p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Import1.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Import2.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Import3.png" width="508" height="408" alt="Create1" />The printed format of an identity includes <em>both</em> a QR code for optical scanning and, as further backup for use with computers lacking cameras, a high legibility textual format presentation with ambiguous characters removed from the character set.<span class="font7px"><br /><br /></span>The textual format includes internal verification so that input errors can be caught.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Import4.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Import5.png" width="508" height="408" alt="Create1" />During the design of SQRL one issue was whether exported identities should carry their name. If they did, it could be useful to confirm whose identity it was. But then when the identity is being imported you have the problem of a name collision. Do you rename the new one, the old one, replace the existing one? It seemed cleaner to treat the importation exactly like the creation of a new identity, where it would not carry a name, but could be given any name the user chooses or replace an existing already installed name &#8212; which is likely the most common choice.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Import6.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<div class="blue_section_heading">SQRL Configuration Management</div>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Options.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Duration.png" width="508" height="408" alt="Create1" />During a password change operation, we must re-encrypt the new password. This gives the user the opportunity to change their identity's password verification duration, if they choose. This panel saves them from making this change separately.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Hint.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/ReEncrypt.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+
+<div class="blue_section_heading">SQRL's Built-In Help Panels</div>
+
+<center><table><tr><td class="nice_white_box">Note: This section will wind up further down the page, but<br />I had this dialog written, so I wanted to get it posted.</td></tr></table></center>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/AboutPasswords.png" width="508" height="408" alt="Create1" />This built-in help panel will be (optionally) displayed when the user requests additional information and help about SQRL's passwords.<span class="font7px"><br /><br /></span>The rest of the text, not shown below the scroll, is here:<span class="font7px"><br /><br /></span><div class="nice_blue_box">[...] know it's really  you until the processing is finished. The slower you make it, the more protection you have, and you can change the processing throttle at any time if it becomes tiresome.<span class="font7px"><br /><br /></span>&bull; To minimize the annoyance of this deliberate throttling, a much shorter "hint" (only the first few characters of your password) can be used to easily reaffirm your identity any time you have previously given SQRL your full password. (SQRL keeps the full password, so it just needs to be sure you haven't wandered off and left your identity exposed.)<span class="font7px"><br /><br /></span>&bull; At any time you wish, you may change your password or adjust the password processing throttle, or the number of hint characters, and how often, and when, you are asked to enter your hint or your full password. It's ALL up to you.<span class="font7px"><br /><br /></span>&bull; These features are provided to offer a balance between your security and your need for convenience.  If you always use this computer in a safe location, you might safely eliminate the prompts for password hints altogether, while keeping them active if you use SQRL on a mobile device.<span class="font7px"><br /><br /></span>&bull; If you needed, for some reason, to divulge your identity's password to someone -- perhaps a family member in an emergency -- you'll be able to change your password later to retake control of your identity. But suppose THEY used your password to CHANGE your password? This is one of the powers of the "Rescue Code": It allows you to recover from a lost, forgotten (or maliciously changed) password.</div></td></tr></table></p>
+
+<div class="blue_section_heading">User Passwords</div>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/PassPrompt.png" width="316" height="175" alt="PassPrompt" />Since SQRL authenticates to websites on its user's behalf, SQRL's password system is used to authenticate the user to the SQRL client. This is done to prevent unauthorized use of the SQRL client to log into websites or perform any sensitive SQRL operations (such as displaying the user's private SQRL identity for export. (Actually, SQRL's security management is such that the SQRL client doesn't even <em>have</em> the user's private SQRL identity for export unless the user enters the key.)
+<ul>
+<li>The dialog prominently displays the user's identity name. Although typical SQRL clients will only be loaded with a single user's identity, multiple identities per SQRL client will be supported and can be used when needed. For example, family members might wish to cross-load their IDs into each other's devices for convenience. Or a shared family PC might be loaded with the entire family's identities. The need for continual password re-authentication makes that safe.</li>
+
+<li>When a SQRL app is loaded with more than one identity, the &#8220;Select Identity&#8221; link will appear, allowing its user to change the currently selected identity shown in the password dialog's title. And an option in the application's settings will also instruct SQRL to always ask which identity should be used before displaying the password dialog.</li>
+
+<li>Since user passwords deliberately require several seconds of process, the password entry field doubles as a progress bar once the user hits &#8220;Enter&#8221; or clicks &#8220;OK&#8221;. This helps to pass the time while the entered password is being processed so that the user knows that something (useful) is going on. As mentioned above, the user can set this processing time themselves, with the understanding that shorter time means that guessing is easier (both for non-malicious friends and definitely malicious bad guys). They should also keep in mind that their full password <b>only</b> needs to be entered after a long period of inactivity or whenever SQRL is first used<b>. . .</b></li>
+</ul></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/HintPrompt.png" width="316" height="175" alt="HintPrompt" />To encourage users to adopt a strong, attack-resistant (and time-consuming to enter) SQRL password, we &#8220;soften the blow&#8221; by allowing <em><i>just the first four characters</i></em> of the user's password to be re-entered during the same session when SQRL has already been initially provided with the user's full password. We call this a password &#8220;hint&#8221;.<ul>
+<li>By default, events which terminate the current session, such as locking the device, logging out of the operating system, or engaging a screen saver, will cause SQRL to immediately overwrite and erase its RAM-resident user password, thus ending the user's session.</li>
+<li>When the user's session is still active, but SQRL needs to re-verify that the user is still in control of the device (which it will do frequently to assure the user's security), it will prompt for a &#8220;hint&#8221; of the user's full password &#8209; <em>only</em> the first four characters.</li>
+<li>SQRL adopts a zero-tolerance policy for hint mistakes: If the four characters entered do not perfectly match the first four characters of the user's password, the session will be immediately terminated with the in-RAM password overwritten and erased<b>&nbsp;.&nbsp;.&nbsp;.</b> after which the user will be re-prompted for their full password.</li>
+<li>In normal use, this allows the user to quickly and effortlessly re-assert their identity to SQRL, while anyone else attempting to use SQRL immediately afterwards would almost certainly lock themselves out, and also give away the fact that an erroneous password hint had been attempted.</li>
+</ul></td></tr></table></p>
+
+<div class="blue_section_heading">Access to Other Operations</div>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Other.png" width="508" height="408" alt="Create1" />The &#8220;Other&#8221; button on the &#8220;confirm that you wish to login&#8221; dialog leads to this dialog which offers the user options other than logging in. Specifically, temporarily disabling SQRL's access to a specific website's login or permanently removing all trace of SQRL from the website.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Disable.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Delete1.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Delete2.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<div class="blue_section_heading">SQRL Status Exceptions</div>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Disabled1.png" width="508" height="408" alt="Create1" />The red-colored decision diamond in the user-interface flow chart at the top of this page with the caption &#8220;Status exception of some kind&#8221; diverts the normal uneventful SQRL login process down another path. Depending upon the status returned by the remote web server, one or two of the following dialogs will be presented for user action.</td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Disabled2.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Previous1.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Previous2.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/Previous3.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/PrevDis1.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/PrevDis2.png" width="508" height="408" alt="Create1" /></td></tr></table></p>
+
+<p><table cellpadding="0" cellspacing="0"><tr><td><img align="left" style="margin-right:1.5em;" src="ui/mitm.png" width="508" height="408" alt="Create1" />One of SQRL's under-appreciated features is its ability to offer some protection from man-in-the-middle identity impersonation attacks. For clients (such as Windows, Mac, or Linux) co-existing in the same machine as the website, where the client's SQRL querying IP address would be expected to be the same as the web browser's, this simple &#8220;the IP's are not the same&#8221; warning can provide significant protection.<span class="font7px"><br /><br /></span>The rest of the text, not shown below the scroll, is here:<span class="font7px"><br /><br /></span><div class="nice_blue_box">[...] For example, if you clicked on a link you received in electronic mail or somewhere else, rather than entering the website's URL name manually into your web browser, that link you clicked on might be fraudulent and may have taken you to a copy of the Amazon site designed to convince you that you were really at Amazon.<span class="font7px"><br /><br /></span>If you are in any way unsure about the source of this SQRL login link, your recommended course of action is to ABORT this login by pressing the ABORT button below, then manually enter the URL of the website you wish to access. If the problem persists this is likely a "false positive warning" that you can safely ignore.<span class="font7px"><br /><br /></span>If you are using a network that always produces this warning, you may permanently suppress it by disabling the "warn of possible man-in-the-middle" attacks on the settings and options page.<span class="font7px"><br /><br /></span>Please choose how you would like to proceed:</div></td></tr></table></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<br /><br />
+<center><font style="font-size:smaller;">Secure QR Login (SQRL) Documentation:</font><br />
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div class="linkblock">
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="top">
+<td>
+<div><span>&nbsp;&nbsp;&nbsp;1&nbsp;<span><a href="sqrl.htm">Introduction &amp; overview</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;2&nbsp;<span><a href="userview.htm">The user's view of the application</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;3&nbsp;<span><a href="crypto.htm">Detailed crypto architecture</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;4&nbsp;<span><a href="idlock.htm">The identity lock protocol</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;5&nbsp;<span><a href="key-flow.htm">Client-Side key management</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;6&nbsp;<span><a href="operation.htm">User-interface & operation</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;7&nbsp;<span><a href="phishing.htm">Anti-phishing countermeasures</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;8&nbsp;<span><a href="attacks.htm">Attacks, weaknesses, vulnerabilities</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;9&nbsp;<span><a href="protocol.htm">Link &amp; query protocol syntax</a>&nbsp;</span></span></div>
+<div><span>&nbsp;10&nbsp;<span><a href="semantics.htm">Link &amp; query protocol semantics</a>&nbsp;</span></span></div>
+</td>
+<td>
+<div><span>&nbsp;11&nbsp;<span><a href="storage.htm">SQRL's Secure Storage System</a>&nbsp;</span></span></div>
+<div><span>&nbsp;12&nbsp;<span><a href="scrypt.htm">Our use of the SCrypt PBKDF</a>&nbsp;</span></span></div>
+<div><span>&nbsp;13&nbsp;<span><a href="client.htm">Client implementation details</a>&nbsp;</span></span></div>
+<div><span>&nbsp;14&nbsp;<span><a href="server.htm">Web server behavior</a>&nbsp;</span></span></div>
+<div><span>&nbsp;15&nbsp;<span><a href="resources.htm">Implementation resources</a>&nbsp;</span></span></div>
+<div><span>&nbsp;16&nbsp;<span><a href="implementations.htm">Projects and finished applications</a>&nbsp;</span></span></div>
+<div><span>&nbsp;17&nbsp;<span><a href="commentary.htm">SQRL commentary from the industry</a>&nbsp;</span></span></div>
+<div><span>&nbsp;18&nbsp;<span><a href="other.htm">Other related QR code login work</a>&nbsp;</span></span></div>
+<div><span>&nbsp;19&nbsp;<span><a href="faq.htm">Frequently Asked SQRL Questions</a>&nbsp;</span></span></div>
+<div><span>&nbsp;20&nbsp;<span><a href="feedback.htm">Feedback about SQRL &amp these pages</a>&nbsp;</span></span></div>
+</td>
+</tr></table></div></td></tr></table>
+<br /><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="operation.htm#top" target="_top"><img src="https://www.grctech.com/_t5ii3ssqfwc1j_/image/grc-icon.gif" width="51" height="51" border="0" alt="Jump to top of page" title="Jump to top of page"/></a></td><td><div style="margin:0 20px;"><font size="-2" color="#777777">Gibson Research Corporation is owned and operated by Steve Gibson.&nbsp;&nbsp;The contents<br />of this page are Copyright (c) 2016 Gibson Research Corporation. SpinRite, ShieldsUP,<br />NanoProbe, and any other indicated trademarks are registered trademarks of Gibson<br />Research Corporation, Laguna Hills, CA, USA. GRC's web and customer <a href="https://www.grc.com/privacy.htm" target="_top">privacy policy</a>.</font></div></td><td><div style="margin:7px 0;"><a href="operation.htm#top" target="_top"><img src="https://www.grctech.com/_t5ii3ssqfwc1j_/image/jumptotop.png" width="52" height="38" border="0" alt="Jump to top of page"  title="Jump to top of page"/></a></div></td></tr></table><br />
+<!-- ChangeDetection.com detection="off" -->
+<table width="90%" border="0" cellspacing="0" cellpadding="0"><tr><td><font color="#666666" size="-2">Last Edit: Aug 02, 2015 at 14:17 (268.02 days ago)</font></td><td align="right"><font color="#666666" size="-2">Viewed 12 times per day</font></td></tr></table>
+</center><a name="bottom"></a></body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

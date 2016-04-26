@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><title>GRC's&nbsp;|&nbsp;SQRL Secure Quick Reliable Login&nbsp;&nbsp;</title>
+<meta name="keywords" content="SQRL Secure Quick Reliable Login, GRC, Gibson Research Corporation, Steve Gibson" />
+<meta name="description" content="SQRL Secure Quick Reliable Login" />
+<meta name="sitemenu" content=" " />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "offices_@_grc.com" for "https://www.grc.com" on "1998.03.30T21:20-0800" r (n 0 s 0 v 0 l 0))' />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "https://www.grc.com" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.grc.com" r (n 0 s 0 v 0 l 0))' />
+<link rel="icon" href="https://www.grctech.com/_imhi4alvfm0mm_/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.grctech.com/_imhi4alvfm0mm_/favicon.ico" type="image/x-icon" />
+<link rel="meta" href="https://www.grc.com/labels.rdf" type="application/rdf+xml" title="ICRA labels" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/grc.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/mainmenu.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grctech.com/_imhi4alvfm0mm_/thirdparty.css" />
+
+<style type="text/css">
+ .greenhead { text-align:center; color:#008800; font-size:16pt; font-family:arial,helvetica; font-weight:bold; }
+ .callout	{ background:#f0f0ff; padding:1em; margin:1em 0 1em 1em; border-left:#6666ff solid 2px; }
+ .callsubj	{ font-family:arial; font-size:11pt; font-weight:bold; }
+ .greynote	{ color:#666; font-size:smaller; margin:-0.5em 0 2em 1.5em }
+ .greensub	{ color:#008800; text-align:center; margin-top:0.5em; font-family:arial,helvetica; font-weight:bold; }
+ .greybox   { padding:1em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 2px; }
+ .greybox2  { padding:1.5em 2em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 4px; }
+ .blackpara { color:#000; margin:0.25em 0 0; }
+ .centerarial { text-align:center; font-family:arial; font-size:larger; }
+ .lsa			{ font-size:larger; margin-top:1em }
+ .sectiondiv{ border-top:#00A 3px solid; font-size:20pt; margin-top:1em; padding-top:0.25em }
+ .redparam { font-family:'Courier New', Courier, monospace; font-weight:bold; color:#900; font-size:large; }
+ .parample { color:#000; font-family: 'Courier New', Courier, monospace; font-size:20pt; }
+ .urltxt   { color:#0000CC; font-family: 'Courier New', Courier, monospace; font-weight:bold; font-size:17px; }
+ .greyfade { font-style:italic; color:#aaa; }
+ .block    { margin:10px 0 10px 0.25em; padding-left:0.5em; border-left:#00f 2px solid; }
+ .comment  { font-weight: normal; color:#888; font-size:smaller;}
+ .repel span a { font-weight: normal; color:#888; font-size:smaller; }	/* the >> in the drop-down menus which link to sub-menus */
+
+</style>
+
+</head><body><a name="top"></a>
+
+<!-- ########################## GRC Masthead Menu ########################## -->
+
+<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
+<div id="masthead">
+	<a href="https://www.grc.com/default.htm"><img id="mastheadlogo" src="https://www.grc.com/mh-logo.gif" width="286" height="24" alt="Gibson Research Corporation" title="" /></a>
+	<img id="focus" src="https://www.grc.com/mh-focus.gif" width="121" height="13" alt="" title="What we're about" />
+	<a href="https://www.grc.com/news.htm"><img id="blogicon" src="https://www.grc.com/image/menublogicon.png" width="22" height="22" alt="blog icon" title="To our news and announcements page" /></a>
+	<a href="https://www.grc.com/news.htm"><img id="twittericon" src="https://www.grc.com/image/menutwittericon.png" width="22" height="22" title="To our news and announcements page" alt="Twitter Icon"/></a>
+	<a href="https://www.grc.com/news.htm"><img id="rssicon" src="https://www.grc.com/image/menurssicon.png" width="22" height="22" title="To our news and announcements page" alt="RSS Icon" /></a>
+
+	<form action="https://www.google.com/search.htm" id="searchbox_000064552291181981813:y8yi5go2xza" onsubmit="javascript: this.action='https://www.grc.com/search.htm'">
+		<input type="hidden" name="cx" value="000064552291181981813:y8yi5go2xza" />
+		<input type="hidden" name="cof" value="FORID:11" />
+		<input id="text" type="text" name="q" maxlength="256" />
+		<input id="search" type="image" name="sa" value="Search" src="https://www.grc.com/mh-srch.gif" alt="&nbsp;[Search]" title="" />
+	</form>
+</div>
+
+<div class="menu">
+
+<ul>
+	<li><a href="https://www.grc.com/default.htm"><img src="https://www.grc.com/mb-home.gif" width="76" height="18" alt="[Home]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="leftbutton">
+			<li><a href="https://www.grc.com/purchasing.htm">&nbsp;Purchasing</a></li>
+			<li><a href="https://www.grc.com/sales.htm">&nbsp;Sales Support</a></li>
+			<li><a href="https://www.grc.com/support.htm">&nbsp;Technical Support</a></li>
+			<li><a href="https://www.grc.com/default.htm#bottom">&nbsp;Contact Us</a></li>
+			<li><a href="https://www.grc.com/news.htm">&nbsp;Blogs, Twitter &amp; RSS</a></li>
+			<li><a href="https://www.grc.com/privacy.htm">&nbsp;Privacy Policy</a></li>
+<!--			<li><a href="/siteoptions.htm">&nbsp;Site Options</a></li>			-->
+			<li><a href="https://www.grc.com/stevegibson.htm">&nbsp;Steve's Projects Page</a></li>
+			<li><a href="https://www.grc.com/resume.htm">&nbsp;Steve's Old Resume</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/sr/spinrite.htm"><img src="https://www.grc.com/mb-products.gif" width="96" height="18" alt="[Products]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/sr/spinrite.htm">&nbsp;General information</a></li>
+			<li><a href="https://www.grc.com/sr/whatitdoes.htm">&nbsp;What SpinRite Does</a></li>
+			<li><a href="https://www.grc.com/sr/testimonials.htm">&nbsp;User testimonials</a></li>
+			<li><a href="https://www.grc.com/sr/smart.htm">&nbsp;S.M.A.R.T. Monitor</a></li>
+			<li><a href="https://www.grc.com/cs/prepurch.htm">&nbsp;Purchase SpinRite</a></li>
+			<li><a href="https://www.grc.com/sr/faq.htm">&nbsp;FAQ</a></li>
+			<li><a href="https://www.grc.com/sr/themovie.htm">&nbsp;Demo Videos</a></li>
+			<li><a href="https://www.grc.com/sr/kb/sata.htm">&nbsp;Knowledgebase: SATA</a></li>
+			<li><a href="https://www.grc.com/sr/kb/badbios.htm">&nbsp;Knowledgebase: BIOS</a></li>
+			<li><a href="https://www.grc.com/sroverview.htm">&nbsp;SpinRite v5.0 pages</a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2"><img src="https://www.grc.com/mb-services.gif" width="94" height="18" alt="[Services]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2">&nbsp;ShieldsUP!</a></li>
+			<li><a href="https://www.grc.com/revocation.htm">&nbsp;Certificate Revocation</a></li>
+			<li><a href="https://www.grc.com/haystack.htm">&nbsp;Password Haystacks</a></li>
+			<li><a href="https://www.grc.com/fingerprints.htm">&nbsp;HTTPS Fingerprints</a></li>			
+			<li><a href="https://www.grc.com/securitynow.htm">&nbsp;Security Now!</a></li>
+			<li><a href="https://www.grc.com/dns/dns.htm">&nbsp;DNS Spoofability Test</a></li>
+			<li><a href="https://www.grc.com/passwords.htm">&nbsp;Perfect Passwords</a></li>
+			<li><a href="https://www.grc.com/ppp.htm">&nbsp;PPP Passwords</a></li>
+			<li><a href="https://www.grc.com/media.htm">&nbsp;Tech TV video clips</a></li>
+			<li><a href="https://www.grc.com/discussions.htm">&nbsp;Newsgroup Discussions</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/freepopular.htm"><img src="https://www.grc.com/mb-freeware.gif" width="98" height="18" alt="[Freeware]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="sqrl.htm"><span class="drop"><span>Security</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/lt/leaktest.htm">&nbsp;Leaktest</a></li>
+					<li><a href="https://www.grc.com/securable.htm">&nbsp;Securable</a></li>
+					<li><a href="https://www.grc.com/stm/shootthemessenger.htm">&nbsp;Shoot the messenger</a></li>
+					<li><a href="https://www.grc.com/unpnp/unpnp.htm">&nbsp;Unplug n' Pray</a></li>
+					<li><a href="https://www.grc.com/freeware/dcom.htm">&nbsp;DCOMbobulator</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrap</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrapCmd</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="sqrl.htm"><span class="drop"><span>Utilities</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/never10.htm">&nbsp;Never 10&nbsp;&nbsp;(no upgrade)</a></li>
+					<li><a href="https://www.grc.com/dns/benchmark.htm">&nbsp;DNS Benchmark</a></li>
+					<li><a href="https://www.grc.com/wizmo/wizmo.htm">&nbsp;Wizmo</a></li>
+					<li><a href="https://www.grc.com/id/idserve.htm">&nbsp;ID Serve</a></li>
+					<li><a href="https://www.grc.com/freeware/clickey.htm">&nbsp;ClicKey</a></li>
+					<li><a href="https://www.grc.com/ct/cleartype.htm">&nbsp;Free &amp; Clear</a></li>
+					<li><a href="https://www.grc.com/tip/id.htm">&nbsp;IDentity (ASPI)</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="sqrl.htm"><span class="drop"><span>Obsolete</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/cih/cih.htm">&nbsp;FIX-CIH</a></li>
+					<li><a href="https://www.grc.com/tip/clickdeath.htm">&nbsp;TIP (trouble in paradise)</a></li>
+					<li><a href="https://www.grc.com/oo-update.htm">&nbsp;OptOut</a></li>
+					<li><a href="https://www.grc.com/xpdite/xpdite.htm">&nbsp;XPdite</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;NoShare</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;LetShare</a></li>
+					<li><a href="https://www.grc.com/pw/patchwork.htm">&nbsp;Patchwork</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="sqrl.htm"><img src="https://www.grc.com/mb-research.gif" width="98" height="18" alt="[Research]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="sqrl.htm"><span class="drop"><span>General</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/malware.htm">&nbsp;Malware Repository</a></li>
+					<li><a href="sqrl.htm">&nbsp;SQRL&nbsp;Login&nbsp;Technology</a></li>					
+					<li><a href="https://www.grc.com/ssl/ev.htm">&nbsp;EV SSL/TLS Certificates</a></li>
+					<li><a href="https://www.grc.com/otg/uheprng.htm">&nbsp;Ultra-high entropy PRNG</a></li>
+					<li><a href="https://www.grc.com/menudemo.htm">&nbsp;Pure CSS web menus</a></li>
+					<li><a href="https://www.grc.com/nat/nat.htm">&nbsp;NAT router security</a></li>
+					<li><a href="https://www.grc.com/pda/palmpower.htm">&nbsp;PDA max battery life</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="sqrl.htm"><span class="drop"><span>Pending</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/nf/netfilter.htm">&nbsp;GRC NetFilter</a></li>
+					<li><a href="https://www.grc.com/tp/trustpuppy.htm">&nbsp;TrustPuppy</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="sqrl.htm"><span class="drop"><span>Historical</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/worms/25-01-03.htm">&nbsp;Worm wars of 2001</a></li>
+					<li><a href="https://www.grc.com/downloaders.htm">&nbsp;File downloader spying</a></li>
+					<li><a href="https://www.grc.com/ct/ctwhat.htm">&nbsp;Sub-pixel font rendering</a></li>
+					<li><a href="https://www.grc.com/su/earthlink.htm">&nbsp;Earthlink browser tag</a></li>
+					<li><a href="https://www.grc.com/tip/codfaq1.htm">&nbsp;ZIP &amp; JAZ click of death</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="sqrl.htm"><span class="drop"><span>Dormant</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/vpn/vpn.htm">&nbsp;OpenVPN</a></li>
+					<li><a href="https://www.grc.com/r&amp;d/assimilator.htm">&nbsp;The Assimilator</a></li>
+					<li><a href="https://www.grc.com/aspi_me.htm">&nbsp;ASPI ME</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+			<li><a href="https://www.grc.com/health.htm"><span class="drop"><span>Health</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/health.htm">&nbsp;Health Homepage</a></li>
+					<li><a href="https://www.grc.com/health/lowcarb.htm">&nbsp;The Low Carb Choice</a></li>
+					<li><a href="https://www.grc.com/health/vitamin-d.htm">&nbsp;Vitamin D</a></li>
+					<li><a href="https://www.grc.com/health/sleep/healthy_sleep_formula.htm">&nbsp;Healthy Sleep Formula</a></li>
+					<li><a href="https://www.grc.com/zeo.htm">&nbsp;Zeo Sleep Manager Pro</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li id="other"><a href="https://www.grc.com/pdp-8/pdp-8.htm"><img src="https://www.grc.com/mb-other.gif" width="77" height="18" alt="[Other]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/pdp-8/pdp-8.htm">&nbsp;PDP-8 Computers</a></li>
+			<li><a href="https://www.grc.com/misc/truecrypt/truecrypt.htm">&nbsp;TrueCrypt Repository</a></li>
+			<li><a href="https://www.grc.com/Big-Number-Calculator.htm">&nbsp;Big Number Calculator</a></li>
+			<li><a href="https://groups.google.com/forum/#!forum/portable-sound-blaster">&nbsp;Portable Sound Blaster</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+</div> <!-- close "menu" div -->
+<hr style="display:none" />
+</div></div></div> <!-- close the "minwidth" wrappers -->
+<!-- ###################### END OF GRC MASTHEAD MENU  ###################### -->
+
+
+<center>
+
+<span class="repel regionhead"><span>SQRL</span>SQRL</span>
+<table style="margin-bottom:1em;" cellpadding="0" cellspacing="0"><tr valign="bottom"><td rowspan="2"><img src="SQRL_Logo_80x80.png" width="80" height="80" alt="100x100 SQRL Logo" /></td><td rowspan="2">&nbsp;&nbsp;&nbsp;</td><td style="color:#bb0000; font-size:22pt;"><b>S</b>ecure <b>Q</b>uick <b>R</b>eliable <b>L</b>ogin</td></tr><tr valign="bottom"><td style="font-size:10.5pt;">A highly secure, comprehensive, easy-to-use replacement<br />for usernames, passwords, reminders, one-time-code<br />authenticators<b>&nbsp;.&nbsp;.&nbsp;.</b> and everything else.</td></tr></table><center><table cellspacing="0" cellspacing="0" style="width:90%; height:150px; background:#0000a0; border:#000 solid 4px;"><tr valign="middle"><td align="center"><table cellspacing="0" cellspacing="0"><tr valign="middle">
+<td style="font-size:14pt; color:#fff; background:#0000a0; font-weight:bold;">With SQRL (Secure Quick Reliable Login)<br />you either tap, snap, or click a login page's<br />QR code and YOU are securely logged in.</td>
+<td style="padding:0 5px 0 10px;"><img src="https://www.grc.com/image/TransWhiteRightArrow.png" width="47" height="32" alt="" /></td>
+<td><img src="512-bit-master-key.png" width="100" height="100" alt="512-bit-master-key" /></td>
+</tr></table></td></tr></table></center>
+
+<div id="embelow" class="pagecontainer">
+
+<center><table style="margin-top:1em;"><tr><td class="red_tight_headline" style="font-size:14pt;" style="margin-top:1em;">The SQRL system (pronounced &#8220;squirrel&#8221;) revolutionizes<br />web site login and authentication. It eliminates many<br />problems inherent in traditional login techniques.</td></tr></table></center>
+
+<div style="margin:1em 0; font-family:arial; font-size:12pt;"><b>The user experience:</b>
+<div style="text-align:center; background:#f8f8ff; border:#7799ff solid 3px;">
+<img style="margin:1em 0;" src="sqrl-login-sample.png" width="400" height="199" alt="SAMPLE SQRL Login Form" />
+<div class="bold_red_arial" style="font-size:12pt; text-align:center;">Wishing to login to an online service where an &#8220;SQRL&#8221; code appears nearby:</div>
+<center><table><tr><td><ul class="tightlist" style="font-size:12pt; font-family:Arial, Helvetica, sans-serif">
+<li>The user can tap or click directly on the SQRL code to login,<br />or launch their smartphone's SQRL app, and scan the QR code.</li>
+<li>For verification, SQRL displays the domain name contained in the SQRL code.</li>
+<li>After verifying the domain, the user permits the SQRL app to authenticate their identity.</li>
+<li>Leaving the login information blank, the user clicks the &#8220;Log in&#8221; button... and is logged in.<br /><span style="font-size:smaller; color:#000;"><i>(A bit of page automation could even eliminate the need to click the &#8220;Log in&#8221; button.)</i></span></li></ul></td></tr></table></center>
+</div></div>
+
+<p class="greenhead">Even though it is THAT simple, it is FAR<br />more secure than any other login solution.<br /><span style="color:#000; font-size:small;">(We'll define exactly what &#8220;far more secure&#8221; means, below.)</span></p>
+
+<div class="greybox">
+<span class="repel" style="font-size:8pt; color:#000"><span class="bold_red_arial" style="font-size:13.5pt;">What happened behind the scenes?</span>(This is intended to quickly inform crypto-aware<br />readers. Complete details are provided below.)</span>
+<ul class="tightlist">
+<li>The QR code presented near the login prompt contains the URL of the authentication service for the site. The URL includes a securely generated long random number so that every presentation of the login page displays a different QR code. (In crypto circles this long random number is known as a &#8220;nonce.&#8221;)</li>
+<li>The smartphone's SQRL authentication app cryptographically hashes the domain name of the site keyed by the user's master key to produce <em>a site-specific public key pair</em>.</li>
+<li>The app cryptographically signs the entire URL contained in the QR code using the site-specific private key. Since the URL includes a secure long random number (the nonce), the signature is unique for that site and QR code.</li>
+<li>The app issues a secure HTTPS POST query to the QR code's URL, which is the authentication service for the site. The POST provides the site-specific public key and the matching cryptographic signature of the QR code's URL.</li>
+<li>The authenticating web site receives and acknowledges the POST query by returning a standard HTTP &#8220;200 OK&#8221; with no other content. The SQRL app acknowledges the successful submission of the user-signed QR code.</li>
+<li>The authenticating site has the URL containing the nonce which came back from the login page via the user's smartphone. It also has a cryptographic signature of that URL, and the user's site-specific public key. It uses the public key to verify that the signature is valid for the URL. This confirms that the user who produced the signature used the private key corresponding to the public key. After verifying the signature, the authenticating site recognizes the now-authenticated user by their site-specific public key.</li></ul>
+<div style="text-align:center; margin:1.5em 0 1em;"><img src="sign-algo.png" width="580" height="194" alt="SQRL Public Key Generation and Authentication" /></div>
+
+<div style="border:#ccc solid 1px; background:#fff; padding:1em;">Summarizing this for your next cocktail party: &#8220;The website's login presents a QR code containing the URL of its authentication service, plus a nonce. The user's smartphone signs the login URL using a private key derived from its master secret and the URL's domain name. The Smartphone sends the matching public key to identify the user, and the signature to authenticate it.&#8221;</div>
+
+</div>
+
+<p class="greenhead">This simple and straightforward SQRL protocol<br />yields a surprising array of features and benefits:</p>
+
+<div class="bold_red_arial" style="font-size:larger;">Anonymous Identification &amp; Authentication:</div>
+
+<div class="callout"><span class="callsubj">SQRL ID:</span>&nbsp;&nbsp;Visitors to a website are uniquely identified by an absolutely anonymous SQRL ID. Their &#8220;SQRL ID&#8221; is simply their public key, described above, a 256-bit number. The same visitor always presents the same ID every time they visit the same site. But no two visitors will ever have the same ID. Thus a single website can uniquely and anonymously identify every one of their visitors.</div>
+
+<div class="callout"><span class="callsubj">SQRL IDs are both user AND site specific:</span>&nbsp;&nbsp;Although the same user always presents the same ID to the same site, they present an entirely different ID to every other site they visit. There is NO WAY TO ASSOCIATE the SQRL ID presented to one site with those presented to any other sites. In other words, there is absolutely no cross-site coupling of identity. Users are free to use their SQRL identity anywhere and everywhere because every site receives its own unique SQRL ID.</div>
+
+<div class="callout"><span class="callsubj">No annoying account creation:</span> Suppose you wish to simply comment on a blog posting. Rather than going through the annoying process of &#8220;creating an account&#8221; to uniquely identify yourself to a new website (which such websites know causes them to lose valuable feedback traffic), you can login using your SQRL identity. If the site hasn't encountered your SQRL ID before, it might prompt you for a &#8220;handle name&#8221; to use for your postings. But either way, <u>you immediately have an absolutely secure and unique identity</u> on that system where no one can possibly impersonate you, and any time you ever return, you will be immediately and uniquely known. No account, no usernames or passwords. Nothing to remember or to forget. Your SQRL identity eliminates all of that.</div>
+
+<div class="greynote"><b>An important note about anonymity:</b> To be clear, virtually nothing else about the use of the Internet is securely anonymous. A web browser's collection and regurgitation of cookies and other telltale debris, your connection IP address, your ISP, etc. all provide potentially identifying and de-anonymizing data. This SQRL system does not, and is not intended to, circumvent, defeat, or resolve any of those problems. This system simply generates a highly secure persistent &#8220;opaque identification token&#8221; which is dynamically authenticated to prevent impersonation... and it does so instantly, with startling ease-of-use.</div>
+
+<span class="bold_red_arial" style="font-size:larger;">Inherent Protection From Hackers:</span>
+
+<div class="callout"><span class="callsubj">Identification vs Authentication:</span>&nbsp;&nbsp;SQRL-enabled websites have only your unique SQRL ID to disclose, and it is useful only to that single site since every users SQRL ID is automatically unique for every site they visit. There need not be any username or password for sites to have compromised, lost or stolen. Your SQRL ID does not <u>authenticate</u> your identity, it only identifies you to that single website. <i><u>Authentication</u></i> requires the SQRL smartphone app to cryptographically sign a long random number and return it with your SQRL ID (your public key). Thus, even if a hacker were to obtain your stored SQRL ID, it is useless for impersonating you&#8212;even to that one site&#8212;because the private key required to create the signature never leaves your smartphone.</div>
+
+<div class="callout"><span class="callsubj">The opportunity for strong anti-phishing countermeasures:</span>&nbsp;&nbsp;This is significant enough that it has its own page: &#8220;<a href="phishing.htm"><em>How SQRL Can Thwart Phishing Attacks</em></a>&#8221; (page 5 in the link block at the bottom of this page.) SQRL can be used for &#8220;same-device&#8221; login, where a desktop, laptop, tablet, or smartphone user wishes to login securely on the same device they are using. (This is different than the &#8220;cross-device&#8221; login we have been examining where an optical QR code is scanned. &#8220;Same-device&#8221; login is also discussed below.) In same-device login, the IP address of the SQRL login authentication will be identical to the IP address that received the login page's QR code image. This means that a sophisticated website spoofing/phishing attack, which SQRL already makes much more difficult, will be detectable and easily blocked.</div>
+
+<div class="callout"><span class="callsubj">&#8220;Identity Lock&#8221; prevents identity change &amp; allows recovery:</span>&nbsp;&nbsp;This is also significant enough to deserve its own detailed description page: &#8220;<a href="idlock.htm"><em>The identity lock protocol</em></a>&#8221; (page 4 in the link block at the bottom of this page.) Once a user's identity has been established with a web server, the SQRL client is <em>unable</em> to change that identity. This means that if the worst happened, and a very weak and easily guessed password was used, or a user's phone or desktop was hacked to obtain their identity master key and password, <em>no malicious third party can change the user's online identity</em> to lock them out of their own online accounts. And, moreover, by then loading an a normally offline &#8220;Identity Unlock Key&#8221;, the true owner of their identity can retire and replace their lost or stolen online identity to essentially <em>take it back</em> from any attacker, rendering their previous identity useless. Please see page 4 for all the details.</div>
+
+<div class="callout"><span class="callsubj">No keyboard interaction:</span>&nbsp;&nbsp;Imagine that you want to login to a computer at an unsafe location such as a library or a hotel. With SQRL, your login occurs without entering any personal credential information into the computer. You provide no username or password that might be captured by a keystroke logger or resident malware. The website issues an &#8220;SQRL authentication challenge&#8221; in the form of a unique SQRL graphic code. If you have an SQRL smartphone app, it takes up the challenge and sends the website a unique challenge response that can only have come from you. The website then logs you in when you click &#8220;Log in&#8221; under the still-empty login form. From the standpoint of that computer&#8212;and anything it might contain that's attempting to spy on you&#8212;you are magically logged in without your credentials ever appearing or passing through. Your smartphone's SQRL application saw the site's SQRL code, instantly identified you to the site, and provided cryptographic proof that the person who just clicked the &#8220;Log in&#8221; button<b>&nbsp;.&nbsp;.&nbsp;.&nbsp;</b>is you.</div>
+
+<div class="callout"><span class="callsubj">No &#8220;shared secrets&#8221; with websites:</span>&nbsp;&nbsp;Six-digit time-based authenticators are based upon a cryptographic secret known only (we hope) to your smartphone and the authenticating website. This allows the website and your phone to agree upon which six-digits will be shown at any time. While this has the benefit of always changing, it repeats the username and password problem of needing to always be kept secret<b>&nbsp;.&nbsp;.&nbsp;.&nbsp;</b>which websites continuously demonstrate is beyond them. (And remember, the employees of those websites do have access to your credentials.) Also like passwords, because they are not truly secure, you must employ a separate and unique authentication sequence for every website you use. If this were to become popular and widespread, you would soon be scrolling through hundreds of six-digit numbers to find the right one.<div class="greensub"><i>SQRL gives websites no secrets to keep.</i></div></div>
+
+<div class="callout"><span class="callsubj">Out-of-band authentication:</span>&nbsp;&nbsp;In the context of an untrusted computer, we mentioned above how website visitors were almost magically logged in without touching the computer's keyboard. This is one aspect of an important security principle known as &#8220;out of band.&#8221; The principle is that it is generally more secure not to send all aspects of a secure communication through a single channel because the security of that channel may be compromised. Entering your username, password, and one-time password all through the same keyboard is worrisome &#8220;all in band&#8221; authentication. Difficult though it might be to compromise the security of any single channel, it is vastly more difficult to simultaneously compromise two very different forms of communication. Since SQRL uses a smartphone's connection to the internet, perhaps even a cellular carrier, it avoids reusing most or all of the local computer's channel. Authentication often occurs completely &#8220;out of band&#8221;, and thus invisible to any intruder monitoring the computer's communications.</div>
+
+<span class="bold_red_arial" style="font-size:larger;">Protection From Hostile Authorities:</span>
+
+<div class="callout"><span class="callsubj">No third-party involvement:</span>&nbsp;&nbsp;In this era of pervasive government surveillance and US NSA coercion, who is going to trust any third-party with their identity? Other identity systems and solutions attempt to &#8220;federate&#8221; trust by creating a role for themselves as a third party with whom you establish a separate trust relationship. Then the authenticating website asks that third party to verify your identity on your behalf. It would be one thing if there were no alternative. But this page, and the pages that follow, demonstrate that secure and practical anonymous identification can use an entirely first-party protocol while delivering extreme ease of use.</div>
+
+<div class="callout"><span class="callsubj">Easily scram and recover:</span>&nbsp;&nbsp;SQRL's inherently stateless operation creates additional security benefits. Imagine that you and your smartphone are be crossing a country's border with potentially nosey or hostile authorities. If you are not comfortable relying upon SQRL's very strong and brute-force-proof (see following pages) password protections, you can simply delete your user account from the SQRL app, or even delete the SQRL app from the phone completely. There will be nothing for any authorities to find. Then, since SQRL's entire state (containing your identity master key, ID lock, etc.) is backed up on a single low-resolution small QR code patch, you can later reinstall the app, retrieve the QR code from your wallet, shoe, the back of your watch, the tattoo on the bottom of your foot<b>&nbsp;.&nbsp;.&nbsp;.</b> or wherever you had creatively hidden it. You scan your master key, apply your password, wait a minute for the deliberately slow import decryption process to complete (which massively retards guessing)<b>&nbsp;.&nbsp;.&nbsp;.</b> and your ability to identity and authenticate yourself to every SQRL-supporting site in the Internet is fully restored.</div>
+
+<p class="greenhead">Secure and practical anonymous identity<br />authentication can use a first-party protocol<br />while delivering extreme ease of use.</p>
+
+<div class="greybox">
+<div class="bold_red_arial" style="font-size:13.5pt;">The LACK of third-party involvement</div>
+<div class="blackpara">The use of a third-party &#8220;middleman&#8221; transfers much of the responsibility for the management of your online identity to an external facility. In an era of secret national security letters compelling the disclosure of whatever the government desires, that's a serious liability (as mentioned above), but it can also be a significant benefit: If your smartphone escapes from your control, you need only tell the third-party to cancel the phone's authentication authority and you're immediately protected from malicious use of your smartphone's identity assertion.</div>
+
+<div class="blackpara">This SQRL system concentrates ALL authentication authority into the smartphone. The benefit is that <b>no one else</b> has the keys to your online identity.&nbsp; No one.&nbsp; But the liability is that <b>YOU</b> are then absolutely responsible for maintaining the security of your online identity.</div>
+
+<p class="centerarial">Ultimately, someone has to be responsible for your identity.<br />Should it be you, or someone else?</p>
+
+<div class="blackpara"><b>This is a serious issue that needed to be addressed.</b> Our solution is to provide the user with a conceptually simple set of tools to dramatically ease the burden of assuming and managing this responsibility. As subsequent pages detail, the system provides extensive cloning, backup, local password protection and reset capability.</b></div></div>
+
+<p><span class="bold_red_arial" style="font-size:larger;">Hold on a second<b>&nbsp;.&nbsp;.&nbsp;.</b>&nbsp;&nbsp;We send the website a signed bunch of gibberish?&nbsp;&nbsp;That's it?</span><span class="font7px"><br /><br /></span>Yes.&nbsp;&nbsp;And that's exactly the point.&nbsp;&nbsp;SQRL provides absolutely anonymous identity authentication (IA). Users are identified <b>only</b> by a random &#8220;opaque token&#8221; and each unique combination of user and website creates a unique identity token. Thus, every user presents a unique identity to every website they visit. It is up to the user and the website to then (optionally) bind the user's unique SQRL identity to a real-world account on the website.</p>
+
+<p>For example, Amazon's account management might have an option to associate a logged in user with their Amazon SQRL identity. So Amazon would present a unique SQRL code on the account management page. The user simply snaps it with their smartphone's SQRL app and now Amazon can add their SQRL ID to their account. From now on, the user can login to Amazon anywhere with vastly improved security just that easily.</p>
+
+<p>And it would probably work the other way around too: Amazon's login page would present traditional login fields and a SQRL code on the side. An existing Amazon user who is establishing their SQRL identity snaps the SQRL code with their new smartphone app and Amazon replies that it does not recognize the user. If they wish to create a new account, they may do so here, or if they are an existing user, please use traditional login one last time to associate their new SQRL identity with their existing Amazon account.</p>
+
+<span class="bold_red_arial" style="font-size:larger;">Defending against the dark forces</span>
+
+<div class="callout"><span class="callsubj">Why we prominently display the domain name BEFORE authenticating:</span>&nbsp;&nbsp;The smartphone has no way of knowing the website the user is visiting. It only receives the domain contained in the QR code displayed by that page. In one of the possible "Evil Website" attacks (discussed on the <a href="attacks.htm">attacks</a> page), a malicious website pretends to offer an SQRL login for itself (www.evilsite.com), but instead it obtains and displays a login QR code from some other domain (www.amazon.com) where an SQRL user may be known. The SQRL app always identifies and authenticates its user to the domain contained within the (human unreadable) QR code. So an unwitting user, who didn't know the domain they were about to login and authenticate to, could be logging themselves into a session initiated and controlled by the Evil Website, thus allowing the Evil Website to impersonate them.<span class="font7px"><br /><br /></span>Note that even in this instance, <em>none</em> of the user's login credentials ever become known to the Evil Website. The Evil Website only gets a spontaneously logged-in session (though that's clearly not a good thing!)<span class="font7px"><br /><br /></span><em>This risk can be easily mitigated</em>, however, simply by having the user's smartphone first <em>prominently display</em> the domain name it will authenticate to <em><i>only if</i></em> the user gives it permission to proceed. The user knows they are visiting &#8220;www.evilsite.com.&#8221; So if their phone asks for permission to login to &#8220;www.amazon.com&#8221; they just say no.</div>
+
+<div class="callout"><span class="callsubj">Trusting the app:</span>&nbsp;&nbsp;Though it should go without saying, it's better to say it: Until SQRL support is moved into the underlying smartphone OS, and is then curated perhaps more carefully, users will be responsible for choosing and installing an SQRL client into their smartphones. As the SQRL system gains in popularity, it is foreseeable that malicious developers might create malicious applications to steal their users' credentials. This is not a problem that's in any way unique to SQRL. Any sort of identity or password manager needs to be carefully vetted before it is entrusted with important information. The standard advice here is to stick with the herd and go with the solution that's been most thoroughly examined, checked out, and proven.</div>
+
+<a name="xkcd"></a>
+<p><span class="bold_red_arial" style="font-size:larger;">On the lighter side:</span><br />
+With some prescience, the always wonderful XKCD foresaw a problem that may have already occurred to readers of this page:</p>
+
+<p><center><img src="qr_code.png" width="268" height="448" alt="xkcd_qr_code" /><br /><span style="font-size:smaller;">Courtesy of XKCD at <a href="http://xkcd.com/">http://xkcd.com/</a></span></center></p>
+
+<p><span class="bold_red_arial" style="font-size:larger;">Three Ways to Go<b>&nbsp;.&nbsp;.&nbsp;.</b> smartphone optional:</span><br />(And we solve the XKCD problem above!) Although the original inspiration for the development of this system was a smartphone scanning a QR code on a website's login page, a small addition to that model enables two more significant modes of operation: Simply make the QR code image <em>also a clickable link</em> to the same URL that's encoded into the QR code. This yields three ways to login:</p>
+
+<img align="left" style="margin-right:25px;" src="512-bit-master-key.png" width="100" height="100" alt="512-bit-master-key" />
+
+<ul style="list-style-image:url(https://www.grc.com/image/topbullet.gif)">
+
+<li><b>Scan the code with a smartphone:</b> Using the model described above, a user's smartphone scans the QR code appearing on a website's login page and the user is logged into that site.</li>
+
+<li><b>TAP THE CODE <i><u>on</u></i> a smartphone:</b> To login to a website ON the smartphone, when the visual SQRL code is also a URL-style link (using sqrl:// as the scheme) the SQRL app installed in the smartphone will receive that link and securely log the user into the site on the phone.</li>
+
+<li><b>Click the code on a desktop or laptop screen:</b> To use the SQRL system on any desktop or laptop system, a desktop SQRL application would be installed and would register itself to receive sqrl:// links. (This is similar to the way an email program registers to receive mailto: links.) This allows <em>the same solution</em> to be used by users on their desktop that they are using on their smartphones. When any website offers an SQRL code the user just clicks on the code with their mouse cursor and the locally installed SQRL app will pop-up, prompt for their SQRL password, confirm the domain, and then log them in.</li>
+
+</ul>
+
+<span class="bold_red_arial" style="font-size:larger;">Practical Considerations:</span><ul>
+
+<li><b>Open &amp; free, as it should be:</b> The component techniques and technologies employed by this solution are all well known, well tested, well understood, unencumbered by patents, and exist in the public domain. The entire system can be readily assembled from 100% open source algorithms, packages and libraries.</li>
+
+<li><b>Did I invent anything?</b> I don't care. Even if some aspects of this system are novel, and might be subject to intellectual property protection, this is too important and much bigger than me. It should be made free for the world to use without encumbrance. With this publication of every detail, I hereby release and disclaim any and all proprietary rights to any new ideas developed and presented herein. This work is thereby added to the public domain.</li>
+
+<li><b>The chicken &amp; egg problem:</b> There was a time before the Internet, when people asked<b>:</b> If there are no high-quality websites no one will use the Internet; and if no one is using the Internet no one will bother creating high-quality websites. Somehow it happened anyway. We hope and expect that SQRL login will be like that. Once we have established the required interoperability standards, people WILL create free smartphone SQRL clients&#8212;probably many. And as websites begin to offer SQRL login as a side-by-side alternative to the traditional username and password, SQRL popularity will grow. Why would anyone NOT use it when it's free, perfect, and just works? Users will want it because it immediately eliminates the most annoying aspect of the Internet. Website visitors will demand it and websites will soon see that they are losing visitors by not offering the instantaneous SQRL option. Now that we have such a terrific egg, it's difficult to see what's going to keep it from hatching, surviving, and growing.</li>
+
+<li><b>It only works with a smartphone?</b> Not any more. See the &#8220;Three Ways to Go&#8221; section above. It can be used to login to a smartphone's displayed website and with only a desktop or laptop.</li>
+
+<li><b>QR Codes?</b> Yes. Or not. A QR code is an elegant, robust, convenient and instantly recognizable icon that now can represent &#8220;instant log in authentication.&#8221; But the QR code is simply conveying a standard format URL. And we've already seen (above) that the SQRL code can be tapped or clicked-on to invoke the QR code as a link. So anything that can convey an Internet-format URL can be used. QR codes simply have many nice properties, both visually and technically.</li>
+
+<li><b>Minimal complexity:</b> Committee-designed solutions too often suffer from the &#8220;too many cooks&#8221; syndrome. This SQRL solution has been designed to make just one thing, which should be simple, very simple indeed. It's the one thing that most people do most of the time and wish was fast, simple and secure. It is.</li>
+
+<li><b>Computational burden:</b> Despite the fact that this is a public key authentication system, you will see on the following pages that a set of algorithms and parameters have been carefully chosen to minimize client and server-side authentication overhead. In particular, the all-important server-side signature verification is very fast and lightweight.</li>
+
+<li><b>NSA &amp; NIST-free cryptography:</b> The recommended implementation of this system leverages several unique characteristics of well-known cryptographer <a href="http://en.wikipedia.org/wiki/Daniel_J._Bernstein">Dr. Daniel J. Bernstein's (DJB)</a> carefully designed twisted Edward's curve digital signature algorithm (EdDSA). In his extensive and complete papers (linked herein) Bernstein explains the detailed derivation and properties of his &#8220;25519&#8221; elliptic curve. Importantly, there are no mysterious constants or &#8220;magic numbers&#8221; of unknown provenance. Dan has a long and well-known history of fighting for cryptographic freedom. In 1995, while a student at the University of California, Berkeley, Dan <a href="http://en.wikipedia.org/wiki/Bernstein_v._United_States">brought a lawsuit against the United States</a> (represented by the EFF) challenging the restrictions on the export of cryptography<b>&nbsp;.&nbsp;.&nbsp;.</b> because he wanted to publish a paper and associated source code of this &#8220;Snuffle&#8221; encryption system. The ruling in the case declared software as protected speech under the First Amendment, and national restrictions on encryption software were overturned. (He won.) Please see the <a href="crypto.htm">Detailed Crypto Architecture</a> page for full detail and discussion.</li>
+</ul></p>
+
+<center><table><tr><td class="nice_blue_box">A SQRL follower named Ben Cooper created a very nice<br />non-technical <a href="http://www.sqrl.pl/"><b>Illustrated Guide to SQRL</b></a>. Check it out!</td></tr></table></center>
+
+<p><span class="bold_red_arial" style="font-size:larger;">So what's left?</span><span class="font7px"><br /><br /></span><b>We're JUST getting started!</b><span class="font7px"><br /><br /></span>What we've seen so far are only the broad outlines of the solution, enough to provide an overview of the system's operation to interested parties, to perhaps convince skeptics that such a system CAN operate, and to create a foundation and interest in the further detailed pages that follow.</p>
+
+<p>Among the problems we have solved to create a practical solution, are:
+<ul class="tightlist">
+<li>How are identities backed up and/or cloned to other devices?</li>
+<li>What about logging into a website displayed on the smartphone's own browser?</li>
+<li>What if the smartphone that contains my identity is lost or stolen?</li>
+<li>What about password protecting logins on the phone?</li>
+<li>What if the phone is hacked?</li>
+<li>What about different people (and identities) sharing one phone?</li>
+<li>What about having multiple identities for the same website?</li>
+</ul></p>
+
+<p>There are workable solutions to every one of those problems, and more. The full implementation of the system protects the user's identities even if their smartphone is stolen and every secret it contains, becomes known.</p>
+
+<p style="text-align:center;"><b>The following pages continue to describe this SQRL system:</b></p>
+</div>
+<br />
+<center><font style="font-size:smaller;">Secure QR Login (SQRL) Documentation:</font><br />
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div class="linkblock">
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="top">
+<td>
+<div><span>&nbsp;&nbsp;&nbsp;1&nbsp;<span><a href="sqrl.htm">Introduction &amp; overview</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;2&nbsp;<span><a href="userview.htm">The user's view of the application</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;3&nbsp;<span><a href="crypto.htm">Detailed crypto architecture</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;4&nbsp;<span><a href="idlock.htm">The identity lock protocol</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;5&nbsp;<span><a href="key-flow.htm">Client-Side key management</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;6&nbsp;<span><a href="operation.htm">User-interface & operation</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;7&nbsp;<span><a href="phishing.htm">Anti-phishing countermeasures</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;8&nbsp;<span><a href="attacks.htm">Attacks, weaknesses, vulnerabilities</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;9&nbsp;<span><a href="protocol.htm">Link &amp; query protocol syntax</a>&nbsp;</span></span></div>
+<div><span>&nbsp;10&nbsp;<span><a href="semantics.htm">Link &amp; query protocol semantics</a>&nbsp;</span></span></div>
+</td>
+<td>
+<div><span>&nbsp;11&nbsp;<span><a href="storage.htm">SQRL's Secure Storage System</a>&nbsp;</span></span></div>
+<div><span>&nbsp;12&nbsp;<span><a href="scrypt.htm">Our use of the SCrypt PBKDF</a>&nbsp;</span></span></div>
+<div><span>&nbsp;13&nbsp;<span><a href="client.htm">Client implementation details</a>&nbsp;</span></span></div>
+<div><span>&nbsp;14&nbsp;<span><a href="server.htm">Web server behavior</a>&nbsp;</span></span></div>
+<div><span>&nbsp;15&nbsp;<span><a href="resources.htm">Implementation resources</a>&nbsp;</span></span></div>
+<div><span>&nbsp;16&nbsp;<span><a href="implementations.htm">Projects and finished applications</a>&nbsp;</span></span></div>
+<div><span>&nbsp;17&nbsp;<span><a href="commentary.htm">SQRL commentary from the industry</a>&nbsp;</span></span></div>
+<div><span>&nbsp;18&nbsp;<span><a href="other.htm">Other related QR code login work</a>&nbsp;</span></span></div>
+<div><span>&nbsp;19&nbsp;<span><a href="faq.htm">Frequently Asked SQRL Questions</a>&nbsp;</span></span></div>
+<div><span>&nbsp;20&nbsp;<span><a href="feedback.htm">Feedback about SQRL &amp these pages</a>&nbsp;</span></span></div>
+</td>
+</tr></table></div></td></tr></table>
+<br /><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="sqrl.htm#top" target="_top"><img src="https://www.grctech.com/_imhi4alvfm0mm_/image/grc-icon.gif" width="51" height="51" border="0" alt="Jump to top of page" title="Jump to top of page"/></a></td><td><div style="margin:0 20px;"><font size="-2" color="#777777">Gibson Research Corporation is owned and operated by Steve Gibson.&nbsp;&nbsp;The contents<br />of this page are Copyright (c) 2016 Gibson Research Corporation. SpinRite, ShieldsUP,<br />NanoProbe, and any other indicated trademarks are registered trademarks of Gibson<br />Research Corporation, Laguna Hills, CA, USA. GRC's web and customer <a href="https://www.grc.com/privacy.htm" target="_top">privacy policy</a>.</font></div></td><td><div style="margin:7px 0;"><a href="sqrl.htm#top" target="_top"><img src="https://www.grctech.com/_imhi4alvfm0mm_/image/jumptotop.png" width="52" height="38" border="0" alt="Jump to top of page"  title="Jump to top of page"/></a></div></td></tr></table><br />
+<!-- ChangeDetection.com detection="off" -->
+<table width="90%" border="0" cellspacing="0" cellpadding="0"><tr><td><font color="#666666" size="-2">Last Edit: Aug 02, 2015 at 14:17 (268.02 days ago)</font></td><td align="right"><font color="#666666" size="-2">Viewed 242 times per day</font></td></tr></table>
+</center><a name="bottom"></a></body></html>

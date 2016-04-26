@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><title>GRC's&nbsp;|&nbsp;SQRL Secure Quick Reliable Login STORAGE&nbsp;&nbsp;</title>
+<meta name="keywords" content="SQRL Secure Quick Reliable Login Storage, GRC, Gibson Research Corporation, Steve Gibson" />
+<meta name="description" content="SQRL Secure Quick Reliable Login Storage" />
+<meta name="sitemenu" content=" " />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "offices_@_grc.com" for "https://www.grc.com" on "1998.03.30T21:20-0800" r (n 0 s 0 v 0 l 0))' />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "https://www.grc.com" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.grc.com" r (n 0 s 0 v 0 l 0))' />
+<link rel="icon" href="https://www.grctech.com/_fmdpz5yv0yn1e_/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.grctech.com/_fmdpz5yv0yn1e_/favicon.ico" type="image/x-icon" />
+<link rel="meta" href="https://www.grc.com/labels.rdf" type="application/rdf+xml" title="ICRA labels" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/grc.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/mainmenu.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grctech.com/_fmdpz5yv0yn1e_/thirdparty.css" />
+
+<style type="text/css">
+ .greenhead { text-align:center; color:#008800; font-size:16pt; font-family:arial,helvetica; font-weight:bold; }
+ .callout	{ background:#f0f0ff; padding:1em; margin:1em 0 1em 1em; border-left:#6666ff solid 2px; }
+ .callsubj	{ font-family:arial; font-size:11pt; font-weight:bold; }
+ .greynote	{ color:#666; font-size:smaller; margin:-0.5em 0 2em 1.5em }
+ .greensub	{ color:#008800; text-align:center; margin-top:0.5em; font-family:arial,helvetica; font-weight:bold; }
+ .greybox   { padding:1em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 2px; }
+ .greybox2  { padding:1.5em 2em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 4px; }
+ .blackpara { color:#000; margin:0.25em 0 0; }
+ .centerarial { text-align:center; font-family:arial; font-size:larger; }
+ .lsa			{ font-size:larger; margin-top:1em }
+ .sectiondiv{ border-top:#00A 3px solid; font-size:20pt; margin-top:1em; padding-top:0.25em }
+ .redparam { font-family:'Courier New', Courier, monospace; font-weight:bold; color:#900; font-size:large; }
+ .parample { color:#000; font-family: 'Courier New', Courier, monospace; font-size:20pt; }
+ .urltxt   { color:#0000CC; font-family: 'Courier New', Courier, monospace; font-weight:bold; font-size:17px; }
+ .greyfade { font-style:italic; color:#aaa; }
+ .block    { margin:10px 0 10px 0.25em; padding-left:0.5em; border-left:#00f 2px solid; }
+ .comment  { font-weight: normal; color:#888; font-size:smaller;}
+ .repel span a { font-weight: normal; color:#888; font-size:smaller; }	/* the >> in the drop-down menus which link to sub-menus */
+
+</style>
+
+<style type="text/css">
+ .blocks { margin-top:2px; }
+ .blocks td { border-right:#333 1px solid; border-bottom:#333 1px solid; padding:0.25em 1em; }
+ .top  { border-top:#333 1px solid; background:#F0F0FF; text-align:center; }
+ .left { border-left:#333 1px solid; border-right:none; text-align:center; }
+ .odd  { background:#F8F8F8; }
+ .r    { color:#a00; }
+ .g    { color:#060; }
+ .p    { color:#60a; }
+ .t    { background:#e8e8e8; }
+ .blu { font-weight:bold; font-family:Arial, Helvetica, sans-serif; font-style:italic; color:#00d; }
+ .num { font-weight:bold; font-family:"Courier New", Courier, monospace; color:#00d; text-align:right; }
+ .bin { margin-top:1em; }
+ .bin td { padding:0.75em 0; border-top:1px solid #aaa; }
+ .bar { font-family:Arial, Helvetica, sans-serif; text-align:center; margin:1.5em 0 1.25em -2em; padding:0.1em; background:#e8e8e8;	} 
+</style>
+</head><body><a name="top"></a>
+
+<!-- ########################## GRC Masthead Menu ########################## -->
+
+<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
+<div id="masthead">
+	<a href="https://www.grc.com/default.htm"><img id="mastheadlogo" src="https://www.grc.com/mh-logo.gif" width="286" height="24" alt="Gibson Research Corporation" title="" /></a>
+	<img id="focus" src="https://www.grc.com/mh-focus.gif" width="121" height="13" alt="" title="What we're about" />
+	<a href="https://www.grc.com/news.htm"><img id="blogicon" src="https://www.grc.com/image/menublogicon.png" width="22" height="22" alt="blog icon" title="To our news and announcements page" /></a>
+	<a href="https://www.grc.com/news.htm"><img id="twittericon" src="https://www.grc.com/image/menutwittericon.png" width="22" height="22" title="To our news and announcements page" alt="Twitter Icon"/></a>
+	<a href="https://www.grc.com/news.htm"><img id="rssicon" src="https://www.grc.com/image/menurssicon.png" width="22" height="22" title="To our news and announcements page" alt="RSS Icon" /></a>
+
+	<form action="https://www.google.com/search.htm" id="searchbox_000064552291181981813:y8yi5go2xza" onsubmit="javascript: this.action='https://www.grc.com/search.htm'">
+		<input type="hidden" name="cx" value="000064552291181981813:y8yi5go2xza" />
+		<input type="hidden" name="cof" value="FORID:11" />
+		<input id="text" type="text" name="q" maxlength="256" />
+		<input id="search" type="image" name="sa" value="Search" src="https://www.grc.com/mh-srch.gif" alt="&nbsp;[Search]" title="" />
+	</form>
+</div>
+
+<div class="menu">
+
+<ul>
+	<li><a href="https://www.grc.com/default.htm"><img src="https://www.grc.com/mb-home.gif" width="76" height="18" alt="[Home]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="leftbutton">
+			<li><a href="https://www.grc.com/purchasing.htm">&nbsp;Purchasing</a></li>
+			<li><a href="https://www.grc.com/sales.htm">&nbsp;Sales Support</a></li>
+			<li><a href="https://www.grc.com/support.htm">&nbsp;Technical Support</a></li>
+			<li><a href="https://www.grc.com/default.htm#bottom">&nbsp;Contact Us</a></li>
+			<li><a href="https://www.grc.com/news.htm">&nbsp;Blogs, Twitter &amp; RSS</a></li>
+			<li><a href="https://www.grc.com/privacy.htm">&nbsp;Privacy Policy</a></li>
+<!--			<li><a href="/siteoptions.htm">&nbsp;Site Options</a></li>			-->
+			<li><a href="https://www.grc.com/stevegibson.htm">&nbsp;Steve's Projects Page</a></li>
+			<li><a href="https://www.grc.com/resume.htm">&nbsp;Steve's Old Resume</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/sr/spinrite.htm"><img src="https://www.grc.com/mb-products.gif" width="96" height="18" alt="[Products]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/sr/spinrite.htm">&nbsp;General information</a></li>
+			<li><a href="https://www.grc.com/sr/whatitdoes.htm">&nbsp;What SpinRite Does</a></li>
+			<li><a href="https://www.grc.com/sr/testimonials.htm">&nbsp;User testimonials</a></li>
+			<li><a href="https://www.grc.com/sr/smart.htm">&nbsp;S.M.A.R.T. Monitor</a></li>
+			<li><a href="https://www.grc.com/cs/prepurch.htm">&nbsp;Purchase SpinRite</a></li>
+			<li><a href="https://www.grc.com/sr/faq.htm">&nbsp;FAQ</a></li>
+			<li><a href="https://www.grc.com/sr/themovie.htm">&nbsp;Demo Videos</a></li>
+			<li><a href="https://www.grc.com/sr/kb/sata.htm">&nbsp;Knowledgebase: SATA</a></li>
+			<li><a href="https://www.grc.com/sr/kb/badbios.htm">&nbsp;Knowledgebase: BIOS</a></li>
+			<li><a href="https://www.grc.com/sroverview.htm">&nbsp;SpinRite v5.0 pages</a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2"><img src="https://www.grc.com/mb-services.gif" width="94" height="18" alt="[Services]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2">&nbsp;ShieldsUP!</a></li>
+			<li><a href="https://www.grc.com/revocation.htm">&nbsp;Certificate Revocation</a></li>
+			<li><a href="https://www.grc.com/haystack.htm">&nbsp;Password Haystacks</a></li>
+			<li><a href="https://www.grc.com/fingerprints.htm">&nbsp;HTTPS Fingerprints</a></li>			
+			<li><a href="https://www.grc.com/securitynow.htm">&nbsp;Security Now!</a></li>
+			<li><a href="https://www.grc.com/dns/dns.htm">&nbsp;DNS Spoofability Test</a></li>
+			<li><a href="https://www.grc.com/passwords.htm">&nbsp;Perfect Passwords</a></li>
+			<li><a href="https://www.grc.com/ppp.htm">&nbsp;PPP Passwords</a></li>
+			<li><a href="https://www.grc.com/media.htm">&nbsp;Tech TV video clips</a></li>
+			<li><a href="https://www.grc.com/discussions.htm">&nbsp;Newsgroup Discussions</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/freepopular.htm"><img src="https://www.grc.com/mb-freeware.gif" width="98" height="18" alt="[Freeware]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="storage.htm"><span class="drop"><span>Security</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/lt/leaktest.htm">&nbsp;Leaktest</a></li>
+					<li><a href="https://www.grc.com/securable.htm">&nbsp;Securable</a></li>
+					<li><a href="https://www.grc.com/stm/shootthemessenger.htm">&nbsp;Shoot the messenger</a></li>
+					<li><a href="https://www.grc.com/unpnp/unpnp.htm">&nbsp;Unplug n' Pray</a></li>
+					<li><a href="https://www.grc.com/freeware/dcom.htm">&nbsp;DCOMbobulator</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrap</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrapCmd</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="storage.htm"><span class="drop"><span>Utilities</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/never10.htm">&nbsp;Never 10&nbsp;&nbsp;(no upgrade)</a></li>
+					<li><a href="https://www.grc.com/dns/benchmark.htm">&nbsp;DNS Benchmark</a></li>
+					<li><a href="https://www.grc.com/wizmo/wizmo.htm">&nbsp;Wizmo</a></li>
+					<li><a href="https://www.grc.com/id/idserve.htm">&nbsp;ID Serve</a></li>
+					<li><a href="https://www.grc.com/freeware/clickey.htm">&nbsp;ClicKey</a></li>
+					<li><a href="https://www.grc.com/ct/cleartype.htm">&nbsp;Free &amp; Clear</a></li>
+					<li><a href="https://www.grc.com/tip/id.htm">&nbsp;IDentity (ASPI)</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="storage.htm"><span class="drop"><span>Obsolete</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/cih/cih.htm">&nbsp;FIX-CIH</a></li>
+					<li><a href="https://www.grc.com/tip/clickdeath.htm">&nbsp;TIP (trouble in paradise)</a></li>
+					<li><a href="https://www.grc.com/oo-update.htm">&nbsp;OptOut</a></li>
+					<li><a href="https://www.grc.com/xpdite/xpdite.htm">&nbsp;XPdite</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;NoShare</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;LetShare</a></li>
+					<li><a href="https://www.grc.com/pw/patchwork.htm">&nbsp;Patchwork</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="storage.htm"><img src="https://www.grc.com/mb-research.gif" width="98" height="18" alt="[Research]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="storage.htm"><span class="drop"><span>General</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/malware.htm">&nbsp;Malware Repository</a></li>
+					<li><a href="sqrl.htm">&nbsp;SQRL&nbsp;Login&nbsp;Technology</a></li>					
+					<li><a href="https://www.grc.com/ssl/ev.htm">&nbsp;EV SSL/TLS Certificates</a></li>
+					<li><a href="https://www.grc.com/otg/uheprng.htm">&nbsp;Ultra-high entropy PRNG</a></li>
+					<li><a href="https://www.grc.com/menudemo.htm">&nbsp;Pure CSS web menus</a></li>
+					<li><a href="https://www.grc.com/nat/nat.htm">&nbsp;NAT router security</a></li>
+					<li><a href="https://www.grc.com/pda/palmpower.htm">&nbsp;PDA max battery life</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="storage.htm"><span class="drop"><span>Pending</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/nf/netfilter.htm">&nbsp;GRC NetFilter</a></li>
+					<li><a href="https://www.grc.com/tp/trustpuppy.htm">&nbsp;TrustPuppy</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="storage.htm"><span class="drop"><span>Historical</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/worms/25-01-03.htm">&nbsp;Worm wars of 2001</a></li>
+					<li><a href="https://www.grc.com/downloaders.htm">&nbsp;File downloader spying</a></li>
+					<li><a href="https://www.grc.com/ct/ctwhat.htm">&nbsp;Sub-pixel font rendering</a></li>
+					<li><a href="https://www.grc.com/su/earthlink.htm">&nbsp;Earthlink browser tag</a></li>
+					<li><a href="https://www.grc.com/tip/codfaq1.htm">&nbsp;ZIP &amp; JAZ click of death</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="storage.htm"><span class="drop"><span>Dormant</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/vpn/vpn.htm">&nbsp;OpenVPN</a></li>
+					<li><a href="https://www.grc.com/r&amp;d/assimilator.htm">&nbsp;The Assimilator</a></li>
+					<li><a href="https://www.grc.com/aspi_me.htm">&nbsp;ASPI ME</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+			<li><a href="https://www.grc.com/health.htm"><span class="drop"><span>Health</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/health.htm">&nbsp;Health Homepage</a></li>
+					<li><a href="https://www.grc.com/health/lowcarb.htm">&nbsp;The Low Carb Choice</a></li>
+					<li><a href="https://www.grc.com/health/vitamin-d.htm">&nbsp;Vitamin D</a></li>
+					<li><a href="https://www.grc.com/health/sleep/healthy_sleep_formula.htm">&nbsp;Healthy Sleep Formula</a></li>
+					<li><a href="https://www.grc.com/zeo.htm">&nbsp;Zeo Sleep Manager Pro</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li id="other"><a href="https://www.grc.com/pdp-8/pdp-8.htm"><img src="https://www.grc.com/mb-other.gif" width="77" height="18" alt="[Other]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/pdp-8/pdp-8.htm">&nbsp;PDP-8 Computers</a></li>
+			<li><a href="https://www.grc.com/misc/truecrypt/truecrypt.htm">&nbsp;TrueCrypt Repository</a></li>
+			<li><a href="https://www.grc.com/Big-Number-Calculator.htm">&nbsp;Big Number Calculator</a></li>
+			<li><a href="https://groups.google.com/forum/#!forum/portable-sound-blaster">&nbsp;Portable Sound Blaster</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+</div> <!-- close "menu" div -->
+<hr style="display:none" />
+</div></div></div> <!-- close the "minwidth" wrappers -->
+<!-- ###################### END OF GRC MASTHEAD MENU  ###################### -->
+
+
+<center>
+
+<div class="repel regionhead"><span>SQRL</span>SQRL</div>
+<table style="margin-bottom:1em;" cellpadding="0" cellspacing="0"><tr valign="bottom"><td rowspan="2"><img src="SQRL_Logo_80x80.png" width="80" height="80" alt="100x100 SQRL Logo" /></td><td rowspan="2">&nbsp;&nbsp;&nbsp;</td><td style="color:#bb0000; font-size:22pt;"><b>S</b>ecure <b>Q</b>uick <b>R</b>eliable <b>L</b>ogin</td></tr><tr valign="bottom"><td style="font-size:10.5pt;">A highly secure, comprehensive, easy-to-use replacement<br />for usernames, passwords, reminders, one-time-code<br />authenticators<b>&nbsp;.&nbsp;.&nbsp;.</b> and everything else.</td></tr></table><img src="https://www.grc.com/image/darkbluepixel.gif" width="90%" height="4" border="0" alt="divider" /><div id="embelow" class="pagecontainer">
+
+<div class="red_tight_headline" style="font-size:20pt; margin-top:1em;">SQRL Secure Storage System (S<sup>4</sup>)</div>
+
+<div class="larger_red_arial">Secure Storage?</div>
+&#8220;Secure Storage&#8221; in this context means that data can be optionally encrypted for privacy, but whether or not encrypted, any alteration of stored data can be reliably detected. In cryptographic terms, this provides authenticated encryption with associated data (AEAD).
+
+<p>SQRL clients require both offline and online storage security:<ul>
+
+<li>SQRL's primary need for secure storage is for long-term offline storage of the user's master identity and identity unlock keys. <b>Any time</b> these extremely sensitive keys are exported from a SQRL client &mdash; even when jumping between devices as a QR code &mdash; they are encrypted under a random key derived by SQRL's deliberately memory and time consuming, attack resistant PBKDF (password based key derivation function).</li>
+
+<li>To enforce key privacy we need to use strong encryption. And to verify successful decryption, verify the user's provided passphrase and detect any tampering, we employ strong message authentication.</li>
+
+<li>To provide additional security, SQRL clients also employ online security to maintain their users' internally stored keys in encrypted form, decrypting them briefly on-the-fly only during the moment they are needed. Therefore, the plaintext form of SQRL's sensitive keys exist only transiently.</li>
+
+</ul></p>
+
+<p><div class="larger_red_arial">AES-GCM: &#8220;AES/Rijndael - Galois/Counter Mode&#8221;</div>
+SQRL v1 obtains both robust data encryption and decryption verification (wrong password, error and tamper detection) through its use of the industry standard AES-GCM &#8220;authenticated encryption&#8221; (AE). Unlike earlier authenticated encryption schemes which either applied a MAC (message authentication code) to the encrypted data, or applied encryption to data that already had a MAC authentication, the AES-GCM performs both operations at once and does not require the use of separate keys for each aspect of the operation.
+
+<p>AES-GCM has been adopted by NIST (National Institute of Standards and Technology). It is present in the IPsec (IP Security) specification and participates in the TLSv1.2 security suites, where it is supported by Firefox and Chrome and recent releases of OpenSSL.</p>
+
+<p>Because all of SQRL's other cryptography is in the public domain, <a href="files/aes-gcm.zip">GRC has produced and provides a reference implementation of AES-GCM</a> whose source code is released without any usage restrictions of any kind into the public domain. It was written in platform-neutral 'C' and should be easily compiled for use with SQRL. Included in the source distribution are NIST's six files of algorithm validation test vectors, a PERL utility to compile them into a single binary, and a test harness (gcmtest.c) which validates GRC's implementation against NIST's 47,250 individual test vectors.</p>
+
+<p><b>Note:</b> After this work was finished the reference LibSodium cryptographic library has added <a href="https://download.libsodium.org/doc/advanced/aes-256-gcm.html">AES-GCM</a> to its suite of security tools. Since SQRL uses LibSodium for several other functions, using the <a href="https://download.libsodium.org/doc/advanced/aes-256-gcm.html">AES-GCM functions from LibSodium</a> now makes the most sense.</p>
+
+<p>Consequently, the individual blocks contained within SQRL's secure storage system are encrypted and authenticated with AES-GCM using a 256-bit key derived from SQRL's EnScrypt algorithm.</p>
+
+<p>SQRL's S<sup>4</sup> system uses NULL initialization vectors (IV) for its type 2 and type 3 blocks. AES-GCM, like many block cipher modes using a keyed symmetric cipher, employs an initialization vector nonce. To provide guaranteed privacy, this nonce does not need to be secret, nor even random, but it does need to never repeat under the same key. For its type 2 and type 3 blocks, SQRL's S<sup>4</sup> storage system meets this requirement using an implied and fixed initialization vector of all zeros (NULL) because those blocks' AES-GCM encryption keys are never reused when the block is changed and re-encrypted. As detailed below, The type 1 and 2 blocks are keyed by SQRL's Scrypt-based EnScrypt function, which has its own 16-byte random salt. This results in the use of a unique encryption key every time the block is encrypted. The type 3 block is keyed by the identity master key (IMK) which is also derived from a random process and is never reused. The type 1 block <em>does</em> use a randomly obtained IV to allow re-encryption under a new IV after user-interface plaintext settings have been changed and a new matching authentication tag must be created.</p>
+
+<div class="larger_red_arial">Efficient, compact, binary-friendly, future-proof SQRL client storage</div>
+The trend, exemplified by XML and JSON data structure description languages, reduces information storage density and efficiency in favor of embedding structural descriptive flexibility. Bundling an application's data description metadata into the data can simplify dissimilar system inter-operation by allowing the data to effectively describe itself. And in today's world of terabyte storage and gigabit communications, the cost of embedding inter-operation metadata is offset by interconnection robustness.</p>
+
+<p>But an excess of metadata makes little sense for SQRL's offline static data storage where long term storage robustness and retrievability are the overriding priority. SQRL exports long-term statically encrypted secrets in future-proof printed paper form,so fewer bits means that each bit can be larger. Fewer characters means that each character can be larger. Few bits means there's more room for stronger error correction with its larger overhead, etc.</p>
+
+<p>However, notwithstanding the previous, today's storage format must also provide for future change and expansion. The following format, while simple and minimal, addresses and meets all of these needs.</p>
+
+<center style="margin-top:1em;">SQRL's Secure Storage System (S<sup>4</sup>) Encrypted Key Sample</center>
+<div class="nice_green_box urltxt">
+	<div class="repel"><span class="g">sqrldata <a>&ndash;&nbsp;lowercase signature means binary follows</a></span>8 bytes</div>
+	<div class="block">
+		<div class="block">
+			<div class="repel"><span>{length = 125} <a>&ndash;&nbsp;inclusive length of entire outer block</a></span>2 bytes</div>
+			<div class="repel"><span>{type = 1} <a>&ndash;&nbsp;user access password protected data</a></span>2 bytes</div>
+			<div class="repel"><span>{pt length = 45} <a>&ndash;&nbsp;inclusive length of entire inner block</a></span>2 bytes</div>
+			<div class="repel"><span>{aes-gcm iv} <a>&ndash;&nbsp;initialization vector for auth/encrypt</a></span>16 bytes</div>
+			<div class="repel"><span>{scrypt random salt} <a>&ndash;&nbsp;update for password change</a></span>16 bytes</div>
+			<div class="repel"><span>{scrypt log(n-factor)} <a>&ndash;&nbsp;memory consumption factor</a></span>1 byte&nbsp;</div>
+			<div class="repel"><span>{scrypt iteration count} <a>&ndash;&nbsp;time consumption factor</a></span>4 bytes</div>
+			<div class="repel"><span>{option flags} <a>&ndash;&nbsp;16 binary flags</a></span>2 bytes</div>
+			<div class="repel"><span>{hint length} <a>&ndash;&nbsp;number of chars in hint</a></span>1 byte&nbsp;</div>
+			<div class="repel"><span>{pw verify sec} <a>&ndash;&nbsp;seconds to run PW EnScrypt</a></span>1 byte&nbsp;</div>
+			<div class="repel"><span>{idle timeout min} <a>&ndash;&nbsp;idle minutes before wiping PW</a></span>2 bytes</div>
+		</div>
+		<div class="repel"><span class="r">{encrypted identity master key (IMK)}</span>32 bytes</div>
+		<div class="repel"><span class="r">{encrypted identity lock key (ILK)}</span>32 bytes</div>
+		<div class="repel t"><span>{verification tag} <a>&ndash;&nbsp;</a></span>16 bytes</div>
+	</div>
+	<div class="block">
+		<div class="repel"><span>{length = 73}</span>2 bytes</div>
+		<div class="repel"><span>{type = 2} <a>&ndash;&nbsp;rescue code data</a></span>2 bytes</div>
+		<div class="repel"><span>{scrypt random salt}</span>16 bytes</div>
+		<div class="repel"><span>{scrypt log(n-factor)}</span>1 byte&nbsp;</div>
+		<div class="repel"><span>{scrypt iteration count}</span>4 bytes</div>
+		<div class="repel"><span class="r">{encrypted identity unlock key (IUK)}</span>32 bytes</div>
+		<div class="repel t"><span>{verification tag} <a>&ndash;&nbsp;</a></span>16 bytes</div>
+	</div>
+
+	<div class="block">
+		<div class="repel"><span>{length = 54, 86, 118 or 150}</span>2 bytes</div>
+		<div class="repel"><span>{type = 3} <a>&ndash;&nbsp;previous identity unlock keys</a></span>2 bytes</div>
+		<div class="repel"><span>{edition >= 1} <a>&ndash;&nbsp;count of <b><u>all</u></b> previous keys</a></span>2 bytes</div>
+		<div class="repel"><span class="r">{encrypted previous IUK}</span>32 bytes</div>
+		<div class="repel"><span class="r">{encrypted next older IUK (if present)}</span>32 bytes</div>
+		<div class="repel"><span class="r">{encrypted next older IUK (if present)}</span>32 bytes</div>
+		<div class="repel"><span class="r">{encrypted oldest previous IUK (if present)}</span>32 bytes</div>
+		<div class="repel t"><span>{verification tag} <a>&ndash;&nbsp;</a></span>16 bytes</div>
+	</div>
+
+
+</div>
+
+<p><em>SQRL's Secure Storage System (S<sup>4</sup>) incorporates the following features:</em><ul>
+
+<li>An S<sup>4</sup> database is identified by its first eight-byte signature 'sqrldata' appearing in string-sequence with 's' being the file's first byte.</li>
+
+<li>Although S<sup>4</sup> is nominally a binary representation, it may be necessary to convey the file over a binary-hostile medium. In this case the standard eight-byte signature will be converted to all uppercase 'SQRLDATA' and the balance of the database will be encoded into 6-bit base64url format for representation, storage or transmission over a binary-intolerant channel.</li>
+
+<li>When a SQRL client encounters a database beginning with uppercase 'SQRLDATA' it must immediately lowercase the 8-byte header and pass the balance of the database through a base64url decoder to restore the database to binary. Processing may then proceed normally.</li>
+
+<li>To aid in the exchange of SQRL data during development &mdash; posting on forums, etc. &mdash; base64url-illegal line ending and whitespace characters &mdash; CR, LF, TAB and SPACE &mdash; should be silently ignored for line wrap tolerance.</li>
+
+<li>Strings are stored in their natural order, first byte first, and multibyte numerical values are stored in &#8216;little endian&#8217; order, with their least significant byte first. This is the reverse of the so-called &#8216;network byte order&#8217;, but this is not a network protocol, it is a storage format and the order is not important as long as it is clearly specified. All Intel and AMD systems are all natively (pardon the pun) little endian, and ARM-based systems are configurable, with many mobile systems choosing little endian mode for inherent Intel compatibility.</li>
+
+<li>All numeric values are simple, unsigned, binary.</li>
+
+<li>Each block begins with a 2-byte length specifier which includes the length byte's two bytes. Similarly, lengths would typically fit within a single byte, but two bytes allows for ample future growth.</li>
+
+<li>The second datum in each block, following its length bytes, is a two-byte block type. As shown above and described below, only three block types are defined by the version 1 S<sup>4</sup> specification. So, again, plenty of accommodation for growth.</li>
+
+<li>This simple, lean, and efficient structure allows SQRL to use a minimal-size credential storage file format while supporting virtually any degree of future expansion in block size, block type, and block count<b>&nbsp;.&nbsp;.&nbsp;.</b> all while maintaining backward compatibility to the original lean v1 specification.</li>
+
+</ul></p>
+
+<p><div class="larger_red_arial">Backward compatibility and forward growth</div>
+The final version of this page will specify the v1 design of GRC's S<sup>4</sup> for its reference SQRL client. All SQRL clients wishing to interchange SQRL identities must fully comply with this simple and straightforward specification. Though this specification is not complex, the following easily enforced characteristics provide significant future growth and backward compatibility:<ul>
+
+<li>This specification fully describes three block types and any unknown block type should be ignored. This allows future clients to incorporate additional features and capabilities in a backward compatible fashion. Older clients, unaware of other block types, will simply ignore them.</li>
+
+<li>The currently defined layout of existing block types must be honored. SQRL clients wishing to store additional non-standard data in SQRL identities must define and create additional block types. S<sup>4</sup> clients will ignore any data they do not explicitly expect.</li>
+
+<li>Future clients may incorporate support for new PBKDF or Authenticated Encryption modes, thus augmenting or replacing the v1 use of EnScrypt, SHA256-Scrypt, AES-256-GCM, by defining new block types and providing whatever data they require.</li>
+
+<li>The type 2 and 3 blocks use an implied NULL initialization vector (IV) nonce. This is cryptographically safe because the application of the type 2 and 3 blocks precludes the same data ever being encrypted by the same key. Since this is not true for the type 1 block, its plaintext header region does incorporate an initialization vector (IV) nonce.</li>
+
+<li>All blocks are terminated by a 16-byte verification tag. This authentication tag is generated by the AES-GCM authenticated encryption and must always be the last field of any block.</li>
+
+</ul></p>
+
+<div class="larger_red_arial">S<sup>4</sup> Database header</div>
+SQRL's eight-byte &#8216;sqrldata&#8217; file signature indicates that S<sup>4</sup> format blocks follow and the alphabetic case of the signature indicates whether the balance of the file is straight binary or 6-bit base64url encoded. The eight-byte header stands alone and does not participate in the authenticated encryption of the blocks that follow.
+<p><div class="nice_green_box urltxt">
+	<div class="repel"><span class="g">sqrldata <a>&ndash;&nbsp;lowercase signature means binary follows</a></span>8 bytes</div>
+</div></p>
+
+<div class="larger_red_arial">S<sup>4</sup> Block types</div>
+To enhance interoperability between SQRL clients by different authors on different platforms, SQRL standardizes the following three block types which are understood by GRC's reference client:<span class="font7px"><br /><br /></span>
+
+<center><table><tr><td><ul class="verytightlist">
+<li>Type 1: Password PBKDF spec., plaintext data and encrypted identity keys.</li>
+<li>Type 2: RescueCode PBKDF spec. and encrypted identity unlock key.</li>
+<li>Type 3: Encrypted previous identity unlock keys.</li>
+</ul></td><tr></table></center>
+
+SQRL keeps two classes of secrets&#8212;user access password and emergency RescueCode&#8212;so we define one data structure to contain the data required by each secret class:
+
+<ul>
+<li><p style="margin-top:2em;"><b>Type 1 - User access password authenticated &amp; encrypted data</b><br />
+The type 1 S<sup>4</sup> block supplies the EnScrypt parameters to convert a user-supplied &#8220;local access passcode&#8221; into a 256-bit symmetric key, and also contains both the plaintext and encrypted data managed by that password.
+
+<p><div class="nice_green_box urltxt">
+	<div class="block">
+		<div class="block">
+			<div class="repel"><span>{length = 125} <a>&ndash;&nbsp;inclusive length of entire outer block</a></span>2 bytes</div>
+			<div class="repel"><span>{type = 1} <a>&ndash;&nbsp;user access password protected data</a></span>2 bytes</div>
+			<div class="repel"><span>{pt length = 45} <a>&ndash;&nbsp;inclusive length of entire inner block</a></span>2 bytes</div>
+			<div class="repel"><span>{aes-gcm iv} <a>&ndash;&nbsp;initialization vector for auth/encrypt</a></span>16 bytes</div>
+			<div class="repel"><span>{scrypt random salt} <a>&ndash;&nbsp;update for password change</a></span>16 bytes</div>
+			<div class="repel"><span>{scrypt log(n-factor)} <a>&ndash;&nbsp;memory consumption factor</a></span>1 byte&nbsp;</div>
+			<div class="repel"><span>{scrypt iteration count} <a>&ndash;&nbsp;time consumption factor</a></span>4 bytes</div>
+			<div class="repel"><span>{option flags} <a>&ndash;&nbsp;16 binary flags</a></span>2 bytes</div>
+			<div class="repel"><span>{hint length} <a>&ndash;&nbsp;number of chars in hint</a></span>1 byte&nbsp;</div>
+			<div class="repel"><span>{pw verify sec} <a>&ndash;&nbsp;seconds to run PW EnScrypt</a></span>1 byte&nbsp;</div>
+			<div class="repel"><span>{idle timeout min} <a>&ndash;&nbsp;idle minutes before wiping PW</a></span>2 bytes</div>
+		</div>
+		<div class="repel"><span class="r">{encrypted identity master key (IMK)}</span>32 bytes</div>
+		<div class="repel"><span class="r">{encrypted identity lock key (ILK)}</span>32 bytes</div>
+		<div class="repel t"><span>{verification tag} <a>&ndash;&nbsp;</a></span>16 bytes</div>
+	</div>
+</div></p>
+
+<p>Notes:<ul>
+
+<li>Immediately following the type 1 block's two-byte length and two-byte type specifier is the two-byte &#8220;plaintext length&#8221; (pt length) of the unencrypted (plaintext) but authenticated data for this block. This is the length of the so-called &#8220;additional authenticated data&#8221; (aad) of the block's AES-GCM cipher. The length specification spans from the first byte of the block (the first byte of the whole block's length specification) up to, but not including, the beginning of the block's encrypted data (shown in <span class='r'><b>red</b></span> above).</li>
+
+<li>The 12-byte (96-bit) AES-GCM nonce appears next, immediately following the two-byte plaintext length. Note that &lsquo;96 bits&rsquo; is the natural length of aes-gcm IV nonces. These 96 bits are chosen randomly every time the block is re-encrypted since the encryption key will typically not be changing and it is crucial that IV nonces are never reused with the same key and differing data under AES-GCM. Since we might only be updating the plaintext user interface data with a short and fast password hint decryption, we would have no opportunity to establish a new key. So a unique nonce will be used with the same quickly-decrypted key.</li>
+
+<li>Immediately following the AES-GCM IV nonce are the EnScrypt encryption parameters, the user's user-interface preferences and other non-critical information. Although it <b>CAN</b> be read without any authentication, all S<sup>4</sup> data is authenticated and it <b>MUST</b> be marked and regarded as untrusted until it has been authenticated under the user's local access password. In other words, prior to using any of the unencrypted data obtained here for any purpose important to security, the client <b>MUST</b> obtain the user's password and authenticate this data. Similarly, in order for any change made in this data to authenticate, the user's password will be required in order for an updated verification tag to be calculated. So saving any changed settings may require the user's password or hint.</li>
+
+<li>Future versions of the SQRL S<sup>4</sup> specification may define additional plaintext to be appended to the end of the v1-specified plaintext, but individual clients may not arbitrarily store their own data there. That need may easily be fulfilled by creating, for example, a type 4 block for their own use.</li>
+
+<li>Encrypted data immediately follows the length-defined end of the inner plaintext block, extending to the end of the outer block (excluding the final 16-byte verification tag). The outer block's overall length is specified at the top of the block. As before, future extensions of this specification may append additional encrypted data to the end of this list, but individual clients are not permitted to do so.</li>
+
+<li><em>Operational Note:</em> This SQRL identity database very efficiently (in 6 bytes) bundles the GRC SQRL client user's user-interface preferences, including the time required to process a full password input. When this identity is imported into a compatible client running on a platform having a different processing speed &#8209; either a different PC or a mobile device &#8209; that SQRL client will obtain that user's preferred password processing time. Although different environments (for example, mobile) might suggest a differing security posture and password processing overhead, the client can note when a large difference exists between the processing time of the origin device &#8209; as revealed in the bundled time specification &#8209; and the current platform. The client can offer to immediately re-encrypt the user's just entered password to re-normalize all future password processing time.</li>
+
+</ul></p>
+
+<ul>
+
+<div class="bar"><b>Cross-Client Options &amp; Flags</b></div>
+
+<p>The type 1 secure storage block includes a set of operational options and settings which allow users to customize the SQRL client's operation to their preferences. These options are stored with the user's identity so that they are changed when the client's logon identity is changed, and so that they may follow the user from platform to platform and from device to device. If SQRL clients standardize upon these options, user convenience will be enhanced:</p>
+
+<li><div class="larger_red_arial"><b>hint length (characters)</b></div>This one-byte value specifies the number of characters used in password hints. The default is 4 characters. A value of zero disables hinting and causes the SQRL client to prompt its user for their full access password whenever it's required.</li>
+
+<li><div class="larger_red_arial">password verify (seconds)</div>This one-byte value specifies the length of time SQRL's EnScrypt function will run in order to deeply hash the user's password to generate the Identity Master Key's (IMK) symmetric key. SQRL clients are suggested to deefault this value to five seconds with one second as a minimum. It should not be possible for the user to circumvent at least one second of iterative hashing on any platform.</li>
+
+<li><div class="larger_red_arial">idle timeout (minutes)</div>This two-byte value specifies the length of idle system time the hinting system is allowed to retain an abbreviated password before it is erased and the full password must be re-entered. This non-zero value, coupled with the 0x80 idle enable bit, are both required to enable idle timeout.</li>
+
+<li><div class="larger_red_arial">option flags <span style='font-family:"Courier New", Courier, monospace'>(default value: 0xF1h)</span></div>This two-byte value contains a set of individual single-bit flags corresponding to options offered by SQRL's user-interface. The individual bits have the following meaning:</li>
+
+<p><table class="bin" cellspacing="0">
+
+<tr valign="top"><td class="num">0x0001</td><td>&nbsp;&nbsp;&nbsp;</td><td><span class="blu">Check for updates</span>: This requests, and gives the SQRL client permission, to briefly check-in with its publisher to see whether any updates to this software have been made available. Note that GRC's client uses a low overhead DNS query to check for newer versions.</td></tr>
+
+<tr valign="top"><td class="num">0x0002</td><td>&nbsp;&nbsp;&nbsp;</td><td><span class="blu">Always ask user to select identity</span>: Where a SQRL client is loaded with multiple identities, this prevents the client from assuming any &#8220;current user&#8221; and causes it to prompt its operator for which identity should be used for every authentication. This can be useful when multiple users share a computer to keep any user from inadvertently attempting to use another user's identity.</td></tr>
+
+<tr valign="top"><td class="num">0x0004</td><td>&nbsp;&nbsp;&nbsp;</td><td><span class="blu">Request SQRL-only login</span>: This adds the &#8220;option=sqrlonly&#8221; string to every client transaction. When this option string is present in any properly signed client transaction, this requests the server to set a flag in the user account that will cause the web server to subsequently disable all traditional non-SQRL account logon authentication such as username and password.</td></tr>
+
+<tr valign="top"><td class="num">0x0008</td><td>&nbsp;&nbsp;&nbsp;</td><td><span class="blu">Request no-recourse identity lock</span>: This adds the &#8220;option=hardlock&#8221; string to every client transaction. When this option string is present in any properly signed client transaction, this requests the server to set a flag in the user account that will cause the web server to subsequently disable all &#8220;out of band&#8221; (non-SQRL) account identity recovery options such as &#8220;what was your favorite pet's name.&#8221;</td></tr>
+
+<tr valign="top"><td class="num">0x0010</td><td>&nbsp;&nbsp;&nbsp;</td><td><span class="blu">Warn of possible MITM attack</span>: When set, this bit instructs the SQRL client to notify its user when the web server indicates that an IP address mismatch exists between the entity that requested the initial logon web page containing the SQRL link URL (and probably encoded into the SQRL link URL's &ldquo;nut&rdquo;) and the IP address from which the SQRL client's query was received for this reply.</td></tr>
+
+<tr valign="top"><td class="num">0x0020</td><td>&nbsp;&nbsp;&nbsp;</td><td><span class="blu">Discard password hint data upon blanking, suspend, etc.</span>: When set, this bit instructs the SQRL client to wash any existing local password and hint data from RAM upon notification that the system is going to sleep in any way such that it cannot be used. This would include sleeping, hibernating, screen blanking, etc.</td></tr>
+
+<tr valign="top"><td class="num">0x0040</td><td>&nbsp;&nbsp;&nbsp;</td><td><span class="blu">Discard password hint data upon user switching</span>: When set, this bit instructs the SQRL client to wash any existing local password and hint data from RAM upon notification that the current user is being switched.</td></tr>
+
+<tr valign="top"><td class="num">0x0080</td><td>&nbsp;&nbsp;&nbsp;</td><td><span class="blu">Discard password hint data after system idle</span>: When set, this bit instructs the SQRL client to wash any existing local password and hint data from RAM when the system has been user-idle (no mouse or keyboard activity) for the number of minutes specified by the two-byte idle timeout.</td></tr>
+
+</table>As noted above, GRC's SQRL client defaults this 16-bit option flags value to 0xF1h. This causes the SQRL client to check for updates, warn of possible MITM attacks, and discard its password hint data whenever the system becomes unavailable, the system's user is changing, or the system is idle.</p></li></ul>
+
+</li>
+
+<li><p style="margin-top:2em;"><b>Type 2 - Rescue code encrypted data</b><br />
+The type 2 S<sup>4</sup> block supplies the EnScrypt parameters to convert a user-supplied &#8220;emergency rescue code&#8221; into a 256-bit symmetric key for use in decrypting the block's embedded encrypted emergency rescue code.
+
+<p><div class="nice_green_box urltxt">
+	<div class="block">
+		<div class="repel"><span>{length = 73}</span>2 bytes</div>
+		<div class="repel"><span>{type = 2} <a>&ndash;&nbsp;emergency rescue code data</a></span>2 bytes</div>
+		<div class="repel"><span>{scrypt random salt}</span>16 bytes</div>
+		<div class="repel"><span>{scrypt log(n-factor)}</span>1 byte&nbsp;</div>
+		<div class="repel"><span>{scrypt iteration count}</span>4 bytes</div>
+		<div class="repel"><span class="r">{encrypted identity unlock key}</span>32 bytes</div>
+		<div class="repel t"><span>{verification tag} <a>&ndash;&nbsp;</a></span>16 bytes</div>
+	</div>
+</div></p>
+
+<p>Notes:<ul>
+
+<li>The type 2 block's unencrypted data, from and including the first byte of the block length up to but not including the first byte of the encrypted identity unlock key, is the unencrypted (plaintext) authenticated data for this block. Therefore, the length of the &#8220;additional authenticated data&#8221; (aad) of the block's AES-GCM cipher is 25 bytes.  As with all of the S<sup>4</sup>'s blocks, the AES-GCM initialization vector (IV) is null (all zeroes).</li>
+
+</ul></p></li>
+
+<li><p style="margin-top:2em;"><b>Type 3 - Encrypted previous identity unlock keys</b><br />
+Since the type 3 S<sup>4</sup> block contains from one to four of the most recently replaced identity unlock keys (PIUKs), the presence of this block type in any SQRL identity is optional. It will only be present when a identity has been rekeyed at least once. When present, this block is encrypted under the current identity's Identity Master Key (IMK). The IMK may be obtained either by decrypting the type 1 block with the user's identity passphrase, or by decrypting the type 2 block with the user's identity RescueCode then &#8220;EnHashing&#8221; the obtained Identity Unlock Key (IUK) to derive the Identity Master Key (IMK).
+
+<p>SQRL is designed to use extremely long-lived, hopefully perpetual, identity keying where the need to rekey any identity is vanishingly rare. Add to this the fact that authenticating to any site that recognizes a user through one of their previous identity keys autonomously updates that site to the users current key. This will tend to automatically keep websites' identity information current. These facts argue for a modest number of previous keys being sufficient to make the entire rekeying process transparent to all reasonable SQRL users (and even any who are unreasonable).</p>
+
+<p>As shown below, the overall size (length) of the type 3 block will be 54, 86, 118 or 150 bytes depending upon whether it contains one, two, three or four previous identity unlock keys.</p>
+
+<p><div class="nice_green_box urltxt">
+	<div class="block">
+		<div class="repel"><span>{length = 54, 86, 118 or 150}</span>2 bytes</div>
+		<div class="repel"><span>{type = 3} <a>&ndash;&nbsp;previous identity unlock keys</a></span>2 bytes</div>
+		<div class="repel"><span>{edition >= 1} <a>&ndash;&nbsp;count of <b><u>all</u></b> previous keys</a></span>2 bytes</div>
+		<div class="repel"><span class="r">{encrypted previous IUK}</span>32 bytes</div>
+		<div class="repel"><span class="r">{encrypted next older IUK (if present)}</span>32 bytes</div>
+		<div class="repel"><span class="r">{encrypted next older IUK (if present)}</span>32 bytes</div>
+		<div class="repel"><span class="r">{encrypted oldest previous IUK (if present)}</span>32 bytes</div>
+		<div class="repel t"><span>{verification tag} <a>&ndash;&nbsp;</a></span>16 bytes</div>
+	</div>
+</div></p>
+
+<p>Notes:<ul>
+
+<li>The type 3 block's unencrypted 6 bytes of header data is the unencrypted (plaintext) &#8220;additional authenticated data&#8221; (aad) for this block. Therefore, the length of the &#8220;additional authenticated data&#8221; (aad) of the block's AES-GCM cipher is 6 bytes. As with all of the S<sup>4</sup> blocks, the AES-GCM initialization vector (IV) is null (all zeroes).</li>
+
+<li>This block contains from one to four most recently retired (previous) identity unlock keys (PIUKs). The up to four key slots are treated as an MRU (most recently used) list with the most recently retired keys placed at the top of the list and earlier keys &#8220;pushed&#8221; down, with the oldest key lost as it is replaced in the last position.</li>
+
+<li>The &#8220;edition&#8221; field is a monotonically incrementing 2-byte counter, incremented once with every identity rekeying. Being in the additional authenticated data header, it is not encrypted. Although this provides an indication of the identity's rekeying history, this information will be of no use to an attacker, whereas it will be extremely useful for the identity's owner, since it will allow them to clearly distinguish among same-name identities of differing editions. SQRL's paper identity printouts will also be able to display this edition number. If the edition were part of the block's encrypted data, the identity's passphrase would be required to view it, which would be inconvenient for its intended purposes.</li>
+
+</ul></p></li>
+
+</ul>
+
+<div class="larger_red_arial" style="margin-top:1.5em;">Uniqueness</div>
+Since no identity should logically contain more than one instance of each block type, no client should ever generate an identity having more than one Type 1, 2 and 3 block. Any client encountering an identity containing more than one of either type should reject the entire identity as suspicious and invalid. Clients wishing to tolerate aberrant identities may choose which one of the duplicated block types to honor.
+
+<div class="larger_red_arial" style="margin-top:1.5em;">Expounding on expansion</div>
+&bull; Some observers have suggested that peripheral features of the underlying SQRL protocol, such as the use of GRC's proposed EnScrypt PBKDF should remain separate. This S<sup>4</sup> database format provides for the addition of any other type of password authentication by leaving all other block types open and available. And the compact representation of this database leaves ample room for future parallel authentication or alternatives.
+
+<p>&bull; If SQRL should evolve in the direction of a form-fill application, that private and probably encrypted data could occupy currently undefined block types without duplicating any of SQRL's existing data. A future encrypted and authenticate block could implicitly infer the use of, for example, the encryption parameters obtained from the existing type 1 block.</p>
+
+<div class="blue_section_heading" style="margin-top:2em;">Changes &amp; Updates</div>
+<ul class="tightlist">
+<li>2016/04/22 <b>:</b> Updated to make the type 3 block both optional and variable length.</li>
+<li>2016/04/21 <b>:</b> Added the &#8220;edition&#8221; field to the new Type 3 block.</li>
+<li>2016/01/23 <b>:</b> Improved final design specification for v1.
+<ul><li>Added the new Type 3 block, keyed by the identity's master key (IMK) to contain from zero to four previous identity unlock keys (PIUK).</li></ul></li>
+<li>2015/10/07 <b>:</b> Proposed final design specification for v1.
+<ul><li>Added <b>three</b> additional previous identity unlock keys (PIUK) to the type 1 block, and made it <b>non</b>-expandable by individual clients. This greatly simplifies implementation and allows for a total of <b>five</b> SQRL identity keys, the current one and up to four previous identity keys, to be carried within any SQRL identity.</li></ul></li>
+<li>2014/05/23 <b>:</b> Complete redesign made as a consequence of first actual implementation.</li>
+<li>2014/06/06 <b>:</b> Switched from patented OCB AE mode to unencumbered AES-GCM.</li>
+<li>2014/06/21 <b>:</b> Removed the variable-length count, length, and type parameters. All parameters are now two bytes long making implementation much simpler and cleaner.</li>
+<li>2014/06/26 <b>:</b><ul><li>Removed the optional previous identity master key from the type 1 block since it can always be derived from its associated identity unlock key.</li><li>Made the storage allocation for the previous identity unlock key mandatory. When no previous identity is defined, the key will be null (all zeroes).</li><li>Removed the block count from the header. It served no real purpose and could not be changed without invalidating any blocks that included it in their additional authenticated data (aad).</li><li>For type 1 blocks, the plaintext sub-block length was moved to the top of the plaintext region along with the AES-GCM IV, and the length now reflects the entire length of the plaintext segment.</li></ul></li>
+
+</ul>
+</div>
+
+<br /><br />
+<center><font style="font-size:smaller;">Secure QR Login (SQRL) Documentation:</font><br />
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div class="linkblock">
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="top">
+<td>
+<div><span>&nbsp;&nbsp;&nbsp;1&nbsp;<span><a href="sqrl.htm">Introduction &amp; overview</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;2&nbsp;<span><a href="userview.htm">The user's view of the application</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;3&nbsp;<span><a href="crypto.htm">Detailed crypto architecture</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;4&nbsp;<span><a href="idlock.htm">The identity lock protocol</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;5&nbsp;<span><a href="key-flow.htm">Client-Side key management</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;6&nbsp;<span><a href="operation.htm">User-interface & operation</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;7&nbsp;<span><a href="phishing.htm">Anti-phishing countermeasures</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;8&nbsp;<span><a href="attacks.htm">Attacks, weaknesses, vulnerabilities</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;9&nbsp;<span><a href="protocol.htm">Link &amp; query protocol syntax</a>&nbsp;</span></span></div>
+<div><span>&nbsp;10&nbsp;<span><a href="semantics.htm">Link &amp; query protocol semantics</a>&nbsp;</span></span></div>
+</td>
+<td>
+<div><span>&nbsp;11&nbsp;<span><a href="storage.htm">SQRL's Secure Storage System</a>&nbsp;</span></span></div>
+<div><span>&nbsp;12&nbsp;<span><a href="scrypt.htm">Our use of the SCrypt PBKDF</a>&nbsp;</span></span></div>
+<div><span>&nbsp;13&nbsp;<span><a href="client.htm">Client implementation details</a>&nbsp;</span></span></div>
+<div><span>&nbsp;14&nbsp;<span><a href="server.htm">Web server behavior</a>&nbsp;</span></span></div>
+<div><span>&nbsp;15&nbsp;<span><a href="resources.htm">Implementation resources</a>&nbsp;</span></span></div>
+<div><span>&nbsp;16&nbsp;<span><a href="implementations.htm">Projects and finished applications</a>&nbsp;</span></span></div>
+<div><span>&nbsp;17&nbsp;<span><a href="commentary.htm">SQRL commentary from the industry</a>&nbsp;</span></span></div>
+<div><span>&nbsp;18&nbsp;<span><a href="other.htm">Other related QR code login work</a>&nbsp;</span></span></div>
+<div><span>&nbsp;19&nbsp;<span><a href="faq.htm">Frequently Asked SQRL Questions</a>&nbsp;</span></span></div>
+<div><span>&nbsp;20&nbsp;<span><a href="feedback.htm">Feedback about SQRL &amp these pages</a>&nbsp;</span></span></div>
+</td>
+</tr></table></div></td></tr></table>
+<br /><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="storage.htm#top" target="_top"><img src="https://www.grctech.com/_fmdpz5yv0yn1e_/image/grc-icon.gif" width="51" height="51" border="0" alt="Jump to top of page" title="Jump to top of page"/></a></td><td><div style="margin:0 20px;"><font size="-2" color="#777777">Gibson Research Corporation is owned and operated by Steve Gibson.&nbsp;&nbsp;The contents<br />of this page are Copyright (c) 2016 Gibson Research Corporation. SpinRite, ShieldsUP,<br />NanoProbe, and any other indicated trademarks are registered trademarks of Gibson<br />Research Corporation, Laguna Hills, CA, USA. GRC's web and customer <a href="https://www.grc.com/privacy.htm" target="_top">privacy policy</a>.</font></div></td><td><div style="margin:7px 0;"><a href="storage.htm#top" target="_top"><img src="https://www.grctech.com/_fmdpz5yv0yn1e_/image/jumptotop.png" width="52" height="38" border="0" alt="Jump to top of page"  title="Jump to top of page"/></a></div></td></tr></table><br />
+<!-- ChangeDetection.com detection="off" -->
+<table width="90%" border="0" cellspacing="0" cellpadding="0"><tr><td><font color="#666666" size="-2">Last Edit: Apr 22, 2016 at 10:43 (4.16 days ago)</font></td><td align="right"><font color="#666666" size="-2">Viewed 11 times per day</font></td></tr></table>
+</center><a name="bottom"></a></body></html>

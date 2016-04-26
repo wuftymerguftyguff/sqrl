@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><title>GRC's&nbsp;|&nbsp;SQRL Secure Quick Reliable Login Cryptography&nbsp;&nbsp;</title>
+<meta name="keywords" content="SQRL Secure Quick Reliable Login Cryptography, GRC, Gibson Research Corporation, Steve Gibson" />
+<meta name="description" content="SQRL Secure Quick Reliable Login Cryptography" />
+<meta name="sitemenu" content=" " />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "offices_@_grc.com" for "https://www.grc.com" on "1998.03.30T21:20-0800" r (n 0 s 0 v 0 l 0))' />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "https://www.grc.com" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.grc.com" r (n 0 s 0 v 0 l 0))' />
+<link rel="icon" href="https://www.grctech.com/_pibxqvzfb2leh_/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.grctech.com/_pibxqvzfb2leh_/favicon.ico" type="image/x-icon" />
+<link rel="meta" href="https://www.grc.com/labels.rdf" type="application/rdf+xml" title="ICRA labels" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/grc.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/mainmenu.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grctech.com/_pibxqvzfb2leh_/thirdparty.css" />
+
+<style type="text/css">
+ .greenhead { text-align:center; color:#008800; font-size:16pt; font-family:arial,helvetica; font-weight:bold; }
+ .callout	{ background:#f0f0ff; padding:1em; margin:1em 0 1em 1em; border-left:#6666ff solid 2px; }
+ .callsubj	{ font-family:arial; font-size:11pt; font-weight:bold; }
+ .greynote	{ color:#666; font-size:smaller; margin:-0.5em 0 2em 1.5em }
+ .greensub	{ color:#008800; text-align:center; margin-top:0.5em; font-family:arial,helvetica; font-weight:bold; }
+ .greybox   { padding:1em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 2px; }
+ .greybox2  { padding:1.5em 2em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 4px; }
+ .blackpara { color:#000; margin:0.25em 0 0; }
+ .centerarial { text-align:center; font-family:arial; font-size:larger; }
+ .lsa			{ font-size:larger; margin-top:1em }
+ .sectiondiv{ border-top:#00A 3px solid; font-size:20pt; margin-top:1em; padding-top:0.25em }
+ .redparam { font-family:'Courier New', Courier, monospace; font-weight:bold; color:#900; font-size:large; }
+ .parample { color:#000; font-family: 'Courier New', Courier, monospace; font-size:20pt; }
+ .urltxt   { color:#0000CC; font-family: 'Courier New', Courier, monospace; font-weight:bold; font-size:17px; }
+ .greyfade { font-style:italic; color:#aaa; }
+ .block    { margin:10px 0 10px 0.25em; padding-left:0.5em; border-left:#00f 2px solid; }
+ .comment  { font-weight: normal; color:#888; font-size:smaller;}
+ .repel span a { font-weight: normal; color:#888; font-size:smaller; }	/* the >> in the drop-down menus which link to sub-menus */
+
+</style>
+
+</head><body><a name="top"></a>
+
+<!-- ########################## GRC Masthead Menu ########################## -->
+
+<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
+<div id="masthead">
+	<a href="https://www.grc.com/default.htm"><img id="mastheadlogo" src="https://www.grc.com/mh-logo.gif" width="286" height="24" alt="Gibson Research Corporation" title="" /></a>
+	<img id="focus" src="https://www.grc.com/mh-focus.gif" width="121" height="13" alt="" title="What we're about" />
+	<a href="https://www.grc.com/news.htm"><img id="blogicon" src="https://www.grc.com/image/menublogicon.png" width="22" height="22" alt="blog icon" title="To our news and announcements page" /></a>
+	<a href="https://www.grc.com/news.htm"><img id="twittericon" src="https://www.grc.com/image/menutwittericon.png" width="22" height="22" title="To our news and announcements page" alt="Twitter Icon"/></a>
+	<a href="https://www.grc.com/news.htm"><img id="rssicon" src="https://www.grc.com/image/menurssicon.png" width="22" height="22" title="To our news and announcements page" alt="RSS Icon" /></a>
+
+	<form action="https://www.google.com/search.htm" id="searchbox_000064552291181981813:y8yi5go2xza" onsubmit="javascript: this.action='https://www.grc.com/search.htm'">
+		<input type="hidden" name="cx" value="000064552291181981813:y8yi5go2xza" />
+		<input type="hidden" name="cof" value="FORID:11" />
+		<input id="text" type="text" name="q" maxlength="256" />
+		<input id="search" type="image" name="sa" value="Search" src="https://www.grc.com/mh-srch.gif" alt="&nbsp;[Search]" title="" />
+	</form>
+</div>
+
+<div class="menu">
+
+<ul>
+	<li><a href="https://www.grc.com/default.htm"><img src="https://www.grc.com/mb-home.gif" width="76" height="18" alt="[Home]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="leftbutton">
+			<li><a href="https://www.grc.com/purchasing.htm">&nbsp;Purchasing</a></li>
+			<li><a href="https://www.grc.com/sales.htm">&nbsp;Sales Support</a></li>
+			<li><a href="https://www.grc.com/support.htm">&nbsp;Technical Support</a></li>
+			<li><a href="https://www.grc.com/default.htm#bottom">&nbsp;Contact Us</a></li>
+			<li><a href="https://www.grc.com/news.htm">&nbsp;Blogs, Twitter &amp; RSS</a></li>
+			<li><a href="https://www.grc.com/privacy.htm">&nbsp;Privacy Policy</a></li>
+<!--			<li><a href="/siteoptions.htm">&nbsp;Site Options</a></li>			-->
+			<li><a href="https://www.grc.com/stevegibson.htm">&nbsp;Steve's Projects Page</a></li>
+			<li><a href="https://www.grc.com/resume.htm">&nbsp;Steve's Old Resume</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/sr/spinrite.htm"><img src="https://www.grc.com/mb-products.gif" width="96" height="18" alt="[Products]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/sr/spinrite.htm">&nbsp;General information</a></li>
+			<li><a href="https://www.grc.com/sr/whatitdoes.htm">&nbsp;What SpinRite Does</a></li>
+			<li><a href="https://www.grc.com/sr/testimonials.htm">&nbsp;User testimonials</a></li>
+			<li><a href="https://www.grc.com/sr/smart.htm">&nbsp;S.M.A.R.T. Monitor</a></li>
+			<li><a href="https://www.grc.com/cs/prepurch.htm">&nbsp;Purchase SpinRite</a></li>
+			<li><a href="https://www.grc.com/sr/faq.htm">&nbsp;FAQ</a></li>
+			<li><a href="https://www.grc.com/sr/themovie.htm">&nbsp;Demo Videos</a></li>
+			<li><a href="https://www.grc.com/sr/kb/sata.htm">&nbsp;Knowledgebase: SATA</a></li>
+			<li><a href="https://www.grc.com/sr/kb/badbios.htm">&nbsp;Knowledgebase: BIOS</a></li>
+			<li><a href="https://www.grc.com/sroverview.htm">&nbsp;SpinRite v5.0 pages</a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2"><img src="https://www.grc.com/mb-services.gif" width="94" height="18" alt="[Services]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2">&nbsp;ShieldsUP!</a></li>
+			<li><a href="https://www.grc.com/revocation.htm">&nbsp;Certificate Revocation</a></li>
+			<li><a href="https://www.grc.com/haystack.htm">&nbsp;Password Haystacks</a></li>
+			<li><a href="https://www.grc.com/fingerprints.htm">&nbsp;HTTPS Fingerprints</a></li>			
+			<li><a href="https://www.grc.com/securitynow.htm">&nbsp;Security Now!</a></li>
+			<li><a href="https://www.grc.com/dns/dns.htm">&nbsp;DNS Spoofability Test</a></li>
+			<li><a href="https://www.grc.com/passwords.htm">&nbsp;Perfect Passwords</a></li>
+			<li><a href="https://www.grc.com/ppp.htm">&nbsp;PPP Passwords</a></li>
+			<li><a href="https://www.grc.com/media.htm">&nbsp;Tech TV video clips</a></li>
+			<li><a href="https://www.grc.com/discussions.htm">&nbsp;Newsgroup Discussions</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/freepopular.htm"><img src="https://www.grc.com/mb-freeware.gif" width="98" height="18" alt="[Freeware]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="crypto.htm"><span class="drop"><span>Security</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/lt/leaktest.htm">&nbsp;Leaktest</a></li>
+					<li><a href="https://www.grc.com/securable.htm">&nbsp;Securable</a></li>
+					<li><a href="https://www.grc.com/stm/shootthemessenger.htm">&nbsp;Shoot the messenger</a></li>
+					<li><a href="https://www.grc.com/unpnp/unpnp.htm">&nbsp;Unplug n' Pray</a></li>
+					<li><a href="https://www.grc.com/freeware/dcom.htm">&nbsp;DCOMbobulator</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrap</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrapCmd</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="crypto.htm"><span class="drop"><span>Utilities</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/never10.htm">&nbsp;Never 10&nbsp;&nbsp;(no upgrade)</a></li>
+					<li><a href="https://www.grc.com/dns/benchmark.htm">&nbsp;DNS Benchmark</a></li>
+					<li><a href="https://www.grc.com/wizmo/wizmo.htm">&nbsp;Wizmo</a></li>
+					<li><a href="https://www.grc.com/id/idserve.htm">&nbsp;ID Serve</a></li>
+					<li><a href="https://www.grc.com/freeware/clickey.htm">&nbsp;ClicKey</a></li>
+					<li><a href="https://www.grc.com/ct/cleartype.htm">&nbsp;Free &amp; Clear</a></li>
+					<li><a href="https://www.grc.com/tip/id.htm">&nbsp;IDentity (ASPI)</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="crypto.htm"><span class="drop"><span>Obsolete</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/cih/cih.htm">&nbsp;FIX-CIH</a></li>
+					<li><a href="https://www.grc.com/tip/clickdeath.htm">&nbsp;TIP (trouble in paradise)</a></li>
+					<li><a href="https://www.grc.com/oo-update.htm">&nbsp;OptOut</a></li>
+					<li><a href="https://www.grc.com/xpdite/xpdite.htm">&nbsp;XPdite</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;NoShare</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;LetShare</a></li>
+					<li><a href="https://www.grc.com/pw/patchwork.htm">&nbsp;Patchwork</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="crypto.htm"><img src="https://www.grc.com/mb-research.gif" width="98" height="18" alt="[Research]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="crypto.htm"><span class="drop"><span>General</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/malware.htm">&nbsp;Malware Repository</a></li>
+					<li><a href="sqrl.htm">&nbsp;SQRL&nbsp;Login&nbsp;Technology</a></li>					
+					<li><a href="https://www.grc.com/ssl/ev.htm">&nbsp;EV SSL/TLS Certificates</a></li>
+					<li><a href="https://www.grc.com/otg/uheprng.htm">&nbsp;Ultra-high entropy PRNG</a></li>
+					<li><a href="https://www.grc.com/menudemo.htm">&nbsp;Pure CSS web menus</a></li>
+					<li><a href="https://www.grc.com/nat/nat.htm">&nbsp;NAT router security</a></li>
+					<li><a href="https://www.grc.com/pda/palmpower.htm">&nbsp;PDA max battery life</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="crypto.htm"><span class="drop"><span>Pending</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/nf/netfilter.htm">&nbsp;GRC NetFilter</a></li>
+					<li><a href="https://www.grc.com/tp/trustpuppy.htm">&nbsp;TrustPuppy</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="crypto.htm"><span class="drop"><span>Historical</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/worms/25-01-03.htm">&nbsp;Worm wars of 2001</a></li>
+					<li><a href="https://www.grc.com/downloaders.htm">&nbsp;File downloader spying</a></li>
+					<li><a href="https://www.grc.com/ct/ctwhat.htm">&nbsp;Sub-pixel font rendering</a></li>
+					<li><a href="https://www.grc.com/su/earthlink.htm">&nbsp;Earthlink browser tag</a></li>
+					<li><a href="https://www.grc.com/tip/codfaq1.htm">&nbsp;ZIP &amp; JAZ click of death</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="crypto.htm"><span class="drop"><span>Dormant</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/vpn/vpn.htm">&nbsp;OpenVPN</a></li>
+					<li><a href="https://www.grc.com/r&amp;d/assimilator.htm">&nbsp;The Assimilator</a></li>
+					<li><a href="https://www.grc.com/aspi_me.htm">&nbsp;ASPI ME</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+			<li><a href="https://www.grc.com/health.htm"><span class="drop"><span>Health</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/health.htm">&nbsp;Health Homepage</a></li>
+					<li><a href="https://www.grc.com/health/lowcarb.htm">&nbsp;The Low Carb Choice</a></li>
+					<li><a href="https://www.grc.com/health/vitamin-d.htm">&nbsp;Vitamin D</a></li>
+					<li><a href="https://www.grc.com/health/sleep/healthy_sleep_formula.htm">&nbsp;Healthy Sleep Formula</a></li>
+					<li><a href="https://www.grc.com/zeo.htm">&nbsp;Zeo Sleep Manager Pro</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li id="other"><a href="https://www.grc.com/pdp-8/pdp-8.htm"><img src="https://www.grc.com/mb-other.gif" width="77" height="18" alt="[Other]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/pdp-8/pdp-8.htm">&nbsp;PDP-8 Computers</a></li>
+			<li><a href="https://www.grc.com/misc/truecrypt/truecrypt.htm">&nbsp;TrueCrypt Repository</a></li>
+			<li><a href="https://www.grc.com/Big-Number-Calculator.htm">&nbsp;Big Number Calculator</a></li>
+			<li><a href="https://groups.google.com/forum/#!forum/portable-sound-blaster">&nbsp;Portable Sound Blaster</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+</div> <!-- close "menu" div -->
+<hr style="display:none" />
+</div></div></div> <!-- close the "minwidth" wrappers -->
+<!-- ###################### END OF GRC MASTHEAD MENU  ###################### -->
+
+
+<center>
+
+<span class="repel regionhead"><span>SQRL</span>SQRL</span>
+<table style="margin-bottom:1em;" cellpadding="0" cellspacing="0"><tr valign="bottom"><td rowspan="2"><img src="SQRL_Logo_80x80.png" width="80" height="80" alt="100x100 SQRL Logo" /></td><td rowspan="2">&nbsp;&nbsp;&nbsp;</td><td style="color:#bb0000; font-size:22pt;"><b>S</b>ecure <b>Q</b>uick <b>R</b>eliable <b>L</b>ogin</td></tr><tr valign="bottom"><td style="font-size:10.5pt;">A highly secure, comprehensive, easy-to-use replacement<br />for usernames, passwords, reminders, one-time-code<br />authenticators<b>&nbsp;.&nbsp;.&nbsp;.</b> and everything else.</td></tr></table><img src="https://www.grc.com/image/darkbluepixel.gif" width="90%" height="4" border="0" alt="divider" /><div id="embelow" class="pagecontainer">
+
+<div class="red_tight_headline" style="font-size:20pt; margin-top:1em;">SQRL Detailed Cryptographic Design</div>
+
+<center><table><tr><td class="greybox2"><img src="sign-algo2.png" width="584" height="220" alt="Complete SQRL Crypto Design" /><div style="text-align:center; color:#000; margin:0.75em 0 -1em; font-size:larger;">The complete SQRL authenticator architecture.</div></td></tr></table></center>
+
+<p>Let's begin by examining SQRL's cryptographic design at the interconnected functional block level. Later, we'll examine the critical and non-obvious functions&#8212;&#8220;Crypto Signature&#8221; &amp; &#8220;Make Public Key.&#8221;</p>
+
+<p><div class="larger_red_arial">When beautiful theory collides with grubby reality . . .</div>
+The schematic above provides for every feature discussed in the previous two pages.</p>
+
+<p>If you look again at the simplified schematic shown near the top of the first <a href="sqrl.htm">intro</a> page, you'll see the essence of the design, which was where we initially began. This original pure solution delivers perfect remote security, but it lacks any provision for local abuse protection. If smartphones perfectly protected their applications from use by non-owners, and if it could be safe to export non-encrypted master identity keys, then that first diagram would be the finished solution. And it would be extremely secure. But we know that smartphones in the real (grubby) world are treated casually. People allow others to use and play with their phones, and there's probably no other application needing abuse prevention security safeguards more than a user's universal identity authenticator.</p>
+
+<p>Consequently, it was necessary to add some additional functions to the conceptually pure design to make it practical and safe for use in the real world.</p>
+
+<p><div class="larger_red_arial">Allowing for a changeable password</div>
+The &#8220;Crypto Signature&#8221; and &#8220;Make Public Key&#8221; functions both take long 256-bit values as their &#8220;Private Key&#8221; input. We obtain this value from an HMAC-SHA256 (Hashed Message Authentication Code using a 256-bit Secure Hash Algorithm) where the HMAC is keyed with the user's master key and the authenticating domain name is the message to be hashed. For this system to work, the master key input to the HMAC function <em>must never change</em> even as the user's password is changed. The HMAC key is the user's ultimate root identification. But in a real-world implementation, we want to allow (almost require) the user to provide a password every time the system is used to prove that they are the person holding the phone and authenticating. We implement this password function by processing the user's password through a password-based key definition function (PBKDF &#8212; the well-known <a href="http://www.tarsnap.com/scrypt/scrypt.pdf">Scrypt sequential memory-hard function</a>) which generates a 256-bit result. This value is then exclusive or'd (XOR) with the user's <em>current master identity key</em> to produce the never-changing value which keys the HMAC private key generating function. An XOR function is used because, as the user's chosen password is changed, the user's master key can be updated to produce a consistent 256-bit value from the XOR output.</p>
+
+<p>ONLY IF the user enters the correct password will the output of the PBKDF function correctly XOR with the current value of the identity master key to produce the correct <em>original master key value</em> which keys the private key generating HMAC function.</p>
+
+<p>Every time the user changes their identity authentication password&#8212;including the first time when it is changed from a null password&#8212;the identity master key's value is updated to preserve the post-XOR value which keys the private key generating HMAC function.</p>
+
+<p><div class="larger_red_arial">Verifying the user's password</div>
+Because present-day smartphones do not provide spoof-proof &#8220;who's holding me now&#8221; authentication, the SQRL application must provide its own access control. Therefore, many aspects of the user interface require the user to prove their identity by re-entering their password. But the XOR solution described thus far only allows us to <em>apply</em> a password. It provides no means for <em>verifying</em> it. For that, we add the &#8220;Password Verify&#8221; function. See the diagram above. The Password Verifier stores a 128-bit &#8220;verification&#8221; piece of the entire 256-bit output of the PBKDF function. Here's how it works:
+
+<p>When a brand new identity is first created, local device's cryptographically secure pseudo random number generator (CSPRNG), augmented by entropy streamed in from the device's camera(s) for five seconds (because SQRL is not going to rely solely upon any platform's CSPRNG), generates the user's identity master key. The system's secure PBKDF Scrypt function should be used for this.</p>
+
+<p>The user will be prompted to enter and re-enter a master SQRL password which will be used to prove their identity to the application whenever they wish to adjust settings, import or export a backup master key, or identify and authenticate themselves to a remote website. Whenever a new password is being set, 64-bits of random &#8220;salt&#8221; will be created for input to Script's PBKFD2 functions. Then, driven by the user's supplied and confirmed new password, the Scrypt PBKDF function will generate a 256-bit value which will be XOR'd with the user's master key and that result used to key the private key generating HMAC function.</p>
+
+<p>To verify future password reentry, that final 256-bit password output value is then hashed once more to produce a derived 256-bit value. The lower 128 bits of <em>that</em> value will be saved as the password verifier so that future password entries can be quickly verified. The single additional hashing yields a verification value that gives away nothing of the hash's previous 256-bit output</p>
+
+<p><div class="larger_red_arial">Thwarting brute-force key-guessing attacks</div>
+The trouble is, if the SQRL system has the free-standing offline capability to verify its user's password, as it must to deliver practical ease-of-use, this inherently renders the system vulnerable to hardware-based brute-force password guessing attacks. Remember though, thanks to the fundamental architecture of the SQRL system, <em>we are not talking about any form of remote attack.</em> Here, we are specifically addressing the situation where an extremely determined adversary is able to obtain a decrypted memory snapshot of the user's smartphone, and wishes to crack the user's access password after obtaining the password verifier. The system's design makes even doing that difficult and extremely time consuming.</p>
+
+<p>As mentioned above, the SQRL system employs the &#8220;Scrypt&#8221; function as its PBKDF. Scrypt is a so-called &#8220;sequential memory hard&#8221; function which was deliberately designed to require much more memory for its execution than traditional cryptographic hashing functions. This means that it actively resists acceleration by GPU's and FPGA's which inherently lack the &#8220;per-function&#8221; memory resources which Scrypt requires. Therefore, the first prong of defense is our use of a memory hard PBKDF for password processing.</p>
+
+<p>The SQRL application uses Scrypt for password processing in two different &#8220;strengths&#8221;: a half-second strength used for on-the-fly user authentication, and the much longer 60-second strength used to protect the user's exported identity master key. These varying strengths balance cracking difficulty with convenience and relative threat level. Half a second is completely acceptable for interactive user-interface password verification, yet it still renders brute-force attacks inefficient enough as to be impractical. This time-targeted strengthening allows the entire password verification system to dynamically adapt to whatever platform it is installed upon, and to maintain a fixed half-second password verification time even as the speed and power of smartphones increases over time.</p>
+
+<p>As discussed on the <a href="userview.htm">user experience</a> page, since an exported identity master key potentially exposes its user to a password guessing attack, exported keys are encrypted under an Scrypt strength which requires a full 60 seconds of extremely acceleration resistant processing by the smartphone. Since importing and exporting master keys is performed infrequently, a 60-second wait is a useful and non-burdensome precaution for allowing the user's master key to exist outside of the phone.</p>
+
+<p>Now that we have examined all aspects of the overall SQRL cryptographic architecture, let's look at how this structure supports the various user interactions described on the previous <a href="userview.htm">user experience</a> page: </p>
+
+<div class="larger_red_arial">Initial identity creation</div>
+The exact sequence of events would be up to the SQRL application author. But for the sake of discussion, let's assume that the user begins with an empty SQRL app and the first thing they do, prompted by the app since it's the only thing available to do in an empty app, is to create a new user identity. It would be possible at this point to import an existing user's identity using their identity master key QR code, but we'll discuss that separately, below.
+
+<p>The user should probably first be asked to enter and re-enter a secure password to protect their identity. A built-in password strength meter should encourage them to use a longish password with a variety of character element types, etc. And it might also discourage their use of their &#8220;standard&#8221; password, which would help to improve their security. (&#8220;Oh, I know the password my mom always uses.&#8221;) They should also be instructed and encouraged to write this down and store it for safe keeping. We discuss this system's password recovery facility below, but there is no third-party to take responsibility.</p>
+
+<p>Once the user has verified their ability to reenter their password, the app should ask them to wave the smartphone around until it chimes. The application would send the platform's random number generator, and five seconds of the smartphone's streaming video, through a secure SHA256 PBKDF2 function to generate the user's initial encrypted master key. This would be saved as shown above as their 256-bit identity master key.</p>
+
+<div class="larger_red_arial">Master identity key import and export</div>
+We consider the master identity key to be encrypted under the user's password since the &#8220;effective master key&#8221; which is applied to the HMAC-SHA256 private key hash <em>never changes</em>. It is the result of Scrypt PBKDF processing the password and XORing the result with the encrypted master key. The encrypted master key changes as necessary to balance any changes made to the password so that the XOR's product remains constant. Therefore, the user's exported master key is simply the currently saved 256-bit identity master key<b>&nbsp;.&nbsp;.&nbsp;.</b> with its associated password implied. Since the system's chosen Scrypt strength also directly affects the final output, those parameters must always be exported and imported along with the current master key.</p>
+
+<p>Since the same password that was in place during the master key's export must be used after that key has been imported into the same or another device, the exported master key QR code also contains the 64-bit nonce salt, the 128-bit password verifier and the Scrypt strength parameter to allow for password verification after the master key has been imported. The system recognizes that the addition of password verification information enables an offline brute-force attack using only the information contained in the exported QR code. So the computational burden of verifying every password is increased to 60-seconds. During the exportation process, the system uses an Scrypt strength that yields 60 seconds of processing on the exporting smartphone. During this time a percentage complete indication is displayed.</p>
+
+<p>Therefore, exportation of the user's master key converts the currently saved 256-bit master key into a QR code graphic for display, copying, eMailing, etc. The user would be instructed that it is &#8220;encrypted&#8221; by their current password, so it should be stored somewhere securely and the matching password at the time of its export should also be written down and saved alongside the QR code. (The user might change their working password after the export, but the exported key would be encrypted by their previous password.)</p>
+
+<p>Importation of a master identity key would occur either to add a new user identity to the application or to overwrite an existing identity. In either case, the password which was associated with that key at the time it was exported MUST be provided to catch entry errors. (This, of course, protects the user from theft of their identity master key.)</p>
+
+<div class="larger_red_arial">Forgotten or locked-out password recovery</div>
+The procedure for recovering a forgotten password, or restoring operation after a password-guessing lockout, is identical to master key import. An existing account is overwritten by importing a previously exported master key QR code image, and the password that was in use at the time of the previous key export must be provided to obtain the information required for the password verification procedure.
+
+<p class="greenhead" style="margin:2em;">What about the mysterious &#8220;Make Public Key&#8221;<br />and &#8220;Crypto Signature&#8221; functions?</p>
+
+<div class="bold_red_arial lsa" style="border-top:#0000aa solid 4px; padding:0.25em 0;">SQRL's underlying crypto technology</div><span class="font7px"><br /></span>
+
+The primary enabling feature of the SQRL system's underlying crypto technology is its ability to use the randomly distributed arbitrary output of the 256-bit SHA256 hash function as its private key. It is <em>that singular feature</em> which enables everything else. To achieve that, we employ elliptic curve public key cryptography as opposed to older &#8220;products of primes&#8221; RSA-style cryptography which inherently lacks the required keying flexibility.
+
+<p>The other necessary feature offered by elliptic curves over RSA prime factorization cryptography is the performance of key generation, digest signing and signature verification. For this system to be feasible on the authenticating server's end, signature verification must be extremely fast and efficient<b>&nbsp;.&nbsp;.&nbsp;.</b> and we do have that.</p>
+
+<p>The SQRL system uses the so-called &#8220;25519&#8221; (as in 2<sup>255</sup>-19) elliptic curve, which was developed by and has been extensively studied by University of Illinois mathematician, cryptographer, programmer, and research professor of computer science, Daniel Julius Bernstein, who is well know by his initials DJB or more often just &#8220;djb.&#8221; He maintains the website at the double-take worthy domain name of: &#8220;<a href="http://cr.yp.to/djb.html">cr.yp.to</a>&#8221;.</p>
+
+<ul>
+<li><a href="http://ed25519.cr.yp.to/index.html"><em>This page (ed25519)</em></a> is the place to begin learning about Dan's work with so-called &#8220;twisted Edwards elliptic curves&#8221;.</li>
+
+<li><a href="http://ed25519.cr.yp.to/ed25519-20110926.pdf"><em> This paper at http://ed25519.cr.yp.to/ed25519-20110926.pdf</em></a> titled &#8220;High-speed high-security signatures&#8221;, lays out the foundation of Dan's &#8220;EdDSA&#8221; (Digital Signature Algorithm), which builds upon his earlier (2006) Diffie-Hellman Curve25519 work, described in similar detail in <a href="http://cr.yp.to/ecdh/curve25519-20060209.pdf"><em>this paper at http://cr.yp.to/ecdh/curve25519-20060209.pdf</em></a> titled &#8220;Curve25519: new Diffie-Hellman speed records.&#8221;</li>
+
+<li>Reference to Dan's implementations of Ed25519 can be found on Dan's site here: <a href="http://ed25519.cr.yp.to/software.html"><em>http://ed25519.cr.yp.to/software.html</em></a></li>
+
+<li>Dan's work is closely tied to UNIX like systems, but people over at the OpenDNS Umbrella Labs project have created a much more portable cross-platform crypto library, derived from Dan's NaCL library, called Sodium, hosted on GitHub:
+<ul class="tightlist">
+<li><a href="http://labs.umbrella.com/2013/03/06/announcing-sodium-a-new-cryptographic-library/"><em>Here is the Umbrella Labs posting</em></a> introducing the Sodium cryptographic library.</li>
+<li><a href="https://github.com/jedisct1/libsodium"><em>Here is the Sodium repository and description at GitHub</em></a>.</li>
+<li><a href="http://download.dnscrypt.org/libsodium/releases/"><em>Here are the Sodium source code releases</em></a>.</li>
+</ul></li>
+<li><a href="https://blog.mozilla.org/warner/2011/11/29/ed25519-keys/"><em>This blog posting</em></a> provides additional background and information about the Ed25519 signature system.</li>
+</ul>
+
+<div class="bold_red_arial lsa" style="border-top:#0000aa solid 4px; padding:0.25em 0; margin-top:2em;">What is Curve25519's security target?</div><span class="font7px"><br /></span>
+
+As Dan discusses in the papers above, his security target was at least or better than 2<sup>128</sup> or roughly equivalent to a traditional RSA key length of 3,000 bits. Web sites have long been using RSA at 1,024 bits (<em>never</em> known to be broken) and are just beginning to switch up to 2,048, mostly for the sake of prudence and marketing. (In mid-2013 Google was making a lot of noise about their move to 2,048 bit RSA keys by the end of 2013.) So at an equivalent strength of approximately 3,000 RSA bits, Dan's &#8220;25519&#8221; elliptic curve-based system appears to provide very good long term protection, even for very short lived signatures.
+
+<p>Since the SQRL system uses a unique public/private key pair for <em>every</em> website, <em>even if</em> it were possible to somehow crack an instance of authentication security (and no one knows how to do that in any reasonable length of time) only that <em>one</em> website's authentication would be compromised. Every other site authenticates with its own unique keys.</p>
+
+<p>And finally, Dan states that the best known attacks appear to require a minimum of 2<sup>140</sup> operations, so he exceeded even his original security target by a factor of 4,096.</p>
+
+<p>Having established an understanding of the complete SQRL architecture, let's now turn to the topic of: <a href="attacks.htm">Attacks, weaknesses and vulnerabilities</a>.</p>
+
+</div>
+
+<br /><br />
+<center><font style="font-size:smaller;">Secure QR Login (SQRL) Documentation:</font><br />
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div class="linkblock">
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="top">
+<td>
+<div><span>&nbsp;&nbsp;&nbsp;1&nbsp;<span><a href="sqrl.htm">Introduction &amp; overview</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;2&nbsp;<span><a href="userview.htm">The user's view of the application</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;3&nbsp;<span><a href="crypto.htm">Detailed crypto architecture</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;4&nbsp;<span><a href="idlock.htm">The identity lock protocol</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;5&nbsp;<span><a href="key-flow.htm">Client-Side key management</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;6&nbsp;<span><a href="operation.htm">User-interface & operation</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;7&nbsp;<span><a href="phishing.htm">Anti-phishing countermeasures</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;8&nbsp;<span><a href="attacks.htm">Attacks, weaknesses, vulnerabilities</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;9&nbsp;<span><a href="protocol.htm">Link &amp; query protocol syntax</a>&nbsp;</span></span></div>
+<div><span>&nbsp;10&nbsp;<span><a href="semantics.htm">Link &amp; query protocol semantics</a>&nbsp;</span></span></div>
+</td>
+<td>
+<div><span>&nbsp;11&nbsp;<span><a href="storage.htm">SQRL's Secure Storage System</a>&nbsp;</span></span></div>
+<div><span>&nbsp;12&nbsp;<span><a href="scrypt.htm">Our use of the SCrypt PBKDF</a>&nbsp;</span></span></div>
+<div><span>&nbsp;13&nbsp;<span><a href="client.htm">Client implementation details</a>&nbsp;</span></span></div>
+<div><span>&nbsp;14&nbsp;<span><a href="server.htm">Web server behavior</a>&nbsp;</span></span></div>
+<div><span>&nbsp;15&nbsp;<span><a href="resources.htm">Implementation resources</a>&nbsp;</span></span></div>
+<div><span>&nbsp;16&nbsp;<span><a href="implementations.htm">Projects and finished applications</a>&nbsp;</span></span></div>
+<div><span>&nbsp;17&nbsp;<span><a href="commentary.htm">SQRL commentary from the industry</a>&nbsp;</span></span></div>
+<div><span>&nbsp;18&nbsp;<span><a href="other.htm">Other related QR code login work</a>&nbsp;</span></span></div>
+<div><span>&nbsp;19&nbsp;<span><a href="faq.htm">Frequently Asked SQRL Questions</a>&nbsp;</span></span></div>
+<div><span>&nbsp;20&nbsp;<span><a href="feedback.htm">Feedback about SQRL &amp these pages</a>&nbsp;</span></span></div>
+</td>
+</tr></table></div></td></tr></table>
+<br /><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="crypto.htm#top" target="_top"><img src="https://www.grctech.com/_pibxqvzfb2leh_/image/grc-icon.gif" width="51" height="51" border="0" alt="Jump to top of page" title="Jump to top of page"/></a></td><td><div style="margin:0 20px;"><font size="-2" color="#777777">Gibson Research Corporation is owned and operated by Steve Gibson.&nbsp;&nbsp;The contents<br />of this page are Copyright (c) 2016 Gibson Research Corporation. SpinRite, ShieldsUP,<br />NanoProbe, and any other indicated trademarks are registered trademarks of Gibson<br />Research Corporation, Laguna Hills, CA, USA. GRC's web and customer <a href="https://www.grc.com/privacy.htm" target="_top">privacy policy</a>.</font></div></td><td><div style="margin:7px 0;"><a href="crypto.htm#top" target="_top"><img src="https://www.grctech.com/_pibxqvzfb2leh_/image/jumptotop.png" width="52" height="38" border="0" alt="Jump to top of page"  title="Jump to top of page"/></a></div></td></tr></table><br />
+<!-- ChangeDetection.com detection="off" -->
+<table width="90%" border="0" cellspacing="0" cellpadding="0"><tr><td><font color="#666666" size="-2">Last Edit: Aug 02, 2015 at 14:17 (268.02 days ago)</font></td><td align="right"><font color="#666666" size="-2">Viewed 14 times per day</font></td></tr></table>
+</center><a name="bottom"></a></body></html>

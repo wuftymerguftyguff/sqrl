@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><title>GRC's&nbsp;|&nbsp;SQRL Secure Quick Reliable Login Anti-Phishing&nbsp;&nbsp;</title>
+<meta name="keywords" content="SQRL Secure Quick Reliable Login Anti-Phishing, GRC, Gibson Research Corporation, Steve Gibson" />
+<meta name="description" content="SQRL Secure Quick Reliable Login Anti-Phishing" />
+<meta name="sitemenu" content=" " />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "offices_@_grc.com" for "https://www.grc.com" on "1998.03.30T21:20-0800" r (n 0 s 0 v 0 l 0))' />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "https://www.grc.com" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.grc.com" r (n 0 s 0 v 0 l 0))' />
+<link rel="icon" href="https://www.grctech.com/_fya2gapvdpsed_/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.grctech.com/_fya2gapvdpsed_/favicon.ico" type="image/x-icon" />
+<link rel="meta" href="https://www.grc.com/labels.rdf" type="application/rdf+xml" title="ICRA labels" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/grc.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/mainmenu.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grctech.com/_fya2gapvdpsed_/thirdparty.css" />
+
+<style type="text/css">
+ .greenhead { text-align:center; color:#008800; font-size:16pt; font-family:arial,helvetica; font-weight:bold; }
+ .callout	{ background:#f0f0ff; padding:1em; margin:1em 0 1em 1em; border-left:#6666ff solid 2px; }
+ .callsubj	{ font-family:arial; font-size:11pt; font-weight:bold; }
+ .greynote	{ color:#666; font-size:smaller; margin:-0.5em 0 2em 1.5em }
+ .greensub	{ color:#008800; text-align:center; margin-top:0.5em; font-family:arial,helvetica; font-weight:bold; }
+ .greybox   { padding:1em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 2px; }
+ .greybox2  { padding:1.5em 2em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 4px; }
+ .blackpara { color:#000; margin:0.25em 0 0; }
+ .centerarial { text-align:center; font-family:arial; font-size:larger; }
+ .lsa			{ font-size:larger; margin-top:1em }
+ .sectiondiv{ border-top:#00A 3px solid; font-size:20pt; margin-top:1em; padding-top:0.25em }
+ .redparam { font-family:'Courier New', Courier, monospace; font-weight:bold; color:#900; font-size:large; }
+ .parample { color:#000; font-family: 'Courier New', Courier, monospace; font-size:20pt; }
+ .urltxt   { color:#0000CC; font-family: 'Courier New', Courier, monospace; font-weight:bold; font-size:17px; }
+ .greyfade { font-style:italic; color:#aaa; }
+ .block    { margin:10px 0 10px 0.25em; padding-left:0.5em; border-left:#00f 2px solid; }
+ .comment  { font-weight: normal; color:#888; font-size:smaller;}
+ .repel span a { font-weight: normal; color:#888; font-size:smaller; }	/* the >> in the drop-down menus which link to sub-menus */
+
+</style>
+
+<style type="text/css">
+ .phish { text-align:center; }
+ .phish td { border-right:#333 1px solid; border-bottom:#333 1px solid; padding:0.25em 1em; }
+ .top  { border-top:#333 1px solid; background:#F0F0FF; }
+ .left { border-left:#333 1px solid; font-weight:normal; }
+ .same { background:#E0FFE0; font-weight:bold; }
+ .diff { background:#FFE0E0; font-weight:bold; }
+ .sum  { border:#333 1px solid; padding:0em 0.5em; }
+ .g { background:#E0FFE0; }
+ .r { background:#FFE0E0; }
+</style>
+</head><body><a name="top"></a>
+
+<!-- ########################## GRC Masthead Menu ########################## -->
+
+<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
+<div id="masthead">
+	<a href="https://www.grc.com/default.htm"><img id="mastheadlogo" src="https://www.grc.com/mh-logo.gif" width="286" height="24" alt="Gibson Research Corporation" title="" /></a>
+	<img id="focus" src="https://www.grc.com/mh-focus.gif" width="121" height="13" alt="" title="What we're about" />
+	<a href="https://www.grc.com/news.htm"><img id="blogicon" src="https://www.grc.com/image/menublogicon.png" width="22" height="22" alt="blog icon" title="To our news and announcements page" /></a>
+	<a href="https://www.grc.com/news.htm"><img id="twittericon" src="https://www.grc.com/image/menutwittericon.png" width="22" height="22" title="To our news and announcements page" alt="Twitter Icon"/></a>
+	<a href="https://www.grc.com/news.htm"><img id="rssicon" src="https://www.grc.com/image/menurssicon.png" width="22" height="22" title="To our news and announcements page" alt="RSS Icon" /></a>
+
+	<form action="https://www.google.com/search.htm" id="searchbox_000064552291181981813:y8yi5go2xza" onsubmit="javascript: this.action='https://www.grc.com/search.htm'">
+		<input type="hidden" name="cx" value="000064552291181981813:y8yi5go2xza" />
+		<input type="hidden" name="cof" value="FORID:11" />
+		<input id="text" type="text" name="q" maxlength="256" />
+		<input id="search" type="image" name="sa" value="Search" src="https://www.grc.com/mh-srch.gif" alt="&nbsp;[Search]" title="" />
+	</form>
+</div>
+
+<div class="menu">
+
+<ul>
+	<li><a href="https://www.grc.com/default.htm"><img src="https://www.grc.com/mb-home.gif" width="76" height="18" alt="[Home]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="leftbutton">
+			<li><a href="https://www.grc.com/purchasing.htm">&nbsp;Purchasing</a></li>
+			<li><a href="https://www.grc.com/sales.htm">&nbsp;Sales Support</a></li>
+			<li><a href="https://www.grc.com/support.htm">&nbsp;Technical Support</a></li>
+			<li><a href="https://www.grc.com/default.htm#bottom">&nbsp;Contact Us</a></li>
+			<li><a href="https://www.grc.com/news.htm">&nbsp;Blogs, Twitter &amp; RSS</a></li>
+			<li><a href="https://www.grc.com/privacy.htm">&nbsp;Privacy Policy</a></li>
+<!--			<li><a href="/siteoptions.htm">&nbsp;Site Options</a></li>			-->
+			<li><a href="https://www.grc.com/stevegibson.htm">&nbsp;Steve's Projects Page</a></li>
+			<li><a href="https://www.grc.com/resume.htm">&nbsp;Steve's Old Resume</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/sr/spinrite.htm"><img src="https://www.grc.com/mb-products.gif" width="96" height="18" alt="[Products]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/sr/spinrite.htm">&nbsp;General information</a></li>
+			<li><a href="https://www.grc.com/sr/whatitdoes.htm">&nbsp;What SpinRite Does</a></li>
+			<li><a href="https://www.grc.com/sr/testimonials.htm">&nbsp;User testimonials</a></li>
+			<li><a href="https://www.grc.com/sr/smart.htm">&nbsp;S.M.A.R.T. Monitor</a></li>
+			<li><a href="https://www.grc.com/cs/prepurch.htm">&nbsp;Purchase SpinRite</a></li>
+			<li><a href="https://www.grc.com/sr/faq.htm">&nbsp;FAQ</a></li>
+			<li><a href="https://www.grc.com/sr/themovie.htm">&nbsp;Demo Videos</a></li>
+			<li><a href="https://www.grc.com/sr/kb/sata.htm">&nbsp;Knowledgebase: SATA</a></li>
+			<li><a href="https://www.grc.com/sr/kb/badbios.htm">&nbsp;Knowledgebase: BIOS</a></li>
+			<li><a href="https://www.grc.com/sroverview.htm">&nbsp;SpinRite v5.0 pages</a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2"><img src="https://www.grc.com/mb-services.gif" width="94" height="18" alt="[Services]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2">&nbsp;ShieldsUP!</a></li>
+			<li><a href="https://www.grc.com/revocation.htm">&nbsp;Certificate Revocation</a></li>
+			<li><a href="https://www.grc.com/haystack.htm">&nbsp;Password Haystacks</a></li>
+			<li><a href="https://www.grc.com/fingerprints.htm">&nbsp;HTTPS Fingerprints</a></li>			
+			<li><a href="https://www.grc.com/securitynow.htm">&nbsp;Security Now!</a></li>
+			<li><a href="https://www.grc.com/dns/dns.htm">&nbsp;DNS Spoofability Test</a></li>
+			<li><a href="https://www.grc.com/passwords.htm">&nbsp;Perfect Passwords</a></li>
+			<li><a href="https://www.grc.com/ppp.htm">&nbsp;PPP Passwords</a></li>
+			<li><a href="https://www.grc.com/media.htm">&nbsp;Tech TV video clips</a></li>
+			<li><a href="https://www.grc.com/discussions.htm">&nbsp;Newsgroup Discussions</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/freepopular.htm"><img src="https://www.grc.com/mb-freeware.gif" width="98" height="18" alt="[Freeware]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="phishing.htm"><span class="drop"><span>Security</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/lt/leaktest.htm">&nbsp;Leaktest</a></li>
+					<li><a href="https://www.grc.com/securable.htm">&nbsp;Securable</a></li>
+					<li><a href="https://www.grc.com/stm/shootthemessenger.htm">&nbsp;Shoot the messenger</a></li>
+					<li><a href="https://www.grc.com/unpnp/unpnp.htm">&nbsp;Unplug n' Pray</a></li>
+					<li><a href="https://www.grc.com/freeware/dcom.htm">&nbsp;DCOMbobulator</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrap</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrapCmd</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="phishing.htm"><span class="drop"><span>Utilities</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/never10.htm">&nbsp;Never 10&nbsp;&nbsp;(no upgrade)</a></li>
+					<li><a href="https://www.grc.com/dns/benchmark.htm">&nbsp;DNS Benchmark</a></li>
+					<li><a href="https://www.grc.com/wizmo/wizmo.htm">&nbsp;Wizmo</a></li>
+					<li><a href="https://www.grc.com/id/idserve.htm">&nbsp;ID Serve</a></li>
+					<li><a href="https://www.grc.com/freeware/clickey.htm">&nbsp;ClicKey</a></li>
+					<li><a href="https://www.grc.com/ct/cleartype.htm">&nbsp;Free &amp; Clear</a></li>
+					<li><a href="https://www.grc.com/tip/id.htm">&nbsp;IDentity (ASPI)</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="phishing.htm"><span class="drop"><span>Obsolete</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/cih/cih.htm">&nbsp;FIX-CIH</a></li>
+					<li><a href="https://www.grc.com/tip/clickdeath.htm">&nbsp;TIP (trouble in paradise)</a></li>
+					<li><a href="https://www.grc.com/oo-update.htm">&nbsp;OptOut</a></li>
+					<li><a href="https://www.grc.com/xpdite/xpdite.htm">&nbsp;XPdite</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;NoShare</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;LetShare</a></li>
+					<li><a href="https://www.grc.com/pw/patchwork.htm">&nbsp;Patchwork</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="phishing.htm"><img src="https://www.grc.com/mb-research.gif" width="98" height="18" alt="[Research]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="phishing.htm"><span class="drop"><span>General</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/malware.htm">&nbsp;Malware Repository</a></li>
+					<li><a href="sqrl.htm">&nbsp;SQRL&nbsp;Login&nbsp;Technology</a></li>					
+					<li><a href="https://www.grc.com/ssl/ev.htm">&nbsp;EV SSL/TLS Certificates</a></li>
+					<li><a href="https://www.grc.com/otg/uheprng.htm">&nbsp;Ultra-high entropy PRNG</a></li>
+					<li><a href="https://www.grc.com/menudemo.htm">&nbsp;Pure CSS web menus</a></li>
+					<li><a href="https://www.grc.com/nat/nat.htm">&nbsp;NAT router security</a></li>
+					<li><a href="https://www.grc.com/pda/palmpower.htm">&nbsp;PDA max battery life</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="phishing.htm"><span class="drop"><span>Pending</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/nf/netfilter.htm">&nbsp;GRC NetFilter</a></li>
+					<li><a href="https://www.grc.com/tp/trustpuppy.htm">&nbsp;TrustPuppy</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="phishing.htm"><span class="drop"><span>Historical</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/worms/25-01-03.htm">&nbsp;Worm wars of 2001</a></li>
+					<li><a href="https://www.grc.com/downloaders.htm">&nbsp;File downloader spying</a></li>
+					<li><a href="https://www.grc.com/ct/ctwhat.htm">&nbsp;Sub-pixel font rendering</a></li>
+					<li><a href="https://www.grc.com/su/earthlink.htm">&nbsp;Earthlink browser tag</a></li>
+					<li><a href="https://www.grc.com/tip/codfaq1.htm">&nbsp;ZIP &amp; JAZ click of death</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="phishing.htm"><span class="drop"><span>Dormant</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/vpn/vpn.htm">&nbsp;OpenVPN</a></li>
+					<li><a href="https://www.grc.com/r&amp;d/assimilator.htm">&nbsp;The Assimilator</a></li>
+					<li><a href="https://www.grc.com/aspi_me.htm">&nbsp;ASPI ME</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+			<li><a href="https://www.grc.com/health.htm"><span class="drop"><span>Health</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/health.htm">&nbsp;Health Homepage</a></li>
+					<li><a href="https://www.grc.com/health/lowcarb.htm">&nbsp;The Low Carb Choice</a></li>
+					<li><a href="https://www.grc.com/health/vitamin-d.htm">&nbsp;Vitamin D</a></li>
+					<li><a href="https://www.grc.com/health/sleep/healthy_sleep_formula.htm">&nbsp;Healthy Sleep Formula</a></li>
+					<li><a href="https://www.grc.com/zeo.htm">&nbsp;Zeo Sleep Manager Pro</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li id="other"><a href="https://www.grc.com/pdp-8/pdp-8.htm"><img src="https://www.grc.com/mb-other.gif" width="77" height="18" alt="[Other]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/pdp-8/pdp-8.htm">&nbsp;PDP-8 Computers</a></li>
+			<li><a href="https://www.grc.com/misc/truecrypt/truecrypt.htm">&nbsp;TrueCrypt Repository</a></li>
+			<li><a href="https://www.grc.com/Big-Number-Calculator.htm">&nbsp;Big Number Calculator</a></li>
+			<li><a href="https://groups.google.com/forum/#!forum/portable-sound-blaster">&nbsp;Portable Sound Blaster</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+</div> <!-- close "menu" div -->
+<hr style="display:none" />
+</div></div></div> <!-- close the "minwidth" wrappers -->
+<!-- ###################### END OF GRC MASTHEAD MENU  ###################### -->
+
+
+<center>
+
+<span class="repel regionhead"><span>SQRL</span>SQRL</span>
+<table style="margin-bottom:1em;" cellpadding="0" cellspacing="0"><tr valign="bottom"><td rowspan="2"><img src="SQRL_Logo_80x80.png" width="80" height="80" alt="100x100 SQRL Logo" /></td><td rowspan="2">&nbsp;&nbsp;&nbsp;</td><td style="color:#bb0000; font-size:22pt;"><b>S</b>ecure <b>Q</b>uick <b>R</b>eliable <b>L</b>ogin</td></tr><tr valign="bottom"><td style="font-size:10.5pt;">A highly secure, comprehensive, easy-to-use replacement<br />for usernames, passwords, reminders, one-time-code<br />authenticators<b>&nbsp;.&nbsp;.&nbsp;.</b> and everything else.</td></tr></table><img src="https://www.grc.com/image/darkbluepixel.gif" width="90%" height="4" border="0" alt="divider" /><div id="embelow" class="pagecontainer">
+
+<div class="red_tight_headline" style="font-size:20pt; margin-top:1em;">How SQRL Can Thwart Phishing Attacks</div>
+
+<p>Although the SQRL identity authentication login system does not promote itself as an anti-phishing solution, observers have hoped that, in addition to everything else it does, it might also be able to provide <b>some</b> relief from the classic and pervasive Internet worry over phishing. As it turns out, the SQRL authentication architecture <b>does</b> present significant opportunities for thwarting phishing attacks.</p>
+
+<p><div class="redhead">The Phishing / Man-In-The-Middle Problem</div>
+A &#8220;Man In The Middle&#8221; (MITM) exploit occurs when an attacker can somehow arrange to <b>interpose</b> themselves between a web browsing user and the web server they believe they are contacting. The attacker becomes the &#8220;man in the middle&#8221;, able to eavesdrop and often intercept and alter the data passing back and forth between the user and the intercepted web site:</p>
+
+<p style="text-align:center;"><img src="phishing-1.png" width="402" height="268" alt="phishing-1" /></p>
+
+<p>This typically occurs through a so-called &#8220;Phishing&#8221; attack, where a fraudulent &mdash; but very authentic appearing &mdash; eMail message induces an unwitting user to &#8220;click this link&#8221; to verify (for example) a Paypal transaction they have no knowledge of, approve the withdrawal of funds from their bank account (which they never made), etc. The fraudulent eMail link will direct the user to a website at a similar <b>looking</b> web address &mdash; perhaps <b>paypol.com</b> or <b>paypal.cn</b> &mdash; which will go unnoticed because everything else about the displayed page is absolutely correct.</p>
+	
+<p>The fraudulent &#8220;phishing&#8221; web site will ask the user to login by providing their username and password. But because the fraudulent site has interposed itself between the user and actual website, the user is unwittingly providing their confidential credentials to the attacking site. Since the attacking site has the user's confidential credentials it can then login <b>as</b> the user, impersonating the user, and transfer the user's funds wherever it wishes.</p>
+
+<p>OAuth authentication (&#8220;login with Facebook&#8221;, &#8220;login with Twitter&#8221;) are equally prone to phishing exploits, and &#8220;six digit&#8221; multi-factor authentication systems, such time-based or one-time &#8220;Google Authenticator&#8221; style systems don't help in this situation because the malicious website can intercept and immediately use the time-based code before it has expired. Attackers <b>are known</b> to be doing this.</p>
+
+<p><div class="redhead blue_div">How SQRL changes things</div>
+When using SQRL, users do not identify and authenticate themselves with a username and password. Instead, their unique user identity is derived from their secret master key and the website's full domain name. Since SQRL generates a unique user identity for every web domain, the user's Internet identity for a look-alike phishing site such as paypol.com or paypal.cn, or anything <em>other</em> than the authentic website the user believes they are visiting, would be useless to any attacker.</p>
+
+<p>This means that the SQRL login link provided by a phishing site's otherwise fraudulent web page <em>must be correct and authentic</em>. In our example, it would have to be &#8220;paypal.com&#8221; because that domain name string is used in the generation of the identity by which Paypal knows the user. This means that the user's SQRL application will connect directly to the authentic website, rather than to the fraudulent phishing site:</p>
+
+<p style="text-align:center;"><img src="phishing-2.png" width="402" height="269" alt="phishing-2" /></p>
+
+<p>The diagram above shows the SQRL Login Agent, its communication link, and the authentic web server in <b style="color:#090;">green</b> to signify the significantly higher degree of trust and tamper-proof assurance that exists for this communication.</p>
+
+<p>The SQRL system takes advantage of this stronger tamper-proofing and enhanced trust in three ways:</p>
+
+<ul style="list-style-image:url(https://www.grc.com/image/topbullet.gif)">
+
+<li><b>Login Redirection</b></li><br />
+As we know, the user's web browser is not actually viewing the authentic web site. It is viewing a malicious copy of the authentic web site. In effect, it got off on the wrong foot by first visiting a spoofed web address. But as the diagram above shows, the SQRL login agent <b>IS</b> communicating directly with the authentic web site. So, if the authentic web site were to respond to the SQRL login agent <em>with a correct link to the logged-in web session</em> instead of logging in the fraudulent session which was initiated by user's browser, the SQRL login agent could follow the correct that link to safely login its user, thus bypassing and dropping the attempted and failed malicious login.
+
+<li><b>Action Confirmation</b></li><br />
+Another way the authentic web server can take advantage of the SQRL login agent's direct connection to it is by sending confirmation requests for important actions back to the SQRL login agent rather than to the regular web session. If, for example, the malicious man-in-the-middle attempted to transfer money from the user's online account, but the user had logged in and authenticated using SQRL, the authentic web server could send a confirmation of this request NOT back to the user's web browser session (which may have been compromised) but instead to the SQRL login agent, thus bypassing any interference from the man in the middle. The user would receive a request to confirm an unexpected transaction and decline to approve it.
+
+<li><b>Man In The Middle Detection</b></li><br />
+When the SQRL login agent resides on the same device (computer, tablet, mobile phone, etc.) as the user's web browser, both the web browser's web queries, and the SQRL login agent's login authentication queries, would share that machine's IP address. This is known as &#8220;same-device&#8221; SQRL login, and it provides another strong anti-phishing / anti-man-in-the-middle attack mitigation. As you can see in the diagram above, from the perspective of the authentic web server, fraudulent man-in-the-middle web queries will be received from the IP address of the MITM server &mdash; <em>not</em> from the user's web browser &mdash; but the user's SQRL login agent's queries will be received from the IP address of the SQRL login agent. When the authentic web server sees that those IPs are different, it will warn the SQRL login agent. If the SQRL agent expects that its queries should have the same IP as the user's web browser, it can warn the user and abort the login.
+
+</ul>
+
+<p><div class="redhead blue_div">Details and Limitations of IP-based MITM detection</div>
+Although IP awareness is powerful and useful as an anti-phishing countermeasure and man-in-the-middle detector, it is not perfect. It can fail or be unavailable in the following scenarios:
+<ul style="list-style-image:url(https://www.grc.com/image/topbullet.gif)">
+
+<li><b>Cross-Device SQRL Authentication</b></li><br />
+We can only safely assume that the SQRL login agent and the user's browser will have the same IP address when they are operating within the same device; the so-called &#8220;same device&#8221; login mode. If a cellular phone uses an available local wireless network preferentially (for example in a residence or office), it might still have the same public IP address as the user, but this is less certain. However, when a smartphone uses cellular bandwidth to perform a cross-device login, it will have an IP address that's almost certainly unrelated to the user's browser. In this instance the remote web server would notify the SQRL login agent that its IP did not match the user's. Depending upon its user interface configuration, the SQRL agent might be expecting this when using cellular bandwidth and silently ignore the notice, or it might notify its user, which the user would also soon learn to expect in these situations.
+<br /><br />
+The point, however, is that since an IP mismatch is <em>expected</em> in this situation, a man-in-the-middle attack, which would also present the expected &#8220;IP is different&#8221; status, would not be detectable in this fashion. Thus, any cross-device login where the SQRL login agent's IP is <em>expected</em> to be different from the user's browser won't provide us with man-in-the-middle protection.
+
+<li><b>Multi-homed  Cross-Device SQRL Authentication</b></li><br />
+It is at least possible, though unusual in the extreme, for a single device to emit outbound queries from different public IP addresses. If SQRL were used for same-device login in such a system, and if the SQRL login agent's IP differed from the user's browser, the result would be a false-positive warnings caused not by a man-in-the-middle attack, but by the normal operation of the system. In such an instance the SQRL login agent would need to have its IP detection warning disabled to prevent false positive warnings<b>&nbsp;.&nbsp;.&nbsp;.</b> and then, again, a true attack would go undetected.
+
+<li><b>Nearby MITH Attacker</b></li><br />
+Man-in-the-middle attackers tend to be located anywhere <em>other</em> than in the next room on the same local area network. Such attacks are typically launched from another country. But because it's possible it needs to be addressed. If someone on the same local area network were to arrange some form of man-in-the-middle attack its malicious server <em>would</em> then have the same IP address as the user's SQRL login query so no cautionary warning flag about differing IP addresses would be raised in this case. Thus, a man-in-the-middle attacker who was somehow sharing the same public IP as the user would not be detected.
+
+<li><b>ISP Carrier-Grade NAT</b></li><br />
+A slight variation on the &#8220;local attacker&#8221; scenario above, is one where multiple customers of a single Internet Service Provider (ISP) receive the same IP address. This broadens the definition of &#8220;local&#8221; somewhat since several different customers of the same ISP would present the same public IP address. Due to the approaching starvation of 32-bit IP Version 4 addresses, ISPs are beginning to deploy Network Address Translation (NAT) within their own fabrics. This so-called &#8220;Carrier Grade Nat&#8221; (CGN) typically allocates one IP address to up to eight customers, thus allowing the ISP to grow their customer base eight times larger than they otherwise could if every customer required their own public IP address. It's not immediately clear how one ISP customer could intercept the ISP-network traffic of another to establish a man-in-the-middle position, and it may not be possible. But since our goal here is to completely examine the tradeoffs inherent in IP-based man-in-the-middle detection, it needed to be mentioned.
+
+<li><b>IPv6 and per-machine IPs</b></li><br />
+If the long-awaited Internet Protocol Version 6 ever actually happens, the world might someday return to the configuration originally envisioned by the Internet's designers: Where every &#8220;Internet Endpoint&#8221; (device of any kind) is uniquely identified by its own IP address. For what it's worth, this would be good for SQRL's IP awareness, since then, unlike today, large clusters of nearby devices would not all be sharing one overloaded 32-bit IPv4 address, nor would ISPs be clumping their customers into bundles of shared IP addresses.
+
+<p class="greenhead" style="font-size:11pt; text-align:left; ">The discussion presented above probably establishes sufficient background and details for understanding the features and tradeoffs inherent in IP address-based man-in-the-middle attack detection and mitigation. However, if you are interested in more, the discussion below assumes no knowledge of the subject, approaches it from more of an implementation direction, and also provides additional details.</p>
+
+<p><div class="redhead blue_div">Examining MITM Attacks More Closely</div>
+It's worth first pointing out that the presence of the SQRL login system inherently escalates the complexity of traditional passive phishing attacks. In fact, passive attacks no longer work:
+
+<p>A traditional phishing attack presents the unsuspecting user with a spoofed login page that mimics the authentic web page they expect to see. The user enters their personal credentials, typically a username and password, and clicks &#8220;Log me in.&#8221; In that instant the phishing site receives their valid credentials for the authentic site and can then impersonate them until the user's credentials are changed. Since the SQRL system uniquely identifies its user and authenticates based upon the domain name in the SQRL link, if the spoofed web site were to use its own domain name, the SQRL client would generate a new identity that would not match the identity used with the authentic web site. And if the spoofed web site were to use the authentic web site's domain, the spoofed site would not receive the user's identity and authentication information because the user's SQRL client would connect to and provide that information to the authentic web site server<b>&nbsp;.&nbsp;.&nbsp;.</b> not to the phishing site.<span class="font7px"><br /><br /></span>However, phishing sites might still attempt to mount &#8220;SQRL-aware&#8221; attacks:</p>
+
+<p><div class="redhead">How a &#8220;SQRL-aware&#8221; phishing attack would be mounted</div>SQRL significantly complicates phishing by forcing the attack to be active rather than passive. To mount a phishing attack against SQRL, a fraudulent website would need to first open a valid login session with the authentic website it plans to spoof. From the valid site's login page it would obtain a &#8220;fresh&#8221; and valid SQRL link URL. The fraudulent site would then present a spoofed login page <em>containing the authentic website's valid SQRL code</em>. When the SQRL application is used to login, they are actually logging in to the session that was originally initiated by the phishing site. The phishing site then completes the login and can impersonate the user for that login session.</p>
+
+<p><i>Although this is not good, the SQRL system <em>did</em> require much more SQRL-specific work on the part of the phishing site, and the use of SQRL <em>completely prevented</em> the phishing site from obtaining <u>any reusable login credentials</u>. Whereas traditional passive phishing attacks obtain the user's reusable username and password, the active SQRL attack only obtains one logged in session<b>&nbsp;.&nbsp;.&nbsp;. Or does it??</b></i></p>
+
+<p><div class="redhead">How SQRL can detect and prevent many phishing attacks</div>You will note two things about the description of the active SQRL phishing attack described above:<ul class="tightlist">
+<li>The phishing web site was required to initiated a login session in order for it to obtain a SQRL link URL that it then passed on to the victim. In doing so, the authentic web site sent the SQRL link URL to the phishing site's web server, <em>at the phishing site's IP address</em>. There's no way around that.</li>
+<li>When the victim logs into the authentic web site using the link contained in the valid SQRL URL obtained by the phishing site, the victim's SQRL application connects to the authentic web site <em>from the victim's IP address</em> to provide the victim's identity and authentication.</li></ul>
+
+As we know, SQRL can be used to log in either &#8220;same-machine&#8221; or &#8220;cross-machine.&#8221; When performing a same-machine login, the IP address requesting the SQRL link URL (where the logging in user is located) <em>should always exactly match</em> the IP address which then, several seconds later, is used to send the web server the user's login identity and authentication. <em>If ever the two IP addresses do not match, there is very good reason to suspect the intervention of a malicious third party.</em></p>
+
+<center><table><tr><td class="nice_blue_box">When the SQRL authentication client is located on the machine being<br />logged in, the IP address of the original SQRL link URL request <em>should<br />be identical</em> to the IP address of the SQRL client's authentication query.</td></tr></table></center>
+
+<p>As explained further on the <a href="details.htm">Implementation Details</a> page, all SQRL login servers record the IP address to which any SQRL link URL is sent. This is typically embedded into the externally opaque and unpredictable token that the SQRL client cryptographically signs and returns. This allows for an on-the-spot comparison of the original requesting IP with the subsequent authenticating IP at the time of possible authentication. The SQRL client's &#8220;enforce&#8221; option, when present, will cause the web server to fail any login attempt whose original and subsequent IP addresses are not identical<b>&nbsp;.&nbsp;.&nbsp;.</b> thereby preventing successful SQRL phishing attacks.</p>
+
+<p><div class="redhead">Where this is effective?</div>This means that phishing attacks can be practically and automatically detected and prevented when the logging-in browser and the SQRL client are known to have the same IP address. This applies in all same-machine logins, as well as any logins where a smartphone is used in a cross-machine optical QR code scan login and the smartphone is networked using the same local area network as the logging in machine.</p>
+
+<p><div class="redhead">Where this cannot help:</div>Since this anti-phishing countermeasure depends upon an <em>unexpected IP mismatch</em>, it cannot help in any situations where an IP mismatch <em>is expected</em>. Smartphones using a cellular carrier's network will certainly have a different public IP address than another machine when they are being used to optically scan and cross-machine login. Although, once again, when a smartphone is logging in with their <em>own</em> web browser, that's again a same-machine login and full phishing protection can be provided.</p>
+
+<p>This means that SQRL login can offer quite robust anti-phishing countermeasures when it is being used to locally (same-machine) login to a smartphone, tablet, laptop or desktop, and also when a smartphone is being used for optical QR scan cross-machine login where the smartphone is using the same network as the logging in machine.</p>
+
+<p><div class="redhead">How is this practically implemented?</div>The beauty of this solution is that the SQRL client application can ask the authenticating website for IP-match enforcement, and it can almost always determine when its SQRL-authenticating query <em>should</em> be seen by the remote website at the <em>same</em> IP address as the machine being logged in. For example, all non-mobile SQRL clients on laptops and desktops, and all non-optical scan smartphone and tablet logins, would always expect IP-match, since the client is running on the same machine as the web browser, thus the same IP.</p>
+
+<p>Each SQRL client authentication query can include an option to request the website to enforce the same-IP policy upon the login. If the authenticating web server receives that option in the authentication query, and the IP that originally requested the SQRL link URL differs from the IP of the authenticating query, the authenticating web site will fail the authentication and inform the SQRL client of the reason. This allows the SQRL client to govern when the same IP-policy should be enforced, and also allows a user to gracefully bypass the policy when the user is sure that everything is okay.</p>
+
+<center><table class="phish" cellpadding="0" cellspacing="0">
+<tr><td>&nbsp;</td><td class="top">Same-<br />Machine</td><td class="top">Cross-<br />Machine</td><td class="top">Client on<br />Same Net</td><td class="top">Client on<br />Different Net</td></tr>
+<tr class="same"><td class="left">1.</td><td>X</td><td>&nbsp;</td><td>X</td><td>&nbsp;</td></tr>
+<tr class="same"><td class="left">2.</td><td>&nbsp;</td><td>X</td><td>X</td><td>&nbsp;</td></tr>
+<tr class="diff"><td class="left">3.</td><td>&nbsp;</td><td>X</td><td>&nbsp;</td><td>X</td></tr>
+</table></center>
+
+<p><table cellpadding="0" cellspacing="10">
+<tr><td class="sum g">1.</td><td>If you imagine a future where SQRL login is widely available, you will predominantly be logging into web sites from your main workstation computer at home and at work. Your smartphone will have the same master identity key installed in it so that you can conveniently and securely login to your sites wherever you are, but for the most part your laptop, desktop, or tablet client will likely receive the most use. In that model, the SQRL client will always be able to safely request same-IP policy enforcement and consequently all of those login will receive strong anti-phishing protection.</td></tr>
+<tr><td class="sum g">2.</td><td>If you wish to leverage the added security of cross-device login using any connected device with a camera, and when that device can be on the same network as your computer &#8209; such as at home or in an open WiFi environment &#8209; your connected, camera-enabled device could still request the enforcement of same-IP policy and you could make exceptions after being warned that the device is attempting to authenticate from a different network than your computer.</td></tr>
+<tr><td class="sum r">3.</td><td>Since a cellular-connected, camera-enabled device can be expected to have a different IP than any cross-device computer you're logging into, the SQRL client will usually be configured not to request any same-IP enforcement from the remote web server. In this instance, same-IP policy driven phishing detection countermeasures will not be available so the user will need to be vigilant about the sites being logged into in these cross-device circumstances.</td></tr>
+</table></p>
+
+</div>
+
+<br />
+<center><font style="font-size:smaller;">Secure QR Login (SQRL) Documentation:</font><br />
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div class="linkblock">
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="top">
+<td>
+<div><span>&nbsp;&nbsp;&nbsp;1&nbsp;<span><a href="sqrl.htm">Introduction &amp; overview</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;2&nbsp;<span><a href="userview.htm">The user's view of the application</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;3&nbsp;<span><a href="crypto.htm">Detailed crypto architecture</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;4&nbsp;<span><a href="idlock.htm">The identity lock protocol</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;5&nbsp;<span><a href="key-flow.htm">Client-Side key management</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;6&nbsp;<span><a href="operation.htm">User-interface & operation</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;7&nbsp;<span><a href="phishing.htm">Anti-phishing countermeasures</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;8&nbsp;<span><a href="attacks.htm">Attacks, weaknesses, vulnerabilities</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;9&nbsp;<span><a href="protocol.htm">Link &amp; query protocol syntax</a>&nbsp;</span></span></div>
+<div><span>&nbsp;10&nbsp;<span><a href="semantics.htm">Link &amp; query protocol semantics</a>&nbsp;</span></span></div>
+</td>
+<td>
+<div><span>&nbsp;11&nbsp;<span><a href="storage.htm">SQRL's Secure Storage System</a>&nbsp;</span></span></div>
+<div><span>&nbsp;12&nbsp;<span><a href="scrypt.htm">Our use of the SCrypt PBKDF</a>&nbsp;</span></span></div>
+<div><span>&nbsp;13&nbsp;<span><a href="client.htm">Client implementation details</a>&nbsp;</span></span></div>
+<div><span>&nbsp;14&nbsp;<span><a href="server.htm">Web server behavior</a>&nbsp;</span></span></div>
+<div><span>&nbsp;15&nbsp;<span><a href="resources.htm">Implementation resources</a>&nbsp;</span></span></div>
+<div><span>&nbsp;16&nbsp;<span><a href="implementations.htm">Projects and finished applications</a>&nbsp;</span></span></div>
+<div><span>&nbsp;17&nbsp;<span><a href="commentary.htm">SQRL commentary from the industry</a>&nbsp;</span></span></div>
+<div><span>&nbsp;18&nbsp;<span><a href="other.htm">Other related QR code login work</a>&nbsp;</span></span></div>
+<div><span>&nbsp;19&nbsp;<span><a href="faq.htm">Frequently Asked SQRL Questions</a>&nbsp;</span></span></div>
+<div><span>&nbsp;20&nbsp;<span><a href="feedback.htm">Feedback about SQRL &amp these pages</a>&nbsp;</span></span></div>
+</td>
+</tr></table></div></td></tr></table>
+<br /><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="phishing.htm#top" target="_top"><img src="https://www.grctech.com/_fya2gapvdpsed_/image/grc-icon.gif" width="51" height="51" border="0" alt="Jump to top of page" title="Jump to top of page"/></a></td><td><div style="margin:0 20px;"><font size="-2" color="#777777">Gibson Research Corporation is owned and operated by Steve Gibson.&nbsp;&nbsp;The contents<br />of this page are Copyright (c) 2016 Gibson Research Corporation. SpinRite, ShieldsUP,<br />NanoProbe, and any other indicated trademarks are registered trademarks of Gibson<br />Research Corporation, Laguna Hills, CA, USA. GRC's web and customer <a href="https://www.grc.com/privacy.htm" target="_top">privacy policy</a>.</font></div></td><td><div style="margin:7px 0;"><a href="phishing.htm#top" target="_top"><img src="https://www.grctech.com/_fya2gapvdpsed_/image/jumptotop.png" width="52" height="38" border="0" alt="Jump to top of page"  title="Jump to top of page"/></a></div></td></tr></table><br />
+<!-- ChangeDetection.com detection="off" -->
+<table width="90%" border="0" cellspacing="0" cellpadding="0"><tr><td><font color="#666666" size="-2">Last Edit: Aug 02, 2015 at 14:17 (268.02 days ago)</font></td><td align="right"><font color="#666666" size="-2">Viewed 12 times per day</font></td></tr></table>
+</center><a name="bottom"></a></body></html>

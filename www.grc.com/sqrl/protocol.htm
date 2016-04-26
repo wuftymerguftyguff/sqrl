@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><title>GRC's&nbsp;|&nbsp;SQRL Secure Quick Reliable Login Protocol Syntax&nbsp;&nbsp;</title>
+<meta name="keywords" content="SQRL Secure Quick Reliable Login Protocol Syntax, GRC, Gibson Research Corporation, Steve Gibson" />
+<meta name="description" content="SQRL Secure Quick Reliable Login Protocol Syntax" />
+<meta name="sitemenu" content=" " />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "offices_@_grc.com" for "https://www.grc.com" on "1998.03.30T21:20-0800" r (n 0 s 0 v 0 l 0))' />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "https://www.grc.com" r (cz 1 lz 1 nz 1 oz 1 vz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "https://www.grc.com" r (n 0 s 0 v 0 l 0))' />
+<link rel="icon" href="https://www.grctech.com/_qce5ihiwrh2mn_/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.grctech.com/_qce5ihiwrh2mn_/favicon.ico" type="image/x-icon" />
+<link rel="meta" href="https://www.grc.com/labels.rdf" type="application/rdf+xml" title="ICRA labels" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/grc.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grc.com/mainmenu.css" />
+<link rel="stylesheet" media="all" type="text/css" href="https://www.grctech.com/_qce5ihiwrh2mn_/thirdparty.css" />
+
+<style type="text/css">
+ .greenhead { text-align:center; color:#008800; font-size:16pt; font-family:arial,helvetica; font-weight:bold; }
+ .callout	{ background:#f0f0ff; padding:1em; margin:1em 0 1em 1em; border-left:#6666ff solid 2px; }
+ .callsubj	{ font-family:arial; font-size:11pt; font-weight:bold; }
+ .greynote	{ color:#666; font-size:smaller; margin:-0.5em 0 2em 1.5em }
+ .greensub	{ color:#008800; text-align:center; margin-top:0.5em; font-family:arial,helvetica; font-weight:bold; }
+ .greybox   { padding:1em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 2px; }
+ .greybox2  { padding:1.5em 2em; margin:2.0em 0; background:#f8f8f8; border:#dddddd solid 4px; }
+ .blackpara { color:#000; margin:0.25em 0 0; }
+ .centerarial { text-align:center; font-family:arial; font-size:larger; }
+ .lsa			{ font-size:larger; margin-top:1em }
+ .sectiondiv{ border-top:#00A 3px solid; font-size:20pt; margin-top:1em; padding-top:0.25em }
+ .redparam { font-family:'Courier New', Courier, monospace; font-weight:bold; color:#900; font-size:large; }
+ .parample { color:#000; font-family: 'Courier New', Courier, monospace; font-size:20pt; }
+ .urltxt   { color:#0000CC; font-family: 'Courier New', Courier, monospace; font-weight:bold; font-size:17px; }
+ .greyfade { font-style:italic; color:#aaa; }
+ .block    { margin:10px 0 10px 0.25em; padding-left:0.5em; border-left:#00f 2px solid; }
+ .comment  { font-weight: normal; color:#888; font-size:smaller;}
+ .repel span a { font-weight: normal; color:#888; font-size:smaller; }	/* the >> in the drop-down menus which link to sub-menus */
+
+</style>
+
+</head><body><a name="top"></a>
+
+<!-- ########################## GRC Masthead Menu ########################## -->
+
+<div class="menuminwidth0"><div class="menuminwidth1"><div class="menuminwidth2">
+<div id="masthead">
+	<a href="https://www.grc.com/default.htm"><img id="mastheadlogo" src="https://www.grc.com/mh-logo.gif" width="286" height="24" alt="Gibson Research Corporation" title="" /></a>
+	<img id="focus" src="https://www.grc.com/mh-focus.gif" width="121" height="13" alt="" title="What we're about" />
+	<a href="https://www.grc.com/news.htm"><img id="blogicon" src="https://www.grc.com/image/menublogicon.png" width="22" height="22" alt="blog icon" title="To our news and announcements page" /></a>
+	<a href="https://www.grc.com/news.htm"><img id="twittericon" src="https://www.grc.com/image/menutwittericon.png" width="22" height="22" title="To our news and announcements page" alt="Twitter Icon"/></a>
+	<a href="https://www.grc.com/news.htm"><img id="rssicon" src="https://www.grc.com/image/menurssicon.png" width="22" height="22" title="To our news and announcements page" alt="RSS Icon" /></a>
+
+	<form action="https://www.google.com/search.htm" id="searchbox_000064552291181981813:y8yi5go2xza" onsubmit="javascript: this.action='https://www.grc.com/search.htm'">
+		<input type="hidden" name="cx" value="000064552291181981813:y8yi5go2xza" />
+		<input type="hidden" name="cof" value="FORID:11" />
+		<input id="text" type="text" name="q" maxlength="256" />
+		<input id="search" type="image" name="sa" value="Search" src="https://www.grc.com/mh-srch.gif" alt="&nbsp;[Search]" title="" />
+	</form>
+</div>
+
+<div class="menu">
+
+<ul>
+	<li><a href="https://www.grc.com/default.htm"><img src="https://www.grc.com/mb-home.gif" width="76" height="18" alt="[Home]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="leftbutton">
+			<li><a href="https://www.grc.com/purchasing.htm">&nbsp;Purchasing</a></li>
+			<li><a href="https://www.grc.com/sales.htm">&nbsp;Sales Support</a></li>
+			<li><a href="https://www.grc.com/support.htm">&nbsp;Technical Support</a></li>
+			<li><a href="https://www.grc.com/default.htm#bottom">&nbsp;Contact Us</a></li>
+			<li><a href="https://www.grc.com/news.htm">&nbsp;Blogs, Twitter &amp; RSS</a></li>
+			<li><a href="https://www.grc.com/privacy.htm">&nbsp;Privacy Policy</a></li>
+<!--			<li><a href="/siteoptions.htm">&nbsp;Site Options</a></li>			-->
+			<li><a href="https://www.grc.com/stevegibson.htm">&nbsp;Steve's Projects Page</a></li>
+			<li><a href="https://www.grc.com/resume.htm">&nbsp;Steve's Old Resume</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/sr/spinrite.htm"><img src="https://www.grc.com/mb-products.gif" width="96" height="18" alt="[Products]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/sr/spinrite.htm">&nbsp;General information</a></li>
+			<li><a href="https://www.grc.com/sr/whatitdoes.htm">&nbsp;What SpinRite Does</a></li>
+			<li><a href="https://www.grc.com/sr/testimonials.htm">&nbsp;User testimonials</a></li>
+			<li><a href="https://www.grc.com/sr/smart.htm">&nbsp;S.M.A.R.T. Monitor</a></li>
+			<li><a href="https://www.grc.com/cs/prepurch.htm">&nbsp;Purchase SpinRite</a></li>
+			<li><a href="https://www.grc.com/sr/faq.htm">&nbsp;FAQ</a></li>
+			<li><a href="https://www.grc.com/sr/themovie.htm">&nbsp;Demo Videos</a></li>
+			<li><a href="https://www.grc.com/sr/kb/sata.htm">&nbsp;Knowledgebase: SATA</a></li>
+			<li><a href="https://www.grc.com/sr/kb/badbios.htm">&nbsp;Knowledgebase: BIOS</a></li>
+			<li><a href="https://www.grc.com/sroverview.htm">&nbsp;SpinRite v5.0 pages</a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2"><img src="https://www.grc.com/mb-services.gif" width="94" height="18" alt="[Services]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/x/ne.dll?bh0bkyd2">&nbsp;ShieldsUP!</a></li>
+			<li><a href="https://www.grc.com/revocation.htm">&nbsp;Certificate Revocation</a></li>
+			<li><a href="https://www.grc.com/haystack.htm">&nbsp;Password Haystacks</a></li>
+			<li><a href="https://www.grc.com/fingerprints.htm">&nbsp;HTTPS Fingerprints</a></li>			
+			<li><a href="https://www.grc.com/securitynow.htm">&nbsp;Security Now!</a></li>
+			<li><a href="https://www.grc.com/dns/dns.htm">&nbsp;DNS Spoofability Test</a></li>
+			<li><a href="https://www.grc.com/passwords.htm">&nbsp;Perfect Passwords</a></li>
+			<li><a href="https://www.grc.com/ppp.htm">&nbsp;PPP Passwords</a></li>
+			<li><a href="https://www.grc.com/media.htm">&nbsp;Tech TV video clips</a></li>
+			<li><a href="https://www.grc.com/discussions.htm">&nbsp;Newsgroup Discussions</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="https://www.grc.com/freepopular.htm"><img src="https://www.grc.com/mb-freeware.gif" width="98" height="18" alt="[Freeware]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="protocol.htm"><span class="drop"><span>Security</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/lt/leaktest.htm">&nbsp;Leaktest</a></li>
+					<li><a href="https://www.grc.com/securable.htm">&nbsp;Securable</a></li>
+					<li><a href="https://www.grc.com/stm/shootthemessenger.htm">&nbsp;Shoot the messenger</a></li>
+					<li><a href="https://www.grc.com/unpnp/unpnp.htm">&nbsp;Unplug n' Pray</a></li>
+					<li><a href="https://www.grc.com/freeware/dcom.htm">&nbsp;DCOMbobulator</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrap</a></li>
+					<li><a href="https://www.grc.com/wmf/wmf.htm">&nbsp;MouseTrapCmd</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="protocol.htm"><span class="drop"><span>Utilities</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/never10.htm">&nbsp;Never 10&nbsp;&nbsp;(no upgrade)</a></li>
+					<li><a href="https://www.grc.com/dns/benchmark.htm">&nbsp;DNS Benchmark</a></li>
+					<li><a href="https://www.grc.com/wizmo/wizmo.htm">&nbsp;Wizmo</a></li>
+					<li><a href="https://www.grc.com/id/idserve.htm">&nbsp;ID Serve</a></li>
+					<li><a href="https://www.grc.com/freeware/clickey.htm">&nbsp;ClicKey</a></li>
+					<li><a href="https://www.grc.com/ct/cleartype.htm">&nbsp;Free &amp; Clear</a></li>
+					<li><a href="https://www.grc.com/tip/id.htm">&nbsp;IDentity (ASPI)</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="protocol.htm"><span class="drop"><span>Obsolete</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/cih/cih.htm">&nbsp;FIX-CIH</a></li>
+					<li><a href="https://www.grc.com/tip/clickdeath.htm">&nbsp;TIP (trouble in paradise)</a></li>
+					<li><a href="https://www.grc.com/oo-update.htm">&nbsp;OptOut</a></li>
+					<li><a href="https://www.grc.com/xpdite/xpdite.htm">&nbsp;XPdite</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;NoShare</a></li>
+					<li><a href="https://www.grc.com/faq-shieldsup.htm">&nbsp;LetShare</a></li>
+					<li><a href="https://www.grc.com/pw/patchwork.htm">&nbsp;Patchwork</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li><a href="protocol.htm"><img src="https://www.grc.com/mb-research.gif" width="98" height="18" alt="[Research]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul class="skinny">
+			<li><a href="protocol.htm"><span class="drop"><span>General</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/malware.htm">&nbsp;Malware Repository</a></li>
+					<li><a href="sqrl.htm">&nbsp;SQRL&nbsp;Login&nbsp;Technology</a></li>					
+					<li><a href="https://www.grc.com/ssl/ev.htm">&nbsp;EV SSL/TLS Certificates</a></li>
+					<li><a href="https://www.grc.com/otg/uheprng.htm">&nbsp;Ultra-high entropy PRNG</a></li>
+					<li><a href="https://www.grc.com/menudemo.htm">&nbsp;Pure CSS web menus</a></li>
+					<li><a href="https://www.grc.com/nat/nat.htm">&nbsp;NAT router security</a></li>
+					<li><a href="https://www.grc.com/pda/palmpower.htm">&nbsp;PDA max battery life</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="protocol.htm"><span class="drop"><span>Pending</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/nf/netfilter.htm">&nbsp;GRC NetFilter</a></li>
+					<li><a href="https://www.grc.com/tp/trustpuppy.htm">&nbsp;TrustPuppy</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="protocol.htm"><span class="drop"><span>Historical</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/worms/25-01-03.htm">&nbsp;Worm wars of 2001</a></li>
+					<li><a href="https://www.grc.com/downloaders.htm">&nbsp;File downloader spying</a></li>
+					<li><a href="https://www.grc.com/ct/ctwhat.htm">&nbsp;Sub-pixel font rendering</a></li>
+					<li><a href="https://www.grc.com/su/earthlink.htm">&nbsp;Earthlink browser tag</a></li>
+					<li><a href="https://www.grc.com/tip/codfaq1.htm">&nbsp;ZIP &amp; JAZ click of death</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+	
+			<li><a href="protocol.htm"><span class="drop"><span>Dormant</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/vpn/vpn.htm">&nbsp;OpenVPN</a></li>
+					<li><a href="https://www.grc.com/r&amp;d/assimilator.htm">&nbsp;The Assimilator</a></li>
+					<li><a href="https://www.grc.com/aspi_me.htm">&nbsp;ASPI ME</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+			<li><a href="https://www.grc.com/health.htm"><span class="drop"><span>Health</span>&raquo;</span><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+				<ul>
+					<li><a href="https://www.grc.com/health.htm">&nbsp;Health Homepage</a></li>
+					<li><a href="https://www.grc.com/health/lowcarb.htm">&nbsp;The Low Carb Choice</a></li>
+					<li><a href="https://www.grc.com/health/vitamin-d.htm">&nbsp;Vitamin D</a></li>
+					<li><a href="https://www.grc.com/health/sleep/healthy_sleep_formula.htm">&nbsp;Healthy Sleep Formula</a></li>
+					<li><a href="https://www.grc.com/zeo.htm">&nbsp;Zeo Sleep Manager Pro</a></li>
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+			</li>
+
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+<ul>
+	<li id="other"><a href="https://www.grc.com/pdp-8/pdp-8.htm"><img src="https://www.grc.com/mb-other.gif" width="77" height="18" alt="[Other]" title="" /><!--[if gt IE 6]><!--></a><!--<![endif]--><!--[if lt IE 7]><table border="0" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+		<ul>
+			<li><a href="https://www.grc.com/pdp-8/pdp-8.htm">&nbsp;PDP-8 Computers</a></li>
+			<li><a href="https://www.grc.com/misc/truecrypt/truecrypt.htm">&nbsp;TrueCrypt Repository</a></li>
+			<li><a href="https://www.grc.com/Big-Number-Calculator.htm">&nbsp;Big Number Calculator</a></li>
+			<li><a href="https://groups.google.com/forum/#!forum/portable-sound-blaster">&nbsp;Portable Sound Blaster</a></li>
+		</ul>
+		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+
+</div> <!-- close "menu" div -->
+<hr style="display:none" />
+</div></div></div> <!-- close the "minwidth" wrappers -->
+<!-- ###################### END OF GRC MASTHEAD MENU  ###################### -->
+
+
+<center>
+
+<span class="repel regionhead"><span>SQRL</span>SQRL</span>
+<table style="margin-bottom:1em;" cellpadding="0" cellspacing="0"><tr valign="bottom"><td rowspan="2"><img src="SQRL_Logo_80x80.png" width="80" height="80" alt="100x100 SQRL Logo" /></td><td rowspan="2">&nbsp;&nbsp;&nbsp;</td><td style="color:#bb0000; font-size:22pt;"><b>S</b>ecure <b>Q</b>uick <b>R</b>eliable <b>L</b>ogin</td></tr><tr valign="bottom"><td style="font-size:10.5pt;">A highly secure, comprehensive, easy-to-use replacement<br />for usernames, passwords, reminders, one-time-code<br />authenticators<b>&nbsp;.&nbsp;.&nbsp;.</b> and everything else.</td></tr></table><img src="https://www.grc.com/image/darkbluepixel.gif" width="90%" height="4" border="0" alt="divider" /><div id="embelow" class="pagecontainer">
+
+<div class="red_tight_headline" style="font-size:20pt; margin-top:1em;">SQRL Link &amp; Query Protocol<br /><b>SYNTAX</b></div>This page details the <em>format</em> of the information exchange between the SQRL client and the remote web server. The &#8220;<a href="semantics.htm">Protocol Semantics</a>&#8221; page specifies and describes the meaning and behavior of individual options.
+
+<div style="background-image: url(https://www.grc.com/image/reddiag.gif); text-align:center; padding:10px; margin:1em 0;"><div style="background:#fff; padding:10px; border:2px #f00 solid; "><div style="color:#C00; font-size:large;"><b>THIS PRELIMINARY SPECIFICATION IS IN FLUX<br />AND IS SUBJECT TO CHANGE AT ANY TIME</div><div style="margin-top:0.5em;">At this time it is being published for comment only. Please DO NOT RELY<br />upon it until this notice has been removed. (Which should be soon!)</div></b></div></div>
+
+<div class="greybox">
+<div class="red_tight_headline" style="font-size:20pt; ">SQRL: What we use, what we ignore</div>
+
+The full definition of an Internet URL (uniform resource locator) includes several less commonly used parameters:
+
+<p><center class="urltxt">scheme://username:password@hostname:port/path?query</center></p>
+
+Since the SQRL system is designed to always generate the same user identity when the user visits the same site, we need to be careful and explicit about which pieces of any possible URL we use for that generation. Consequently, any superfluous, variable, optional, and possibly confusing components are deliberately excluded from use:
+
+<p><center class="urltxt">scheme://<span style="color:#bbb">username:password@</span>hostname<span style="color:#bbb">:port</span>/path?query</center></p>
+
+The end result of pruning the SQRL link URL is the retention of the URL's scheme, which will be either &#8216;sqrl&#8217; or &#8216;qrl&#8217;, the DNS domain name without any optional port specifier, and the balance of the URL's path and query terms:
+
+<p><center class="urltxt">scheme://hostname/path?query</center></p>
+
+<b>Lowercase:</b> Since the scheme and DNS domain name portions of a URL are not case-sensitive, those two components of any SQRL link URL are converted to lowercase before any processing is performed. The path and query parameters are left untouched.<span class="font7px"><br /><br /></span><b>No port?</b> The deliberate exclusion of the &#8220;port&#8221; parameter from the domain-based key generation allows sites to freely move SQRL authentication services and/or web services to non-standard ports without breaking any existing SQRL identification. This eliminates the ability to have separate port-based identities for the same domain name, which seems like the preferred thing to do.</div>
+
+<div class="red_tight_headline" style="font-size:16pt; margin-top:1em;">SQRL QR code/hyperlink URL format</div>
+
+<p>SQRL URLs may be encoded into graphical QR codes to enable multifactor cross-device authentication, or embedded into standard HTML links to enable local, same-device SQRL authentication. To afford maximum server-side design freedom, the SQRL URL format has minimal requirements:</p>
+
+<p><center><img src="sqrl-url-scheme.png" width="602" height="94" alt="sqrl-url-scheme" /></center></p>
+
+<ul>
+<li><b>Scheme: </b>The SQRL URL scheme is either &#8220;<span class="fixed_black">sqrl</span>&#8221; or &#8220;<span class="fixed_black">qrl</span>&#8221;. The <em>strongly preferred</em> use of &#8220;<span class="fixed_black">sqrl</span>&#8221; as the SQRL URL's scheme signals to the SQRL client that the web server supports standard encrypted and authenticated SSL/TLS connections and has a certificate for the indicated domain. Unless a standard colon-delimited port override is provided, the SQRL client will connect to the IP for the indicated domain at standard HTTPS port 443 and issue a standard HTTP GET query.
+
+<p>If a host web server does not support SSL/TLS connections, it may signal this to the SQRL client by using the &#8220;<span class="fixed_black">qrl</span>&#8221; scheme. This drops the leading &#8220;s&#8221; to signal that the SQRL client should issue its user authentication query over an unsecured HTTP connection. In this case, unless a standard colon-delimited port override is provided, the SQRL client will connect to the IP for the indicated domain at standard HTTP port 80 and issue a standard HTTP GET query.</p>
+
+<li><b>Domain: </b>As usual, the domain portion of the URL specifies the DNS domain to be looked up to determine the host web server's connection IP address. Unless modified by the optional &#8220;d&#8221; domain-extension parameter, this is the same string that is HMAC hashed to create the user's site-specific private key.</li>
+
+<li><b>Query Separator &amp; Query: </b>The query data begins after the query separator (?) question mark character. To protect against various sorts of replay and prediction attacks, the query data <b>must</b> include a cryptographically strong unpredictable and non-repeating opaque token. This has been previously referred to with the generic term &#8220;nonce.&#8221; However, due to its specific unpredictability and possible reversibility requirements (more than simply a number used once) this more complete formal specification will use the term &#8220;<b>nut</b>.&#8221;</p>
+
+<p>Its precise role will vary based upon the server's implementation needs. It might be the result of a strong one-way hash function or a strong reversible symmetric cipher. But since it is publicly exposed in the SQRL link URL, it <b>must</b> at least have the property of cryptographically strong unpredictability:</li>
+</ul>
+<p><center><img src="sqrl-url-sample.png" width="507" height="17" alt="sqrl-url-sample" /></center></p>
+<ul>
+<li class="nobull">The &#8220;<a href="server.htm">Web Server Behavior</a>&#8221; page further discusses the recommended ways this &#8220;nut&#8221; value can be developed and used by the hosting web server.</li>
+
+<li><b>Any OTHER server data: </b> This is discussed on the &#8220;<a href="server.htm">Web Server Behavior</a>&#8221; page, but it's important enough to be mentioned here. Due to the fact that login session-state information is being placed onto a web page where it is then taken up by an SQRL authenticator, the value of <em>any other token</em> the web server might use for session identification must also be completely unpredictable or encrypted. If, for example, a simple session number counter were used, an attacker might examine the SQRL link, predict a future session ID, then trick the user into signing a modified SQRL link for the attacker to use in impersonating the user. Any session tokens should therefore be generated by a cryptographically strong cipher under a secret key or a strong secretly salted hash function.<span class="font7px"><br /><br /></span>SQRL clients return and sign the <em>entire</em> unmodified SQRL link URL, exactly as it was received. So websites are free to include any additional information they choose so long as they remain mindful of possible attack implications.</li>
+
+<li><b>Server Friendly Name: </b>All SQRL links <em>must</em> also provide the commonly known name of the website for quick and easy recognition by SQRL users. SQRL refers to this as the &#8220;SFN&#8221; or server friendly name. For example, whereas Amazon's full domain name is www.amazon.com, they are known as Amazon, so their SFN would doubtless be &#8220;Amazon&#8221;. Similarly, www.wordpress.com would use &#8220;Wordpress&#8221; and www.ebay.com would use &#8220;eBay&#8221;. The entire SQRL URL is returned to the server for verification and if the returned &#8220;sfn&#8221; does not match what is expected, the transaction will be immediately failed.<span class="font7px"><br /><br /></span>To support an international character set, individual characters employ UTF-8 encoding and to make the entire name url-safe it is then base64url encoded. The resulting &#8220;sfn={base64url-encoded name}&#8221; name=value string is included anywhere within the SQRL URL:</li>
+</ul>
+<p><center><img src="sqrl-url-sfn.png" width="623" height="16" alt="sqrl-url-sample" /></center></p>
+<ul>
+<li><b>Portion of URL to be hashed: </b>Except as modified by the presence of the optional &#8220;d=n&#8221; domain extension specifier (see the following item) the SQRL authenticator hashes (with a keyed HMAC function) the entire DNS domain name contained in the SQRL link URL (excluding, as described above, any username, password, or port designation).<span class="font7px"><br /><br /></span>The entire UNMODIFIED URL, exactly as it was obtained from the website, is transcribed into the &#8220;url&#8221; parameter which is returned and signed in the SQRL client's authentication query.</li>
+
+<li><b>The optional &#8220;x=n&#8221; domain e<b>X</b>tension specification: </b></li>
+</ul>
+<center style="padding:1em 0;"><img src="sqrl-domain-extension2.png" width="507" height="99" alt="sqrl-domain-extension" /></center>
+<ul>
+<li class="nobull">As shown in the diagram above, a SQRL URL may <em>optionally</em> contain a <em>domain extension specifier</em> in the query parameter list using the reserved single character name &#8220;x&#8221;. If present, the &#8220;x=n&#8221; domain extension specifier will cause the SQRL client to include &#8220;n&#8221; characters <em>of the path</em> starting immediately after the domain name in the computation of the domain-specific private key. See the diagram above.<span class="font7px"><br /><br /></span>Note that if a &#8220;:port&#8221; specification is present after the domain it will be ignored and skipped during the formation of the &#8220;Site Key String&#8221; (SKS).<span class="font7px"><br /><br /></span>This optional domain extension allows websites which support separate user accounts defined at the start of the resource's path (such as GitHub) to inform the SQRL client of this by indicating how much of the path they would like included in the SQRL's HMAC key hashing.
+</li>
+
+<li><b>Anything else in the SQRL link: </b>The web server may freely include any additional arguments it chooses to within the SQRL link URL.</li>
+
+</ul>
+
+<div class="red_tight_headline sectiondiv" style="font-size:16pt; margin-top:1em;">SQRL Authentication Query Format</div>
+
+<p>In the odd and somewhat contrived &#8220;sending data <em>from</em> a web client back <em>to</em> a web server&#8221; operation of the web, a web client may use a &#8220;GET&#8221; query to <em>send</em> a web server data by asking the server for a standard web resource, where the data it wishes to send is appended to the end of the resource's name. This is the so-called &#8220;query tail&#8221;.</p>
+
+<center><img src="http-query-format.png" width="568" height="87" alt="http-query-format" /></center>
+
+<p>As shown in the diagram above, this simple &#8220;GET&#8221; query link format is used in the web server's SQRL link URL to append data to the URL: the server's &#8220;nut&#8221;, which is used to make every SQRL URL unique and unpredictable, and any other information the server may wish to include for the client or to have returned to itself.</p>
+
+<div class="larger_red_arial tight_title">POST Queries</div>
+A web client can also use a &#8220;POST&#8221; query to send additional data which might be too lengthy to fit into a URL, might be binary data, or otherwise unsuitable for a URL's environment. Since the SQRL client often returns a substantial amount of information to the web server (multiple keys and signatures, etc., see below), it uses the POST verb's natural division of data. The server's supplied SQRL link URL, as provided, is used for the POST verb's query, and the entire collection of SQRL arguments and signatures are provided in the body of the POST submission.<span class="font7px"><br /><br /></span>The URL's parameters are standard HTTP <em>form-urlencoded</em> parameters where name=value pairs are separated by &#8216;&amp;&#8217; characters:
+
+
+<p>The use of standardized HTTP POST query syntax allows existing web query parsing, interpretation tools and libraries to be used without modification.</p>
+
+<div class="larger_red_arial tight_title">How the SQRL query string is formed</div>A SQRL client will only interpret a URL link beginning with &#8220;<em>sqrl://</em>&#8221; or &#8220;<em>qrl://</em>&#8221; as a valid SQRL link. Anything else submitted through any channel (sent to the client by an operating system when then user clicks on a link, or optically scanned from a QR code) will present its user with a note that the link scanned or submitted was not recognized as a valid SQRL login link and no other link processing will be performed.<span class="font7px"><br /><br /></span>If the SQRL client receives a link that does begin with either of the two SQRL schemes:
+<ul>
+<li>Before any modifications are made, the link, exactly as received, is preserved to become the value of the client's &#8220;url&#8221; parameter returned to the server.</li>
+
+<li>The hostname portion of the link (except for any username:password@) will be used as the value for the query's &#8220;Host:&#8221; header.</li>
+
+<li>If any username[:password]@ appeared in the SQRL link URL it will be returned in the query's &#8220;Authentication:&#8221; header.</li>
+
+<li>The &#8220;User-Agent:&#8221; header is set to &#8220;SQRL/1&#8221; to specify the client and its version.</li>
+
+<li>The &#8220;Content-type:&#8221; header is set to &#8220;application/x-www-form-urlencoded&#8221;</li>
+
+</ul>
+
+<div class="larger_red_arial">How to form the POST verb's body</div><ul>
+
+<li>SQRL POST queries follow the HTTP standard for &#8220;form-urlencoded&#8221; data: The POST's body is a single string consisting of &#8220;name=value&#8221; pairs separated with ampersands (&#8216;&&#8217;).</li>
+
+<li>The protocol is deliberately tolerant of arbitrary reordering of individual name=value parameters. This affords compatibility with web server development environments which might parse received form data into a language-specific abstraction of the original submission. We only require that the value of a given named parameter can be retrieved.</li>
+
+<li>All binary values (public keys and signatures) are base64url encoded with any trailing equals signs (&#8216;=&#8217;) removed to prevent confusion with the equals sign in the name=value pair. If needed by the receiving decoder, the appropriate number of equals signs should be appended before decoding the base64url value back to its original binary.</li>
+
+<li>The &#8220;ASCII Encoding of Binary Data&#8221; box at the bottom of this page contains additional discussions of SQRL's base64url binary-to-ASCII-to-binary encoding and decoding.</li>
+
+<li>The query data consists of three or more name=value pairs:<ul>
+
+<li><b>client=</b> The base64url encoded collection of the client's arguments as a series of ampersand-separated name=value pairs. The <b>client</b> parameter MUST always be present and SHOULD always be the first parameter in the parameter list.</li>
+
+<li><b>server=</b> Either:<ul><li>The base64url encoded SQRL link URL as it was received by the client before any modifications were made, or...</li><li>The data received from the server's immediately previous reply (which will be a base64url encoded list of &amp;-separated name=values</li></ul> The <b>server</b> parameter MUST always be present and SHOULD always be the second parameter in the parameter list.</li>
+
+<li><b>ids=</b> One or more signatures of the concatenation of the values of the first two parameters. The <b>ids=</b> parameter (at least) MUST always be present since it uses the user's site-specific private key to sign the concatenated values of the first two required parameters, thus validating the user's identity to the web site.</li>
+
+<li><b>???=</b> Additional signatures will be appended, as needed, to similarly sign the concatenated values of the first two required parameters.</li>
+
+</ul>
+</li>
+
+<li>The <b>value</b> of the second <b>server=</b> parameter is concatenated to the end of the <b>value</b> of the first <b>client=</b> to create the data to be signed and later verified.</li>
+
+<li>Signatures are <b>NOT</b> &#8220;cumulative&#8221;. Each signature signs exactly the <b>same</b> string of data, consisting of the concatenated values of those two parameters.</li>
+
+<li>The <b>client=</b> value contains one or more public keys that are included to allow the receiving web server to validate their respective requested functions. Therefore, there will be a <b>???=</b> signature for every corresponding public key appearing in the <b>client=</b> value list.</li>
+
+</ul>
+
+<center><table><tr><td class="urltxt">
+client={ base64url encoded name=value list }&<br />
+server={ base64url encoded name=value list }&<br />
+ids={ signature corresponding to idk }&<br />
+pids={ signature corresponding to pidk }&<br />
+urs={ signature to permit SQRL association updates }
+</td></tr></table>
+
+
+<div style="text-align:center; margin:0.5em 0 2em 0; font-size:smaller; color:#000; ">In this example, the line-breaks are ONLY PRESENT for display clarity. The<br />actual SQRL POST body is a single long unbroken string. The &#8220;SQRL Web<br />Server Reply Format&#8221; section below has an example of the step-by-step<br />encoding and construction of SQRL's compound name=value format.</div></center>
+
+
+<div class="larger_red_arial">The content of the &#8220;client&#8221; parameter.</div><span class="font7px"><br /></span>The <em>client</em> name=value pair conveys the bulk of the client's data to the web server. It contains everything the client wishes to provide to the server with the exception of the server's original URL or previous reply data (which are conveyed in the <em>server</em> value) and the variable number of signatures required to validate various parameters and requests being issued by the client.
+
+<ul>
+
+<li>The <em>client</em> value will contain one or more public keys, and possibly other binary data. In all cases, keys and other binary data will be converted into a safe 64-character ASCII character set using standard base64url encoding. After encoding any trailing equals signs, which the encoding may have added as padding, will be removed from the encoded string to prevent confusion with the equals signs separating name=value pairs.</li>
+
+<li>The client's data being sent to the web server takes the form of a list of name=value pairs with one name=value pair per line and every name=value pair, including the last one, being terminated by a carriage return and line feed (CRLF) pair:
+<p style="margin-left:2em;">
+ver=1<span class="greyfade">&lt;CR,LF&gt;</span><br />
+cmd=setkey~setlock~create~login<span class="greyfade">&lt;CR,LF&gt;</span><br />
+idk={base64url encoded identity key}<span class="greyfade">&lt;CR,LF&gt;</span><br />
+pidk={base64url encoded previous identity key}<span class="greyfade">&lt;CR,LF&gt;</span><br />
+suk={base64url encoded server unlock key}<span class="greyfade">&lt;CR,LF&gt;</span><br />
+vuk={base64url encoded verify unlock key}<span class="greyfade">&lt;CR,LF&gt;</span>
+</p>
+</li>
+
+<li>To aid any future version parsing, the first argument of the client value MUST be the version (ver=1) which the SQRL client adheres to. This is the only operator ordering convention. All other name=value parameters may appear in any order within the client value string.</li>
+
+<li>Once the list of the client's name=value pairs has been assembled, <b>it</b> is base64url converted into a final ASCII encoded string to become the final value of the <em>&#8220;client=&#8221;</em> parameter.</li>
+
+</ul>
+
+<div class="larger_red_arial">The content of the &#8220;server&#8221; parameter.</div><span class="font7px"><br /></span>The <em>server</em> parameter value is <em>either</em> the unmodified SQRL link URL, exactly as it was originally obtained by the SQRL client, then base64url encoded, <b>-OR-</b> the base64url encoded name=value pair list that was most recently received from the server. Either way, the resulting base64url ASCII string becomes the value of the <em><b>server=</b></em> parameter.
+
+<br /><br />
+
+<div class="larger_red_arial">Forming signatures</div><span class="font7px"><br /></span>The SQRL protocol uses signatures to prove its ownership of various secrets (typically private keys) without revealing what those secrets are. It does this by providing a signature's public key in the client parameter list and using the signature's matching private key to sign the concatenation of the client and the server values. The 512-bit binary signature is then converted into ASCII using base64url (and trailing equals signs removed) for transmission, and appended to the client's POST body in the series of ampersand separated name=value pairs.</p>
+
+<p>The receiving web server, to verify the validity of various aspects of the SQRL client's request, verifies each attached signature in turn. It extracts each signature's matching pubic key from the client parameter list and uses it with the signature to verify that the SQRL client is authorized to perform the operations it is requesting. Since <b>every</b> attached signature should <b>always</b> verify correctly, <b>any failed signature verification</b> causes the entire SQRL query transaction to fail even if other signatures are valid for their operations. Unless every signature is valid <b>no action</b> is taken.</p>
+
+<p><em>Concatenation:</em><br />As mentioned above, the client and server string <em>values</em> are signed as a single whole after they have been concatenated into a single string. They are concatenated in the same order as they appear in the client's POST body: client first and server second. So the server value is appended to the end of the client value. The resulting single string is then signed by every private key required to validate the requested server actions.</p>
+
+<p><em>Base64url encoding:</em><br />Many base64url encoders append one or two &#8220;padding&#8221; equals signs to the end of the encoded string because they encode in blocks of 24-bits &mdash; converting each set of three input bytes into four output characters. But neither 256-bit keys nor 512-bit signatures are an even multiple of three bytes. So encoding these values will always cause one or two padding equals signs to be appended to the end of the encoded string. Since the signature's name=value expression contains an equals sign, we need to remove the trailing equals signs from the base64url encoding so that the receiving web server does not become confused. Note that the receiver will need to add one or two equals signs back to the end of the key or sig before decoding them back into their original binary values.</p>
+
+<div class="red_tight_headline sectiondiv" style="font-size:16pt; margin-top:1em;">SQRL Web Server Reply Format</div>
+
+<p>The web server's HTTP reply status (200 OK, 404 Not Found, etc.) does <em>not</em> encode the success or failure of the underlying SQRL authentication transaction. That information is carried within the body of the reply. Instead, the standard HTTP status is only used to indicate whether the query payload was properly received from the SQRL client and whether the HTTP object referred to in the SQRL query was found, valid, known, etc. in the standard HTTP sense.</p>
+
+<p>An HTTP &#8220;200 OK&#8221; reply would indicate that the communication from the SQRL client appeared to succeed and that the web server's object referred to by the query was valid. An HTTP &#8220;404 Not Found&#8221; would indicated that, irrespective of the query's trailing URL parameters, the object referred to by the query was not found, invalid, illegal, etc.</p>
+
+<p>Since SQRL link URLs are invoking a real-time service rather than a static web page, and since they are expected to be generated upon demand, the entire class of 3xx Redirection responses will be illegal for SQRL queries and will result in the SQRL client returning an error message to the user. It will <b>not</b> follow any redirection links provided by any such replies.</p>
+
+<div class="larger_red_arial">Returning information to the SQRL client</div><span class="font7px"><br /></span>Assuming that the overall HTTP reply status was &#8220;200 OK&#8221;; In order to return SQRL protocol status, public keys, and other required information, the web server will return a base64url encoded list of name=value pairs, one per line, with each one, including the final one, terminated with a CRLF character pair.
+
+<p>Since this single base64url encoded string is the only data being returned by the server, there is no need to explicitly label it. Upon receipt, the client base64url decodes the string into the server's list of CRLF-separated name=value pairs.</p>
+
+<div class="red_tight_headline sectiondiv" style="font-size:16pt; margin-top:1em;">SQRL's ASCII Encoding of Binary Data</div>
+
+<p>SQRL's various key and signature values are generated as binary character arrays of 256 and 512 bits respectively. Although POST query and HTTP reply bodies can contain and carry binary data, the conversion of this binary information into a reduced ASCII character set for transmission allows SQRL to be used with other transports that may not be binary compatible, eases development verification, and encourages the use of standard data parsing libraries.</p>
+
+To perform this conversion, we employ a widely available variation of the standard base64 encoding known as &#8220;<b>base64url</b>&#8221; as defined in the <a href="http://tools.ietf.org/html/rfc4648">Base Data Encodings RFC #4648</a>. The &#8220;base64url&#8221; encoding replaces the URL-hostile &#8216;<b>+</b>&#8217; and &#8216;<b>/</b>&#8217; characters, which are typically used as the last two non-alphanumeric symbols in the encoding alphabet, with the URL-friendly characters &#8216;<b>-</b>&#8217; and &#8216;<b>_</b>&#8217; respectively. However<b>&nbsp;.&nbsp;.&nbsp;.</b> </p>
+
+<div class="red_headline" style="font-family:Arial, Helvetica, sans-serif">Trailing &#8220;=&#8221; characters must be trimmed from<br />the end before the encoded strings are used.</div>
+
+<p>Base64 encoding converts 8-bit bytes into a 6-bit character set. The least common multiple (LCM) of 8 and 6 is 24. Therefore, some base64 converters perform their conversions by taking multiples of three 8-bit binary source bytes (24-bits) to produce four 6-bit characters (24-bits). The trouble with this is that the source data length may not be an even multiple of 3 bytes <b>(and none of ours are)</b>. Encoders resolve this (annoyingly) by appending one or two null (all zero) bytes to fill out the final &#8220;group of three&#8221; source bytes. Such converters also insist upon always emitting full sets of four encoded characters<b>&nbsp;.&nbsp;.&nbsp;.</b> even if doing so means that they must pad the output with &#8220;=&#8221; equals sign characters (since they have no real source data to go with those padding characters).</p>
+
+<p>The &#8220;=&#8221; equals sign is NOT a URL-safe character because it is reserved to join URL parameter names and values. Therefore, the SQRL standard requires that any trailing &#8220;=&#8221; characters be trimmed and removed from the end of all base64url converted strings.</p> 
+
+<div class="red_headline" style="font-family:Arial, Helvetica, sans-serif">Our 256-bit, 32-byte SQRL keys will always end in one (&#8220;=&#8221;)<br />equals sign, and our 512-bit, 64-byte SQRL signatures will<br />end with two (&#8220;==&#8221;) equals signs. They <em>must</em> be removed.</div>
+
+The same care should be taken by the server with the encoding and subsequent decoding of its &#8220;nut&#8221; value included in the SQRL link URL.
+
+<p>Note that when the encoding process is reversed to decode and return the ASCII back to binary, some base64url decoders will expect to encounter the original equals sign(s). So, to be safe, the web server that decodes these strings should append one (&#8220;=&#8221;) equals sign to SQRL's key values and two (&#8220;==&#8221;) equals signs to SQRL's signature values.</p>
+
+</div>
+
+<br /><br />
+
+<center><font style="font-size:smaller;">Secure QR Login (SQRL) Documentation:</font><br />
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div class="linkblock">
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="top">
+<td>
+<div><span>&nbsp;&nbsp;&nbsp;1&nbsp;<span><a href="sqrl.htm">Introduction &amp; overview</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;2&nbsp;<span><a href="userview.htm">The user's view of the application</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;3&nbsp;<span><a href="crypto.htm">Detailed crypto architecture</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;4&nbsp;<span><a href="idlock.htm">The identity lock protocol</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;5&nbsp;<span><a href="key-flow.htm">Client-Side key management</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;6&nbsp;<span><a href="operation.htm">User-interface & operation</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;7&nbsp;<span><a href="phishing.htm">Anti-phishing countermeasures</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;8&nbsp;<span><a href="attacks.htm">Attacks, weaknesses, vulnerabilities</a>&nbsp;</span></span></div>
+<div><span>&nbsp;&nbsp;&nbsp;9&nbsp;<span><a href="protocol.htm">Link &amp; query protocol syntax</a>&nbsp;</span></span></div>
+<div><span>&nbsp;10&nbsp;<span><a href="semantics.htm">Link &amp; query protocol semantics</a>&nbsp;</span></span></div>
+</td>
+<td>
+<div><span>&nbsp;11&nbsp;<span><a href="storage.htm">SQRL's Secure Storage System</a>&nbsp;</span></span></div>
+<div><span>&nbsp;12&nbsp;<span><a href="scrypt.htm">Our use of the SCrypt PBKDF</a>&nbsp;</span></span></div>
+<div><span>&nbsp;13&nbsp;<span><a href="client.htm">Client implementation details</a>&nbsp;</span></span></div>
+<div><span>&nbsp;14&nbsp;<span><a href="server.htm">Web server behavior</a>&nbsp;</span></span></div>
+<div><span>&nbsp;15&nbsp;<span><a href="resources.htm">Implementation resources</a>&nbsp;</span></span></div>
+<div><span>&nbsp;16&nbsp;<span><a href="implementations.htm">Projects and finished applications</a>&nbsp;</span></span></div>
+<div><span>&nbsp;17&nbsp;<span><a href="commentary.htm">SQRL commentary from the industry</a>&nbsp;</span></span></div>
+<div><span>&nbsp;18&nbsp;<span><a href="other.htm">Other related QR code login work</a>&nbsp;</span></span></div>
+<div><span>&nbsp;19&nbsp;<span><a href="faq.htm">Frequently Asked SQRL Questions</a>&nbsp;</span></span></div>
+<div><span>&nbsp;20&nbsp;<span><a href="feedback.htm">Feedback about SQRL &amp these pages</a>&nbsp;</span></span></div>
+</td>
+</tr></table></div></td></tr></table>
+<br /><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="protocol.htm#top" target="_top"><img src="https://www.grctech.com/_qce5ihiwrh2mn_/image/grc-icon.gif" width="51" height="51" border="0" alt="Jump to top of page" title="Jump to top of page"/></a></td><td><div style="margin:0 20px;"><font size="-2" color="#777777">Gibson Research Corporation is owned and operated by Steve Gibson.&nbsp;&nbsp;The contents<br />of this page are Copyright (c) 2016 Gibson Research Corporation. SpinRite, ShieldsUP,<br />NanoProbe, and any other indicated trademarks are registered trademarks of Gibson<br />Research Corporation, Laguna Hills, CA, USA. GRC's web and customer <a href="https://www.grc.com/privacy.htm" target="_top">privacy policy</a>.</font></div></td><td><div style="margin:7px 0;"><a href="protocol.htm#top" target="_top"><img src="https://www.grctech.com/_qce5ihiwrh2mn_/image/jumptotop.png" width="52" height="38" border="0" alt="Jump to top of page"  title="Jump to top of page"/></a></div></td></tr></table><br />
+<!-- ChangeDetection.com detection="off" -->
+<table width="90%" border="0" cellspacing="0" cellpadding="0"><tr><td><font color="#666666" size="-2">Last Edit: Dec 07, 2015 at 16:50 (140.91 days ago)</font></td><td align="right"><font color="#666666" size="-2">Viewed 5 times per day</font></td></tr></table>
+</center><a name="bottom"></a></body></html>
